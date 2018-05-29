@@ -8,51 +8,51 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Zotero.bib
-Warning--I didn't find a database entry for "bab2-docker-what-is-docker"
+Warning--I didn't find a database entry for "bab2-nginx"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 3 entries,
+You've used 8 entries,
             4063 wiz_defined-function locations,
-            840 strings with 7839 characters,
-and the built_in function-call counts, 1212 in all, are:
-= -- 79
-> -- 19
-< -- 0
-+ -- 10
-- -- 4
-* -- 71
-:= -- 215
-add.period$ -- 6
-call.type$ -- 3
-change.case$ -- 5
-chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 100
-empty$ -- 109
-format.name$ -- 5
-if$ -- 246
+            865 strings with 8428 characters,
+and the built_in function-call counts, 3656 in all, are:
+= -- 270
+> -- 54
+< -- 11
++ -- 31
+- -- 9
+* -- 185
+:= -- 595
+add.period$ -- 16
+call.type$ -- 8
+change.case$ -- 13
+chr.to.int$ -- 30
+cite$ -- 8
+duplicate$ -- 297
+empty$ -- 337
+format.name$ -- 12
+if$ -- 805
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 22
-newline$ -- 36
-num.names$ -- 1
-pop$ -- 69
+int.to.str$ -- 8
+missing$ -- 60
+newline$ -- 57
+num.names$ -- 3
+pop$ -- 180
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 81
+skip$ -- 268
 stack$ -- 0
-substring$ -- 7
-swap$ -- 54
-text.length$ -- 0
+substring$ -- 88
+swap$ -- 184
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 3
+type$ -- 8
 warning$ -- 0
-while$ -- 1
-width$ -- 4
-write$ -- 48
+while$ -- 7
+width$ -- 9
+write$ -- 94
 (There was 1 warning)

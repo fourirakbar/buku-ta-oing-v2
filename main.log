@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  29 MAY 2018 16:15
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  30 MAY 2018 00:24
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1395,40 +1395,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 BAB II.
 [7
 
-]
-LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/bx/it' will be
-(Font)              scaled to size 11.27493pt on input line 16.
- [8]
+] [8]
 LaTeX Font Info:    Font shape `EU1/CourierNew(0)/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 20.
- [9] [10] [11]
+ [9]
+
+LaTeX Warning: Citation `bab2-nginx' on page 10 undefined on input line 28.
+
+[10] [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
 [13]
-
-LaTeX Warning: Citation `bab2-docker-what-is-docker' on page 14 undefined on in
-put line 60.
-
-File: images/bab2/docker-vm-container.png Graphic file (type QTm)
-<use  "images/bab2/docker-vm-container.png" >
-LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 9.22495pt on input line 65.
-LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/bx/n' will be
-(Font)              scaled to size 9.22495pt on input line 65.
-LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/m/it' will be
-(Font)              scaled to size 9.22495pt on input line 65.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
-Underfull \vbox (badness 5331) has occurred while \output is active []
-
- [15])
-(./chapters/3-Desain_dan_Perancangan.tex [16]
+LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/bx/it' will be
+(Font)              scaled to size 11.27493pt on input line 59.
+ [14]) (./chapters/3-Desain_dan_Perancangan.tex [15] [16]
 BAB III.
 File: images/bab3/usecase.png Graphic file (type QTm)
-<use  "images/bab3/usecase.png" > [17
+<use  "images/bab3/usecase.png" >
+LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/m/n' will be
+(Font)              scaled to size 9.22495pt on input line 13.
+LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/bx/n' will be
+(Font)              scaled to size 9.22495pt on input line 13.
+ [17
 
 ] [18] [19] [20]
 Underfull \vbox (badness 6927) has occurred while \output is active []
@@ -1465,7 +1454,10 @@ Overfull \hbox (3.1087pt too wide) in alignment at lines 101--106
  []
 
 File: images/bab3/MockupLogin.png Graphic file (type QTm)
-<use  "images/bab3/MockupLogin.png" > [24]
+<use  "images/bab3/MockupLogin.png" >
+LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/m/it' will be
+(Font)              scaled to size 9.22495pt on input line 113.
+ [24]
 File: images/bab3/DesainBackend.png Graphic file (type QTm)
 
 <use  "images/bab3/DesainBackend.png" >
@@ -1923,27 +1915,15 @@ BAB VI.
 
 ]
 Lampiran A.
-[79] [80] [81]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [82]
-[83] [84] [85]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [86]
-[87] [88]) (./chapters/8-Lampiran_B.tex [89] [90
+[79] [80]) (./chapters/8-Lampiran_B.tex [81] [82
 
 ]
 Lampiran B.
-
-Underfull \vbox (badness 3919) has occurred while \output is active []
-
- [91])
-[92]
+[83] [84])
 File: images/cover/pic.JPG Graphic file (type QTm)
  <use  "images/cover/pic.JPG" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 53.
- [93
+ [85
 
 
 ]
@@ -1960,12 +1940,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 28284 strings out of 493638
- 491671 string characters out of 6146796
- 626819 words of memory out of 5000000
- 31307 multiletter control sequences out of 15000+600000
+ 28126 strings out of 493638
+ 488683 string characters out of 6146796
+ 610518 words of memory out of 5000000
+ 31151 multiletter control sequences out of 15000+600000
  7043 words of font info for 62 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 55i,12n,63p,10396b,1835s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,63p,10396b,1784s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (117 pages).
+Output written on main.pdf (109 pages).

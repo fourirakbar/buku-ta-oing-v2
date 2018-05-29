@@ -20,9 +20,5 @@
 \contentsline {lstlisting}{\numberline {4.20}Command untuk mengarahkan \textit {client} ke halaman \textit {login}}{49}{lstlisting.4.20}
 \contentsline {lstlisting}{\numberline {4.21}Perintah untuk Membaca \textit {File Log} dari \textit {Mitmproxy}}{52}{lstlisting.4.21}
 \contentsline {lstlisting}{\numberline {4.22}Perintah untuk Membaca \textit {File Log} dari \textit {Client}}{52}{lstlisting.4.22}
-\contentsline {lstlisting}{\numberline {1.1}Isi Berkas docker-compose.yml}{81}{lstlisting.A.1}
-\contentsline {lstlisting}{\numberline {1.2}Isi Berkas registry.conf}{81}{lstlisting.A.2}
-\contentsline {lstlisting}{\numberline {1.3}Isi Berkas confd.toml}{85}{lstlisting.A.3}
-\contentsline {lstlisting}{\numberline {1.4}Isi Berkas haproxy.cfg.tmpl}{85}{lstlisting.A.4}
-\contentsline {lstlisting}{\numberline {1.5}Isi Berkas haproxy.toml}{87}{lstlisting.A.5}
-\contentsline {lstlisting}{\numberline {2.1}Let's Encrypt X3 Cross Signed.pem}{91}{lstlisting.B.1}
+\contentsline {lstlisting}{\numberline {2.1}Isi Berkas app.conf}{83}{lstlisting.B.1}
+\contentsline {lstlisting}{\numberline {2.2}Isi Berkas app}{84}{lstlisting.B.2}

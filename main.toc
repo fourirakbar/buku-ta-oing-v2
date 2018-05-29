@@ -22,19 +22,18 @@
 \contentsline {section}{\numberline {2.1}Python}{7}{section.2.1}
 \contentsline {section}{\numberline {2.2}Flask}{7}{section.2.2}
 \contentsline {section}{\numberline {2.3}Gunicorn}{8}{section.2.3}
-\contentsline {section}{\numberline {2.4}\textit {Supervisor}}{8}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}\textit {Supervisord}}{9}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}\textit {Supervisorctl}}{9}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}\textit {Nginx}}{10}{section.2.5}
-\contentsline {section}{\numberline {2.6}\textit {Iptables}}{10}{section.2.6}
+\contentsline {section}{\numberline {2.4}Supervisor}{8}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Supervisord}{9}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Supervisorctl}{9}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Nginx}{10}{section.2.5}
+\contentsline {section}{\numberline {2.6}Iptables}{10}{section.2.6}
 \contentsline {section}{\numberline {2.7}MySQL}{11}{section.2.7}
-\contentsline {section}{\numberline {2.8}\textit {Mitmproxy}}{13}{section.2.8}
-\contentsline {section}{\numberline {2.9}\textit {VirtualBox}}{13}{section.2.9}
-\contentsline {section}{\numberline {2.10}\textit {Crontab}}{14}{section.2.10}
-\contentsline {section}{\numberline {2.11}\textit {Docker}}{14}{section.2.11}
-\contentsline {subsection}{\numberline {2.11.1}\textit {Docker Container}}{15}{subsection.2.11.1}
-\contentsline {subsection}{\numberline {2.11.2}\textit {Docker Images}}{16}{subsection.2.11.2}
-\contentsline {subsection}{\numberline {2.11.3}\textit {Docker Registry}}{16}{subsection.2.11.3}
+\contentsline {section}{\numberline {2.8}Mitmproxy}{13}{section.2.8}
+\contentsline {section}{\numberline {2.9}VirtualBox}{13}{section.2.9}
+\contentsline {section}{\numberline {2.10}Docker}{14}{section.2.10}
+\contentsline {subsection}{\numberline {2.10.1}\textit {Docker Container}}{14}{subsection.2.10.1}
+\contentsline {subsection}{\numberline {2.10.2}\textit {Docker Images}}{15}{subsection.2.10.2}
+\contentsline {subsection}{\numberline {2.10.3}\textit {Docker Registry}}{15}{subsection.2.10.3}
 \contentsline {chapter}{\numberline {III}DESAIN DAN PERANCANGAN}{17}{chapter.3}
 \contentsline {section}{\numberline {3.1}Deskripsi Umum Sistem}{17}{section.3.1}
 \contentsline {section}{\numberline {3.2}Kasus Penggunaan}{17}{section.3.2}
@@ -97,7 +96,7 @@
 \contentsline {chapter}{\numberline {VI}PENUTUP}{75}{chapter.6}
 \contentsline {section}{\numberline {6.1}Kesimpulan}{75}{section.6.1}
 \contentsline {section}{\numberline {6.2}Saran}{75}{section.6.2}
-\contentsline {chapter}{DAFTAR PUSTAKA}{77}{chapter*.26}
+\contentsline {chapter}{DAFTAR PUSTAKA}{77}{chapter*.25}
 \contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{79}{appendix.A}
-\contentsline {chapter}{\numberline {B}KODE SUMBER}{91}{appendix.B}
-\contentsline {chapter}{BIODATA PENULIS}{93}{appendix*.27}
+\contentsline {chapter}{\numberline {B}Konfigurasi}{83}{appendix.B}
+\contentsline {chapter}{BIODATA PENULIS}{85}{appendix*.26}

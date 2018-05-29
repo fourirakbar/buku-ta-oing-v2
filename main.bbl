@@ -40,4 +40,33 @@ D.~I. Fernandez., J.~M. Atencia., O.~Q. Gamboa., dan O.~E.~H. Bedoya., ``Design
   {Colombia's} {Language} {Pairs:} {Spanish-Wayuunaiki} {Case},'' \emph{IEEE
   Transactions on Cloud Computing}, Jul. 2013.
 
+\bibitem{bab2-iptables}
+L.~fei Xuan. dan P.~fei Wu., ``The {Optimization} and {Implementation} of
+  {Iptables} {Rules} {Set} on {Linux},'' \emph{IEEE Transactions on Cloud
+  Computing}, Jun. 2015.
+
+\bibitem{bab2-mysql}
+Y.~Ping, H.~Hong-Wei, dan Z.~Nan, ``Design and implementation of a {MySQL}
+  database backup and recovery system,'' in \emph{Proceeding of the 11th
+  {World} {Congress} on {Intelligent} {Control} and {Automation}}, Jun. 2014,
+  hal. 5410--5415.
+
+\bibitem{bab2-mitmproxy}
+\BIBentryALTinterwordspacing
+``Welcome to {Mitmproxy}.org,'' 29 Mei 2018. [Daring]. Tersedia pada:
+  \url{https://mitmproxy.org/}. [Diakses: 29 Mei 2018].
+\BIBentrySTDinterwordspacing
+
+\bibitem{bab2-docker}
+\BIBentryALTinterwordspacing
+``What is {Docker}?'' 2016, 29 Mei 2018. [Daring]. Tersedia pada:
+  \url{https://www.docker.com/what-docker}. [Diakses: 29 Mei 2018].
+\BIBentrySTDinterwordspacing
+
+\bibitem{bab2-docker-registry}
+\BIBentryALTinterwordspacing
+``Docker {Registry},'' Jun. 2017, 29 Mei 2018. [Daring]. Tersedia pada:
+  \url{https://docs.docker.com/registry/}. [Diakses: 29 Mei 2018].
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

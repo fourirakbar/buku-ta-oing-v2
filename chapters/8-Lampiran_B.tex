@@ -1,32 +1,50 @@
-\chapter{KODE SUMBER}
+\chapter{Konfigurasi}
 
-\section*{Let's Encrypt Cross Signed}
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Let's Encrypt X3 Cross Signed.pem},label=letsencryptpem, captionpos=b]
------BEGIN CERTIFICATE-----
-MIIEkjCCA3qgAwIBAgIQCgFBQgAAAVOF c2oLheynCDANBgkqhkiG9w0BAQsFADA/
-MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25h dHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT
-DkRTVCBSb290IENBIFgzMB4XDTE2MDMx NzE2NDA0NloXDTIxMDMxNzE2NDA0Nlow
-SjELMAkGA1UEBhMCVVMxFjAUBgNVBAoT DUxldCdzIEVuY3J5cHQxIzAhBgNVBAMT
-GkxldCdzIEVuY3J5cHQgQXV0aG9yaXR5 IFgzMIIBIjANBgkqhkiG9w0BAQEFAAOC
-AQ8AMIIBCgKCAQEAnNMM8FrlLke3cl03 g7NoYzDq1zUmGSXhvb418XCSL7e4S0EF
-q6meNQhY7LEqxGiHC6PjdeTm86dicbp5 gWAf15Gan/PQeGdxyGkOlZHP/uaZ6WA8
-SMx+yk13EiSdRxta67nsHjcAHJyse6cF 6s5K671B5TaYucv9bTyWaN8jKkKQDIZ0
-Z8h/pZq4UmEUEz9l6YKHy9v6Dlb2honz hT+Xhq+w3Brvaw2VFn3EK6BlspkENnWA
-a6xK8xuQSXgvopZPKiAlKQTGdMDQMc2P MTiVFrqoM7hD8bEfwzB/onkxEz0tNvjj
-/PIzark5McWvxI0NHWQWM6r6hCm21AvA 2H3DkwIDAQABo4IBfTCCAXkwEgYDVR0T
-AQH/BAgwBgEB/wIBADAOBgNVHQ8BAf8E BAMCAYYwfwYIKwYBBQUHAQEEczBxMDIG
-CCsGAQUFBzABhiZodHRwOi8vaXNyZy50 cnVzdGlkLm9jc3AuaWRlbnRydXN0LmNv
-bTA7BggrBgEFBQcwAoYvaHR0cDovL2Fw cHMuaWRlbnRydXN0LmNvbS9yb290cy9k
-c3Ryb290Y2F4My5wN2MwHwYDVR0jBBgw FoAUxKexpHsscfrb4UuQdf/EFWCFiRAw
-VAYDVR0gBE0wSzAIBgZngQwBAgEwPwYL KwYBBAGC3xMBAQEwMDAuBggrBgEFBQcC
-ARYiaHR0cDovL2Nwcy5yb290LXgxLmxl dHNlbmNyeXB0Lm9yZzA8BgNVHR8ENTAz
-MDGgL6AthitodHRwOi8vY3JsLmlkZW50 cnVzdC5jb20vRFNUUk9PVENBWDNDUkwu
-Y3JsMB0GA1UdDgQWBBSoSmpjBH3duubR ObemRWXv86jsoTANBgkqhkiG9w0BAQsF
-AAOCAQEA3TPXEfNjWDjdGBX7CVW+dla5 cEilaUcne8IkCJLxWh9KEik3JHRRHGJo
-uM2VcGfl96S8TihRzZvoroed6ti6WqEB mtzw3Wodatg+VyOeph4EYpr/1wXKtx8/
-wApIvJSwtmVi4MFU5aMqrSDE6ea73Mj2 tcMyo5jMd6jmeWUHK8so/joWUoHOUgwu
-X4Po1QYz+3dszkDqMp4fklxBwXRsW10K XzPMTZ+sOPAveyxindmjkW8lGy+QsRlG
-PfZ+G6Z6h7mjem0Y+iWlkYcV4PIWL1iw Bi8saCbGS5jN2p8M+X+Q7UNKEkROb3N6
-KOqkqm57TH2H3eDJAkSnh6/DNFu0Qg==
------END CERTIFICATE-----
-	\end{lstlisting}
+\section*{Konfigurasi Supervisor}
+
+Supaya servis pada halaman \textit{login} dapat langsung berjalan, penulis menambahkan konfigurasi perangkat lunak Supervisor pada \texttt{/etc/supervisor/conf.d/app.conf} sepert pada Kode Sumber \ref{appconf}. 
+
+\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Isi Berkas app.conf},label=appconf, captionpos=b]
+command = /home/fourirakbar/flask-loginpage/flask-loginpageenv/bin/python /home/fourirakbar/flask-loginpage/flask-loginpageenv/bin/gunicorn -b 0.0.0.0:4000 app:app
+
+directory = /home/fourirakbar/flask-loginpage
+
+user = fourirakbar
+
+stdout_logfile = /home/fourirakbar/flask-loginpage/logs/app_stdout.log
+
+stderr_logfile = /home/fourirakbar/flask-loginpage/logs/app_stderr.log
+
+redirect_stderr = True
+autostart = True
+enviroment = PATH = "/home/fourirakbar/flask-loginpage/flask-loginpageenv/bin", 
+
+PRODUCTION=1
+\end{lstlisting}
+
+\section*{Konfigurasi Supervisor}
+
+Supaya web \textit{server} untuk halaman \textit{login} dapat dijalankan, penulis menambahkan konfigurasi perangkat lunak Nginx pada \texttt{/etc/nginx/sites-available/app} seperti pada Kode Sumber \ref{nginxapp}.
+
+\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption={Isi Berkas app},label=nginxapp, captionpos=b]
+server {
+	listen 80;
+	server_name 10.151.36.173;
+	
+	add_header X-Frame-Options SAMEORIGIN;
+	add_header X-Content-Type-Options nosniff;
+	add_header X-XSS-Protection "1; mode=block";
+	
+	access_log /home/fourirakbar/flask-loginpage/logs/app_access.log;
+	location / {
+		proxy_pass       http://127.0.0.1:4000;
+		proxy_set_header Host        $host;
+		proxy_set_header X-Real-IP   $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	}
+	location ^~ /static/  {
+	include     /etc/nginx/mime.types;
+	alias       /home/fourirakbar/flask-loginpage/static/;
+	}  
+}
+\end{lstlisting}
