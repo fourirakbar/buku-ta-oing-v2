@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  29 MAY 2018 14:33
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  29 MAY 2018 15:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1341,47 +1341,44 @@ Overfull \hbox (3.65033pt too wide) in paragraph at lines 1--1
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[8]
+Underfull \vbox (badness 5008) has occurred while \output is active []
 
- [8]
-[9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10])
-(./chapters/0-Kata_Pengantar.tex [11] [12
-
-]
+ [9])
+(./chapters/0-Kata_Pengantar.tex [10]
 LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/bx/n' will be
 (Font)              scaled to size 11.27493pt on input line 1.
 File: img/bismillah.png Graphic file (type QTm)
- <use  "img/bismillah.png" > [13])
-[14] (./main.toc [15
+ <use  "img/bismillah.png" > [11
+
+])
+[12] (./main.toc [13
 
 
-] [16] [17])
+] [14] [15])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [18] (./main.lot)
+ [16] (./main.lot)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
- [19
+ [17
 
-] [20
+] [18
 
 ] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
 
-[21] [22
+[19] [20
 
 ] (./main.lol)
 \tf@lol=\write7
 \openout7 = `main.lol'.
 
- [23] [24
+ [21] [22
 
 ] (./chapters/1-Pendahuluan.tex
 BAB I.
@@ -1394,17 +1391,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] [3] [4]) (./chapters/2-Tinjauan_Pustaka.tex [5] [6
+[2] [3] [4] [5]) (./chapters/2-Tinjauan_Pustaka.tex [6]
+BAB II.
+[7
 
 ]
-BAB II.
-[7]
 LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/bx/it' will be
 (Font)              scaled to size 11.27493pt on input line 16.
  [8]
 LaTeX Font Info:    Font shape `EU1/CourierNew(0)/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 20.
- [9] [10] [11] [12] [13]
+ [9] [10] [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+[13]
 
 LaTeX Warning: Citation `bab2-docker-what-is-docker' on page 14 undefined on in
 put line 60.
@@ -1967,4 +1968,4 @@ Here is how much of TeX's memory you used:
  1328 hyphenation exceptions out of 8191
  55i,12n,63p,10396b,1835s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (119 pages).
+Output written on main.pdf (117 pages).
