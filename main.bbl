@@ -34,4 +34,10 @@
   2018].
 \BIBentrySTDinterwordspacing
 
+\bibitem{bab2-gunicorn}
+D.~I. Fernandez., J.~M. Atencia., O.~Q. Gamboa., dan O.~E.~H. Bedoya., ``Design
+  and {Implementation} of an "{Web API}" for the {Automatic} {Translation}
+  {Colombia's} {Language} {Pairs:} {Spanish-Wayuunaiki} {Case},'' \emph{IEEE
+  Transactions on Cloud Computing}, Jul. 2013.
+
 \end{thebibliography}
