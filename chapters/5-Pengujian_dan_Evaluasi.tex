@@ -40,7 +40,7 @@
                 4 & Komputer Penguji 2 & 192.168.99.101 \\ \hline
                 5 & Komputer Penguji 3 & 192.168.99.102 \\ \hline
 			\end{longtable}
-    
+   
 \section{Skenario Uji Coba} \label{skenarioujicoba}
 	Uji coba akan dilakukan untuk mengetahui keberhasilan sistem yang telah dibangun. Skenario pengujian dibedakan menjadi 2 bagian, yaitu:
     \begin{itemize}
@@ -50,8 +50,88 @@
     	Pengujian ini untuk menguji ketahanan sistem terhadap sejumlah permintaan ke aplikasi secara bersamaan. Pengujian dilakukan dengan melakukan \textit{benchmark} pada sistem.
     \end{itemize}
     
-    \subsection{Skenario Uji Coba Fungsionalitas}
-    	Uji fungsionalitas dibagi menjadi 2, yaitu uji mengelola aplikasi berbasis \textit{docker} dan uji fungsionalitas menu aplikasi Dasbor.
+\subsection{Skenario Uji Coba Fungsionalitas}
+Uji coba fungsionalitas dilakukan dengan cara menjalankan sistem yang telah dibuat, dan melakukan pengujian terhadap fitur yang telah dibuat. Uji coba fungsionalitas akan berfungsi untuk memastikan sistem sudah memenuhi kebutuhan yang tertera pada Bab 3, yaitu meliputi:
+
+\begin{enumerate}
+\item Pengujian \textit{client} dapat \textit{login} ke dalam sistem.
+\item Pengujian \textit{client} dapat mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker host}.
+\item Pengujian \textit{docker host} dapat menerima permintaan penyediaan kontainer \textit{docker}.
+\item Pengujian \textit{client} dapat mengakses internet.
+\item Pengujian fungsionalitas menu aplikasi halaman administrator.
+\end{enumerate}
+
+\subsubsection{Uji \textit{Client} dapat \textit{Login} ke Dalam Sistem}
+Pengujian ini dilakukan untuk mengetahui apakah \textit{client} sudah bisa \textit{login} ke dalam sistem saat \textit{client} akan mengakses internet. Pengujian menggunakan satu buah \textit{server} yang berperan sebagai \textit{server login} untuk \textit{client} dan menggunakan enam buah Komputer Penguji yang dijalankan dengan VirtualBox berperan sebagai \textit{client}. Pengujian dilakukan oleh \textit{client} dalam keadaan belum \textit{login} ke dalam sistem. Ketika \textit{client} mencoba membuka sebuah web, maka \textit{client} akan diarahkan ke \textit{server login} terlebih dahulu.
+
+Alamat / IP \textit{address} dari \textit{server login} yang digunakan adalah \texttt{10.151.36.173}. Setelah \textit{client} diarahkan ke \textit{server login}, selanjutnya adalah \textit{client} harus memasukkan \textit{input username} dan \textit{password}. Daftar uji fungsionalitas \textit{client} dapat \textit{login} ke dalam sistem dijelaskan pada Tabel \ref{ujicoba1}
+
+\begin{longtable}{|p{0.05\textwidth}|p{0.38\textwidth}|p{0.39\textwidth}|}					\caption{Skenario Uji \textit{Client} dapat \textit{Login} ke Dalam Sistem} \label{ujicoba1} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endfirsthead
+	\caption[]{Skenario Uji Mengelola Aplikasi Berbasis Docker} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endhead
+	\endfoot
+	\endlastfoot
+	
+	1 & \textit{Client} membuka sebuah website ketika belum \textit{login} ke dalam sistem. & \textit{Traffic} dari \textit{client} akan diarahkan ke \textit{server login} dan \textit{client} dapat membuka halaman \textit{login} secara otomatis.\\ \hline
+	2 & \textit{Client} melakukan \textit{login} ke \textit{server login}. & \textit{Client} berhasil melakukan \textit{login} dengan menggunakan \textit{username} dan \textit{password} yang sudah ditentukan.\\ \hline
+\end{longtable}
+
+\subsubsection{Uji \textit{Client} dapat Mengirimkan Permintaan Penyediaan Kontainer \textit{Docker} ke \textit{Docker Host}}
+Pengujian ini dilakukan untuk memberikan perintah kepada \textit{docker host} untuk menyediakan kontainer \textit{docker} ke \textit{client} yang baru saja berhasil \textit{login} ke dalam sistem. Pengujian menggunakan satu buah \textit{server} yang berperan sebagai \textit{server login} yang akan mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker host}.
+
+Pengujian ini dapat dilakukan setelah \textit{client} berhasil memasukkan \textit{input username} dan \textit{password} ke sistem, dan berhasil \textit{login} ke dalam sistem. Setelah itu sistem akan mengirimkan permintaan penyediaan kontiner \textit{docker} ke \textit{docker host}. Daftar uji fungsionalitas \textit{client} dapat mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker} host dijelaskan pada Tabel \ref{ujicoba2}
+
+\begin{longtable}{|p{0.05\textwidth}|p{0.38\textwidth}|p{0.39\textwidth}|}					\caption{Skenario Uji \textit{Client} dapat \textit{Login} Mengirimkan Permintaan Penyediaan Kontainer \textit{Docker}} \label{ujicoba2} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endfirsthead
+	\caption[]{Skenario Uji Mengelola Aplikasi Berbasis Docker} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endhead
+	\endfoot
+	\endlastfoot
+	
+	1 & \textit{Client} mengirimkan permintaan penyediaan kontainer \textit{docker} kepada \textit{docker host}. & \textit{Client} berhasil mengirimakn permintaan penyediaan kontainer \textit{docker} kepada \textit{docker host}.\\ \hline
+\end{longtable}
+
+\subsubsection{Uji \textit{Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit{Docker}}
+Pengujian ini dilakukan untuk menerima perintah permintaan penyediaan kontainer \textit{docker} pada \textit{docker host}. Pengujian menggunakan satu buah \textit{server} yang berperan sebagai \textit{docker host} yang akan menerima permintaan penyediaan kontainer \textit{docker}.
+
+Alamat dari \textit{server} yang berperan sebagai \textit{docker host} adalah \texttt{10.151.36.134}. Setelah berhasil menerima permintaan penyediaan kontainer \textit{docker}, selanjutnya adalah sistem akan menuliskan \textit{username}, IP \textit{address}, dan \textit{port} dari \textit{client} yang telah mengirimkan permintaan penyediaan kontainer \textit{docker} ke basis data yang sudah tersedia.
+
+Setelah selesai menuliskan \textit{username}, IP \textit{address}, dan \textit{port} dari \textit{client} yang telah mengirimkan permintaan penyediaan kontainer \textit{docker} ke basis data yang sudah tersedia, selanjutnya adalah membuat satu buah kontainer \textit{docker} dengan nama kontainer \texttt{[IP-Username-Port]}, dimana \texttt{IP} adalah IP \textit{address} dari \textit{client}, \texttt{Username} adalah \textit{username} ketika \textit{client} memasukkan \textit{inputan} kepada sistem saat akan \textit{login}, dan \texttt{Port} adalah sebuah \textit{port} khusus untuk \textit{client} tersebut.
+
+Terakhir, pengujian yang dilakukan adalah membuat sebuah \textit{directory} pada \textit{docker host} yang berfungsi untuk menyimpan data \textit{log traffic} dari \textit{client}. \textit{Directory} ini akan dibuat pada \texttt{/container-data/[Tanggal]/[IP-USERNAME-PORT]}, dimana \texttt{Tanggal} akan sesuai dengan tanggal ketika \textit{client} berhasil \textit{login} ke dalam sistem, dan \texttt{[IP-USERNAME-PORT]} sesuai dengan yang sudah dituliskan pada basis data.
+
+Daftar uji fungsionalitas \textit{docker host} dapat menerima permintaan penyediaan kontainer \textit{docker} dijelaskan pada Tabel \ref{ujicoba3}.
+
+\begin{longtable}{|p{0.05\textwidth}|p{0.38\textwidth}|p{0.39\textwidth}|}					\caption{Skenario Uji \textit{Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit{Docker}} \label{ujicoba3} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endfirsthead
+	\caption[]{Skenario Uji Mengelola Aplikasi Berbasis Docker} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endhead
+	\endfoot
+	\endlastfoot
+	
+	1 & Sistem menerima permintaan penyediaan kontainer \textit{docker} dari \textit{client} pada \textit{docker host}. & Sistem berhasil menerima permintaan penyediaan kontainer \textit{docker} dari \textit{client} dan menuliskannya pada basis data pada \textit{docker host}.\\ \hline
+	2 & Sistem membuat satu buah kontainer \textit{docker} untuk \textit{client} \textit{Docker host}. & Sistem berhasil membuat satu buah kontainer \textit{docker} dengan nama sesuai yang ditulis pada basis data untuk \textit{client} yang berisi Mitmproxy pada \textit{docker host}.\\ \hline
+	3 & Sistem membuat sebuah \textit{directory} pada \textit{docker host} sesuai dengan tanggal dan informasi dari \textit{client}. & Sistem berhasil membuat sebuah \textit{directory} pada \textit{docker host} sesuai dengan tanggal dan informasi dari \textit{client} yang sudah dituliskan pada basis data.\\ \hline
+\end{longtable}
+
+\subsubsection{Uji \textit{Client} dapat Mengakses Internet}
+
+\subsubsection{Uji Fungsionalitas Menu Aplikasi Halaman Administrator}
+
+
         
         \subsubsection{Uji Mengelola Aplikasi Berbasis Docker} \label{ujimengelolaaplikasiberbasisdocker}
         	Pengujian ini dilakukan untuk mengetahui apakah sistem sudah bisa menyimpan dan mengelola data \textit{docker image} dari aplikasi yang dimasukkan oleh pengembang. Pengujian menggunakan VPS yang berperan sebagai \textit{docker} klien. Pengujian dilakukan dengan memasukkan data \textit{docker image} ke \textit{server docker registry} yang sudah disediakan. Dengan menggunakan sebuah komputer lain yang digunakan untuk membuat aplikasi web berbasis \textit{docker}, dari sana aplikasi tersebut akan ditaruh ke \textit{server docker registry}. \\
