@@ -1,7 +1,8 @@
 \chapter{PENGUJIAN DAN EVALUASI}
-
+	Pada bab ini akan dibahas uji coba dan evaluasi dari sistem yang telah dibuat. Sistem akan diuji coba fungsionalitas dan performanya dengan menjalankan skenario uji coba yang sudah ditentukan. Uji coba dilakukan untuk mengetahui hasil dari sistem ini sehingga dapat menjawab rumusan masalah pada tugas akhir ini.    
+	
 \section{Lingkungan Uji Coba}
-	Lingkungan pengujian menggunakan komponen-komponen yang terdiri dari: satu \textit{server load balancer}, satu \textit{server master host}, satu \textit{server controller}, satu \textit{server docker registry}, dan enam komputer penguji. Semua \textit{server} menggunakan Virtual Private Server dari DigitalOcean. Lalu, untuk komputer penguji menggunakan lima buah desktop dan satu buah VPS sebagai \textit{docker} klien yang digunakan untuk membuat \textit{docker image}. Pengujian dilakukan di Laboratoriom Pemrograman Jurusan Teknik Informatika ITS. \\
+	Lingkungan pengujian menggunakan komponen-komponen yang terdiri dari: satu \textit{server docker host}, satu \textit{server login}, dan tiga komputer penguji.Semua komputer penguji menggunakan dua buah desktop dengan sistem operasi Ubuntu 16.04 dan satu buah desktop dengan sistem operasi Windows 7. Pengujian dilakukan di Laboratoriom Arsitektur dan Jaringan Komputer Jurusan Teknik Informatika ITS. \\
     \indent Spesifikasi untuk setiap komponen yang digunakan ditunjukkan pada Tabel \ref{spesifikasikomponen}.
     \begin{longtable}{|p{0.05\textwidth}|p{0.18\textwidth}|p{0.33\textwidth}|p{0.33\textwidth}|}					\caption{Spesifikasi Komponen} \label{spesifikasikomponen} \\
         \hline
@@ -14,31 +15,31 @@
         \endfoot
         \endlastfoot
 
-    	1 & Load balancer & 2 core processor, 4GB RAM, 20GB SSD & Ubuntu 14.04.5 LTS, HAProxy, Python 2.7 \\ \hline
-        2 & Master host & 8 core processor, 16GB RAM, 20GB SSD & Ubuntu 14.04.5 LTS, Docker 17.03.0-ce, Python 2.7 \\ \hline
-        3 & Controller & 2 core processor, 4GB RAM, 20GB SSD & Ubuntu 14.04.5 LTS, Redis, MySQL, Python 2.7 \\ \hline
-        4 & Docker registry & 1 core processor, 512MB RAM, 20GB SSD & Ubuntu 14.04.5 LTS, Docker 17.03.0-ce, Python 2.7 \\ \hline
-        5 & Komputer penguji & Processor Core2Duo E7300, 2GB RAM & Windows 8, JMeter 3.2 \\ \hline
-        6 & Docker klien & 1 core processor, 1GB RAM, 20GB SSD & Ubuntu 16.04 LTS, Docker 17.03.0-ce \\ \hline
+    	1 & Docker Host & 4 core processor, 8GB RAM, 500GB HDD & Ubuntu 16.04.5 LTS, Docker 1.13.1, Python 3.5.2, MySQL 5.7.18, Flask 1.0.2, Iptables 1.6. \\ \hline
+        2 & Server Login & 2 core processor, 2GB RAM, 20GB HDD & Ubuntu 16.04.5 LTS,  Python 3.5.2, Flask 1.0.2, Supervisor 3.2, Nginx 1.10.3, Gunicorn 19.9.1. \\ \hline
+        3 & Komputer Penguji 1 & Processor Core2Duo E7300, 2GB RAM & Ubuntu 14.04 LTS, Firefox Quantum 60.0.1 \\ \hline
+        4 & Komputer Penguji 2 & Processor Core2Duo E7300, 2GB RAM & Ubuntu 14.04 LTS, Firefox Quantum 60.0.1 \\ \hline
+        5 & Komputer Penguji 3 & Processor Core2Duo E7300, 2GB RAM & Windows 7, Firefox Quantum 60.0.1 \\ \hline
     \end{longtable}
     
-    \indent Untuk akses ke masing-masing komponen, digunakan IP publik yang disediakan untuk masing-masing komponen tersebut. Selain menggunakan IP, ada sebagian \textit{server} yang bisa diakses melalui domain. Detailnya ditunjukkan pada Tabel \ref{ipdomainserver}.
-    			\begin{longtable}{|p{0.05\textwidth}|p{0.33\textwidth}|p{0.44\textwidth}|}					\caption{IP dan Domain Server} \label{ipdomainserver} \\
-					\hline
-					\textbf{No} & \textbf{Server} & \textbf{IP dan Domain} \\ \hline
-					\endfirsthead
-					\caption[]{IP dan Domain Server} \\
-					\hline
-					\textbf{No} & \textbf{Server} & \textbf{IP dan Domain} \\ \hline
-					\endhead
-					\endfoot
-					\endlastfoot
-					
-                    1 & Load balancer & 128.199.160.188 \\ \hline
-                    2 & Master host & 128.199.182.29 \\ \hline
-                    3 & Controller & 128.199.250.137 http://controller.nota-no.life \\ \hline
-                    4 & Docker registry & 139.59.97.244 https://registry.nota-no.life \\ \hline
-				\end{longtable}
+    \indent Untuk akses ke masing-masing komponen, digunakan IP private yang disediakan untuk masing-masing komponen tersebut. Detailnya ditunjukkan pada Tabel \ref{ipdomainserver}.
+   			\begin{longtable}{|p{0.05\textwidth}|p{0.33\textwidth}|p{0.44\textwidth}|}					\caption{IP dan Domain Server} \label{ipdomainserver} \\
+				\hline
+				\textbf{No} & \textbf{Server} & \textbf{IP dan Domain} \\ \hline
+				\endfirsthead
+				\caption[]{IP dan Domain Server} \\
+				\hline
+				\textbf{No} & \textbf{Server} & \textbf{IP Address} \\ \hline
+				\endhead
+				\endfoot
+				\endlastfoot
+				
+                1 & Docker Host & 10.151.36.134 \\ \hline
+                2 & Server Login & 10.151.36.173 \\ \hline
+                3 & Komputer Penguji 1 & 192.168.99.100 \\ \hline
+                4 & Komputer Penguji 2 & 192.168.99.101 \\ \hline
+                5 & Komputer Penguji 3 & 192.168.99.102 \\ \hline
+			\end{longtable}
     
 \section{Skenario Uji Coba} \label{skenarioujicoba}
 	Uji coba akan dilakukan untuk mengetahui keberhasilan sistem yang telah dibangun. Skenario pengujian dibedakan menjadi 2 bagian, yaitu:

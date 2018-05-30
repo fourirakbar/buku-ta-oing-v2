@@ -40,6 +40,12 @@ D.~I. Fernandez., J.~M. Atencia., O.~Q. Gamboa., dan O.~E.~H. Bedoya., ``Design
   {Colombia's} {Language} {Pairs:} {Spanish-Wayuunaiki} {Case},'' \emph{IEEE
   Transactions on Cloud Computing}, Jul. 2013.
 
+\bibitem{bab2-supervisor}
+\BIBentryALTinterwordspacing
+``Supervisor: {A} {Process} {Control} {System},'' 29 Mei 2018. [Daring].
+  Tersedia pada: \url{https://http://supervisord.org/}. [Diakses: 29 Mei 2018].
+\BIBentrySTDinterwordspacing
+
 \bibitem{bab2-nginx}
 X.~Chi, B.~Liu, Q.~Niu, dan Q.~Wu, ``Web {Load} {Balance} and {Cache}
   {Optimization} {Design} {Based} {Nginx} under {High}-{Concurrency}

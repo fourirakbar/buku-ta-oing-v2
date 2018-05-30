@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  30 MAY 2018 14:05
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  30 MAY 2018 15:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1589,17 +1589,12 @@ File: images/bab4/userrekap.png Graphic file (type QTm)
 ]
 BAB V.
 
-Overfull \hbox (17.76279pt too wide) in alignment at lines 6--9
+Overfull \hbox (17.76279pt too wide) in alignment at lines 7--10
  [] [] [] [] 
  []
 
 
-Overfull \hbox (17.76279pt too wide) in alignment at lines 9--13
- [] [] [] [] 
- []
-
-
-Overfull \hbox (17.76279pt too wide) in alignment at lines 13--14
+Overfull \hbox (17.76279pt too wide) in alignment at lines 10--14
  [] [] [] [] 
  []
 
@@ -1609,7 +1604,12 @@ Overfull \hbox (17.76279pt too wide) in alignment at lines 14--15
  []
 
 
-Overfull \hbox (17.76279pt too wide) in alignment at lines 15--23
+Overfull \hbox (17.76279pt too wide) in alignment at lines 15--16
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (17.76279pt too wide) in alignment at lines 16--23
  [] [] [] [] 
  []
 
@@ -1620,143 +1620,143 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [67]
 File: Images/C-5/jumlahcontainer.png Graphic file (type QTm)
  <use  "Images/C-5/jumlahcontainer.png" > [68]
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 235--235
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 236--236
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(1,1,0)| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 235--235
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 236--236
 []|\EU1/TimesNewRoman(0)/m/n/10.95 34.167| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 235--235
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 236--236
 []|\EU1/TimesNewRoman(0)/m/n/10.95 43.286| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 235--235
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 236--236
 []|\EU1/TimesNewRoman(0)/m/n/10.95 48.143| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 235--235
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 236--236
 []|\EU1/TimesNewRoman(0)/m/n/10.95 63.857| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 235--235
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 236--236
 []|\EU1/TimesNewRoman(0)/m/n/10.95 62.286| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 236--236
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 237--237
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(2,1,0)| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 236--236
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 237--237
 []|\EU1/TimesNewRoman(0)/m/n/10.95 27.429| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 236--236
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 237--237
 []|\EU1/TimesNewRoman(0)/m/n/10.95 38.571| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 236--236
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 237--237
 []|\EU1/TimesNewRoman(0)/m/n/10.95 44.143| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 236--236
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 237--237
 []|\EU1/TimesNewRoman(0)/m/n/10.95 42.143| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 236--236
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 237--237
 []|\EU1/TimesNewRoman(0)/m/n/10.95 57.857| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 237--237
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 238--238
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(3,1,0)| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 237--237
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 238--238
 []|\EU1/TimesNewRoman(0)/m/n/10.95 32.429| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 237--237
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 238--238
 []|\EU1/TimesNewRoman(0)/m/n/10.95 36.000| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 237--237
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 238--238
 []|\EU1/TimesNewRoman(0)/m/n/10.95 38.429| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 237--237
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 238--238
 []|\EU1/TimesNewRoman(0)/m/n/10.95 41.571| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 237--237
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 238--238
 []|\EU1/TimesNewRoman(0)/m/n/10.95 43.857| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 238--238
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 239--239
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(4,1,0)| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 238--238
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 239--239
 []|\EU1/TimesNewRoman(0)/m/n/10.95 24.857| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 238--238
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 239--239
 []|\EU1/TimesNewRoman(0)/m/n/10.95 31.571| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 238--238
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 239--239
 []|\EU1/TimesNewRoman(0)/m/n/10.95 34.429| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 238--238
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 239--239
 []|\EU1/TimesNewRoman(0)/m/n/10.95 42.143| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 238--238
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 239--239
 []|\EU1/TimesNewRoman(0)/m/n/10.95 52.714| 
  []
 
 File: Images/C-5/runningtime.png Graphic file (type QTm)
 <use  "Images/C-5/runningtime.png" > [69]
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 263--263
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 264--264
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(1,1,0)| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 264--264
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 265--265
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(2,1,0)| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 265--265
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 266--266
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(3,1,0)| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 266--266
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 267--267
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(4,1,0)| 
  []
 
@@ -1765,138 +1765,138 @@ File: Images/C-5/cpuusage.png Graphic file (type QTm)
 Underfull \vbox (badness 2913) has occurred while \output is active []
 
  [70]
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 293--293
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 294--294
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(1,1,0)| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 293--293
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 294--294
 []|\EU1/TimesNewRoman(0)/m/n/10.95 130.79| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 293--293
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 294--294
 []|\EU1/TimesNewRoman(0)/m/n/10.95 120.14| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 293--293
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 294--294
 []|\EU1/TimesNewRoman(0)/m/n/10.95 157.73| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 294--294
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 295--295
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(2,1,0)| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 294--294
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 295--295
 []|\EU1/TimesNewRoman(0)/m/n/10.95 123.47| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 294--294
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 295--295
 []|\EU1/TimesNewRoman(0)/m/n/10.95 156.64| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 294--294
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 295--295
 []|\EU1/TimesNewRoman(0)/m/n/10.95 158.33| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 295--295
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 296--296
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(3,1,0)| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 295--295
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 296--296
 []|\EU1/TimesNewRoman(0)/m/n/10.95 125.56| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 295--295
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 296--296
 []|\EU1/TimesNewRoman(0)/m/n/10.95 144.42| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 295--295
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 296--296
 []|\EU1/TimesNewRoman(0)/m/n/10.95 152.14| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 296--296
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 297--297
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(4,1,0)| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 296--296
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 297--297
 []|\EU1/TimesNewRoman(0)/m/n/10.95 117.39| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 296--296
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 297--297
 []|\EU1/TimesNewRoman(0)/m/n/10.95 149.76| 
  []
 
 
-Overfull \hbox (1.55699pt too wide) in paragraph at lines 296--296
+Overfull \hbox (1.55699pt too wide) in paragraph at lines 297--297
 []|\EU1/TimesNewRoman(0)/m/n/10.95 158.71| 
  []
 
 File: Images/C-5/memoryusage.png Graphic file (type QTm)
 <use  "Images/C-5/memoryusage.png" > [71]
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 323--323
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 324--324
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(1,1,0)| 
  []
 
 
-Overfull \hbox (5.29457pt too wide) in paragraph at lines 323--323
+Overfull \hbox (5.29457pt too wide) in paragraph at lines 324--324
 []|\EU1/TimesNewRoman(0)/m/n/10.95 12.85%| 
  []
 
 
-Overfull \hbox (5.29457pt too wide) in paragraph at lines 323--323
+Overfull \hbox (5.29457pt too wide) in paragraph at lines 324--324
 []|\EU1/TimesNewRoman(0)/m/n/10.95 12.54%| 
  []
 
 
-Overfull \hbox (5.29457pt too wide) in paragraph at lines 323--323
+Overfull \hbox (5.29457pt too wide) in paragraph at lines 324--324
 []|\EU1/TimesNewRoman(0)/m/n/10.95 13.38%| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 324--324
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 325--325
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(2,1,0)| 
  []
 
 
-Overfull \hbox (5.29457pt too wide) in paragraph at lines 324--324
+Overfull \hbox (5.29457pt too wide) in paragraph at lines 325--325
 []|\EU1/TimesNewRoman(0)/m/n/10.95 10.68%| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 325--325
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 326--326
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(3,1,0)| 
  []
 
 
-Overfull \hbox (5.29457pt too wide) in paragraph at lines 325--325
+Overfull \hbox (5.29457pt too wide) in paragraph at lines 326--326
 []|\EU1/TimesNewRoman(0)/m/n/10.95 10.02%| 
  []
 
 
-Overfull \hbox (5.29457pt too wide) in paragraph at lines 325--325
+Overfull \hbox (5.29457pt too wide) in paragraph at lines 326--326
 []|\EU1/TimesNewRoman(0)/m/n/10.95 13.22%| 
  []
 
 
-Overfull \hbox (5.29457pt too wide) in paragraph at lines 325--325
+Overfull \hbox (5.29457pt too wide) in paragraph at lines 326--326
 []|\EU1/TimesNewRoman(0)/m/n/10.95 12.24%| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 326--326
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 327--327
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(4,1,0)| 
  []
 
@@ -1934,10 +1934,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 27777 strings out of 493638
- 484756 string characters out of 6146796
- 597376 words of memory out of 5000000
- 30805 multiletter control sequences out of 15000+600000
+ 27778 strings out of 493638
+ 484773 string characters out of 6146796
+ 597414 words of memory out of 5000000
+ 30806 multiletter control sequences out of 15000+600000
  7051 words of font info for 63 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,12n,63p,10396b,1746s stack positions out of 5000i,500n,10000p,200000b,80000s
