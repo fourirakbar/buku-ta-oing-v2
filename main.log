@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  30 MAY 2018 00:24
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  30 MAY 2018 14:05
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -586,84 +586,84 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
-Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
-Package tocloft Info: The document has chapter divisions on input line 44.
-\cftparskip=\skip67
-\cftbeforetoctitleskip=\skip68
-\cftaftertoctitleskip=\skip69
-\cftbeforepartskip=\skip70
-\cftpartnumwidth=\skip71
-\cftpartindent=\skip72
-\cftbeforechapskip=\skip73
-\cftchapindent=\skip74
-\cftchapnumwidth=\skip75
-\cftbeforesecskip=\skip76
-\cftsecindent=\skip77
-\cftsecnumwidth=\skip78
-\cftbeforesubsecskip=\skip79
-\cftsubsecindent=\skip80
-\cftsubsecnumwidth=\skip81
-\cftbeforesubsubsecskip=\skip82
-\cftsubsubsecindent=\skip83
-\cftsubsubsecnumwidth=\skip84
-\cftbeforeparaskip=\skip85
-\cftparaindent=\skip86
-\cftparanumwidth=\skip87
-\cftbeforesubparaskip=\skip88
-\cftsubparaindent=\skip89
-\cftsubparanumwidth=\skip90
-\cftbeforeloftitleskip=\skip91
-\cftafterloftitleskip=\skip92
-\cftbeforefigskip=\skip93
-\cftfigindent=\skip94
-\cftfignumwidth=\skip95
-\c@lofdepth=\count141
-\c@lotdepth=\count142
-\cftbeforelottitleskip=\skip96
-\cftafterlottitleskip=\skip97
-\cftbeforetabskip=\skip98
-\cfttabindent=\skip99
-\cfttabnumwidth=\skip100
-)
 (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip101
+\labelindent=\skip67
 \enit@outerparindent=\dimen158
 \enit@toks=\toks19
 \enit@inbox=\box51
-\enitdp@description=\count143
+\enitdp@description=\count141
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen159
 \extrarowheight=\dimen160
 \NC@list=\toks20
-\extratabsurround=\skip102
-\backup@length=\skip103
+\extratabsurround=\skip68
+\backup@length=\skip69
 )
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count144
+\etb@tempcnta=\count142
 )
-\c@magicrownumbers=\count145
+\c@magicrownumbers=\count143
 
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip104
-\f@ncyO@elh=\skip105
-\f@ncyO@erh=\skip106
-\f@ncyO@olh=\skip107
-\f@ncyO@orh=\skip108
-\f@ncyO@elf=\skip109
-\f@ncyO@erf=\skip110
-\f@ncyO@olf=\skip111
-\f@ncyO@orf=\skip112
+\fancy@headwidth=\skip70
+\f@ncyO@elh=\skip71
+\f@ncyO@erh=\skip72
+\f@ncyO@olh=\skip73
+\f@ncyO@orh=\skip74
+\f@ncyO@elf=\skip75
+\f@ncyO@erf=\skip76
+\f@ncyO@olf=\skip77
+\f@ncyO@orf=\skip78
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 44.
+\cftparskip=\skip79
+\cftbeforetoctitleskip=\skip80
+\cftaftertoctitleskip=\skip81
+\cftbeforepartskip=\skip82
+\cftpartnumwidth=\skip83
+\cftpartindent=\skip84
+\cftbeforechapskip=\skip85
+\cftchapindent=\skip86
+\cftchapnumwidth=\skip87
+\cftbeforesecskip=\skip88
+\cftsecindent=\skip89
+\cftsecnumwidth=\skip90
+\cftbeforesubsecskip=\skip91
+\cftsubsecindent=\skip92
+\cftsubsecnumwidth=\skip93
+\cftbeforesubsubsecskip=\skip94
+\cftsubsubsecindent=\skip95
+\cftsubsubsecnumwidth=\skip96
+\cftbeforeparaskip=\skip97
+\cftparaindent=\skip98
+\cftparanumwidth=\skip99
+\cftbeforesubparaskip=\skip100
+\cftsubparaindent=\skip101
+\cftsubparanumwidth=\skip102
+\cftbeforeloftitleskip=\skip103
+\cftafterloftitleskip=\skip104
+\cftbeforefigskip=\skip105
+\cftfigindent=\skip106
+\cftfignumwidth=\skip107
+\c@lofdepth=\count144
+\c@lotdepth=\count145
+\cftbeforelottitleskip=\skip108
+\cftafterlottitleskip=\skip109
+\cftbeforetabskip=\skip110
+\cfttabindent=\skip111
+\cfttabnumwidth=\skip112
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
@@ -1217,8 +1217,8 @@ LaTeX Info: Redefining \nameref on input line 13.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-File: img/sampul.png Graphic file (type QTm)
- <use  "img/sampul.png" >
+File: images/cover/sampul.png Graphic file (type QTm)
+ <use  "images/cover/sampul.png" >
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
@@ -1266,8 +1266,8 @@ LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/m/it' will be
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-File: img/sampulWhite.png Graphic file (type QTm)
- <use  "img/sampulWhite.png" > [1
+File: images/cover/sampulWhite.png Graphic file (type QTm)
+ <use  "images/cover/sampulWhite.png" > [1
 
 ] [2
 
@@ -1305,9 +1305,9 @@ File: img/sampulWhite.png Graphic file (type QTm)
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-File: img/sampulWhite.png Graphic file (type QTm)
- <use  "img/sampulWhite.png" >
-[3
+File: images/cover/sampulWhite.png Graphic file (type QTm)
+
+<use  "images/cover/sampulWhite.png" > [3
 
 ] [4
 
@@ -1321,7 +1321,8 @@ LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/bx/it' will be
 (Font)              scaled to size 11.22368pt on input line 17.
  [5] [6
 
-] (./chapters/0-Abstrak.tex
+]
+(./chapters/0-Abstrak.tex
 LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/m/n' will be
 (Font)              scaled to size 8.19995pt on input line 1.
 LaTeX Font Info:    Font shape `EU1/TimesNewRoman(0)/m/n' will be
@@ -1398,11 +1399,7 @@ BAB II.
 ] [8]
 LaTeX Font Info:    Font shape `EU1/CourierNew(0)/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 20.
- [9]
-
-LaTeX Warning: Citation `bab2-nginx' on page 10 undefined on input line 28.
-
-[10] [11]
+ [9] [10] [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
@@ -1523,10 +1520,10 @@ File: images/bab3/desainstream.png Graphic file (type QTm)
 
 ]
 BAB IV.
-[35] [36] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-[37]
+[35] [36]
+LaTeX Font Info:    Font shape `EU1/CourierNew(0)/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 46.
+ [37]
 File: images/bab4/halamanlogin.png Graphic file (type QTm)
  <use  "images/bab4/halamanlogin.png" > [38]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1586,8 +1583,10 @@ File: images/bab4/useraktif.png Graphic file (type QTm)
  <use  "images/bab4/useraktif.png" >
 File: images/bab4/userrekap.png Graphic file (type QTm)
 
-<use  "images/bab4/userrekap.png" > [53])
-(./chapters/5-Pengujian_dan_Evaluasi.tex [54]
+<use  "images/bab4/userrekap.png" >) (./chapters/5-Pengujian_dan_Evaluasi.tex
+[53] [54
+
+]
 BAB V.
 
 Overfull \hbox (17.76279pt too wide) in alignment at lines 6--9
@@ -1614,9 +1613,7 @@ Overfull \hbox (17.76279pt too wide) in alignment at lines 15--23
  [] [] [] [] 
  []
 
-[55
-
-] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65]
+[55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [66]
@@ -1909,13 +1906,13 @@ File: Images/C-5/errorratio.png Graphic file (type QTm)
 
 ]
 BAB VI.
-[75]) (./main.bbl [76]) (./chapters/7-Lampiran_A.tex [77
+[75]) (./main.bbl [76] [77
 
-] [78
-
-]
+]) (./chapters/7-Lampiran_A.tex [78]
 Lampiran A.
-[79] [80]) (./chapters/8-Lampiran_B.tex [81] [82
+[79
+
+] [80]) (./chapters/8-Lampiran_B.tex [81] [82
 
 ]
 Lampiran B.
@@ -1933,19 +1930,16 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 53.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 53.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 28126 strings out of 493638
- 488683 string characters out of 6146796
- 610518 words of memory out of 5000000
- 31151 multiletter control sequences out of 15000+600000
- 7043 words of font info for 62 fonts, out of 8000000 for 9000
+ 27777 strings out of 493638
+ 484756 string characters out of 6146796
+ 597376 words of memory out of 5000000
+ 30805 multiletter control sequences out of 15000+600000
+ 7051 words of font info for 63 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 55i,12n,63p,10396b,1784s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,63p,10396b,1746s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (109 pages).

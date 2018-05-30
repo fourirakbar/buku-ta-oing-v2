@@ -44,12 +44,10 @@
 
 % JSON
 \usepackage{listings}
-\renewcommand{\lstlistingname}{Kode Sumber}
 \usepackage{xcolor}
 
 \colorlet{punct}{red!60!black}
 \definecolor{background}{HTML}{EEEEEE}
-\definecolor{terminalbg}{HTML}{34495E}
 \definecolor{delim}{RGB}{20,105,176}
 \colorlet{numb}{magenta!60!black}
 
@@ -83,25 +81,9 @@
       {]}{{{\color{delim}{]}}}}{1},
 }
 
-\lstdefinelanguage{terminal}{
-	frame=single,
-	tabsize=2,
-    basicstyle=\scriptsize\color{white}\ttfamily,
-    numbers=none,fa
-    showstringspaces=false,
-    backgroundcolor=\color{terminalbg},
-    captionpos=b,
-}
-
-\lstdefinelanguage{python}{
-	frame=single,
-	tabsize=2,
-    basicstyle=\scriptsize\ttfamily,
-    numbers=none,
-    showstringspaces=false,
-    backgroundcolor=\color{background},
-    captionpos=b,
-}
+\usepackage[titles]{tocloft}
+\renewcommand{\cftchappresnum}{BAB }
+\cftsetindents{chapter}{0in}{0.575in}
 
 %Indent first paragraph
 \usepackage{indentfirst}
@@ -144,14 +126,7 @@
 	\pagestyle{main}
 	\pagenumbering{arabic}}
 \makeatother
-
-% Format baru - 11 Jun 2017
-% start - tambah kata 'BAB' pada daftar isi
-\usepackage[titles]{tocloft}
-\renewcommand{\cftchappresnum}{BAB }
-\cftsetindents{chapter}{0in}{0.575in}
-% end - tambah kata 'BAB' pada daftar isi
-
+    
 \RequirePackage[hypcap=true, font=footnotesize]{caption}
     \captionsetup{labelfont=bf, justification=centering, singlelinecheck=false, format=plain}
 
@@ -202,8 +177,7 @@
 	\renewcommand\contentsname{DAFTAR ISI}%
 	\renewcommand\listtablename{DAFTAR TABEL}%
 	\renewcommand\listfigurename{DAFTAR GAMBAR}%
-    \renewcommand\lstlistlistingname{DAFTAR KODE SUMBER}%
-	\renewcommand\chaptername{BAB}%
+	\renewcommand{\chaptername}{BAB}
 }%
 
 \renewcommand*\thechapter{\Roman{chapter}}
@@ -321,12 +295,12 @@
     \ifdef{\pembimbingDua}{
         Dosen Pembimbing II\\*%
     	\pembimbingDua
-    }{} \\*[10pt]%
-    DEPARTEMEN \MakeUppercase{\jurusan} \\*%
+    }{} \\*[32pt]%
+    JURUSAN \MakeUppercase{\jurusan} \\*%
     Fakultas \fakultas \\*%
     Institut Teknologi Sepuluh Nopember \\*%
     Surabaya, \tahun \\*%
-    \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{images/cover/sampul.png}}%
+    \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{img/sampul.png}}%
     \rmfamily%
     \normalsize%
     \restoregeometry%
@@ -345,11 +319,11 @@
         Dosen Pembimbing II\\*%
     	\pembimbingDua
     }{} \\*[10pt]%
-    DEPARTEMEN \MakeUppercase{\jurusan} \\*%
+    JURUSAN \MakeUppercase{\jurusan} \\*%
     Fakultas \fakultas \\*%
     Institut Teknologi Sepuluh Nopember \\*%
     Surabaya, \tahun \\*%
-    \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{images/cover/sampulWhite.png}}%
+    \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{img/sampulWhite.png}}%
     \rmfamily%
     \normalsize%
     \restoregeometry%
@@ -371,7 +345,7 @@
     Faculty of \fakultasEnglish \\*%
     Institut Teknologi Sepuluh Nopember \\*%
     Surabaya, \tahun \\*%
-    \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{images/cover/sampulWhite.png}}%
+    \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{img/sampulWhite.png}}%
     \rmfamily%
     \normalsize%
     \restoregeometry%
@@ -423,7 +397,7 @@
 \noindent\begin{tabular}{>{\bfseries}ll>{\bfseries}p{6.5cm}}
 Nama  & :& \MakeUppercase{\penulis} \\
 NRP & :& \nrp \\
-Jurusan  & :& \jurusan \fakultasSingkatan \\
+Departemen  & :& \jurusan \fakultasSingkatan \\
 Pembimbing I  & :& \pembimbingSatu
 \ifdef{\pembimbingDua}{\\Pembimbing II  & :& \pembimbingDua}{}
 \end{tabular}
