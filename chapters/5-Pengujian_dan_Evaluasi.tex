@@ -2,7 +2,7 @@
 	Pada bab ini akan dibahas uji coba dan evaluasi dari sistem yang telah dibuat. Sistem akan diuji coba fungsionalitas dan performanya dengan menjalankan skenario uji coba yang sudah ditentukan. Uji coba dilakukan untuk mengetahui hasil dari sistem ini sehingga dapat menjawab rumusan masalah pada tugas akhir ini.    
 	
 \section{Lingkungan Uji Coba}
-	Lingkungan pengujian menggunakan komponen-komponen yang terdiri dari: satu \textit{server docker host}, satu \textit{server login}, dan tiga komputer penguji.Semua komputer penguji menggunakan dua buah desktop dengan sistem operasi Ubuntu 16.04 dan satu buah desktop dengan sistem operasi Windows 7. Pengujian dilakukan di Laboratoriom Arsitektur dan Jaringan Komputer Jurusan Teknik Informatika ITS. \\
+	Lingkungan pengujian menggunakan komponen-komponen yang terdiri dari: satu \textit{server docker host}, satu \textit{server login}, dan tiga komputer penguji.Semua komputer penguji menggunakan tiga buah desktop dengan sistem operasi Ubuntu 16.04 dan tiga buah desktop dengan sistem operasi Windows 7. Pengujian dilakukan di Laboratoriom Arsitektur dan Jaringan Komputer Jurusan Teknik Informatika ITS. \\
     \indent Spesifikasi untuk setiap komponen yang digunakan ditunjukkan pada Tabel \ref{spesifikasikomponen}.
     \begin{longtable}{|p{0.05\textwidth}|p{0.18\textwidth}|p{0.33\textwidth}|p{0.33\textwidth}|}					\caption{Spesifikasi Komponen} \label{spesifikasikomponen} \\
         \hline
@@ -19,7 +19,10 @@
         2 & Server Login & 2 core processor, 2GB RAM, 20GB HDD & Ubuntu 16.04.5 LTS,  Python 3.5.2, Flask 1.0.2, Supervisor 3.2, Nginx 1.10.3, Gunicorn 19.9.1. \\ \hline
         3 & Komputer Penguji 1 & Processor Core2Duo E7300, 2GB RAM & Ubuntu 14.04 LTS, Firefox Quantum 60.0.1 \\ \hline
         4 & Komputer Penguji 2 & Processor Core2Duo E7300, 2GB RAM & Ubuntu 14.04 LTS, Firefox Quantum 60.0.1 \\ \hline
-        5 & Komputer Penguji 3 & Processor Core2Duo E7300, 2GB RAM & Windows 7, Firefox Quantum 60.0.1 \\ \hline
+        5 & Komputer Penguji 3 & Processor Core2Duo E7300, 2GB RAM & Ubuntu 14.04 LTS, Firefox Quantum 60.0.1 \\ \hline
+        6 & Komputer Penguji 4 & Processor Core2Duo E7300, 2GB RAM & Windows 7, Firefox Quantum 60.0.1 \\ \hline
+        7 & Komputer Penguji 5 & Processor Core2Duo E7300, 2GB RAM & Windows 7, Firefox Quantum 60.0.1 \\ \hline
+        8 & Komputer Penguji 6 & Processor Core2Duo E7300, 2GB RAM & Windows 7, Firefox Quantum 60.0.1 \\ \hline
     \end{longtable}
     
     \indent Untuk akses ke masing-masing komponen, digunakan IP private yang disediakan untuk masing-masing komponen tersebut. Detailnya ditunjukkan pada Tabel \ref{ipdomainserver}.
@@ -39,6 +42,9 @@
                 3 & Komputer Penguji 1 & 192.168.99.100 \\ \hline
                 4 & Komputer Penguji 2 & 192.168.99.101 \\ \hline
                 5 & Komputer Penguji 3 & 192.168.99.102 \\ \hline
+                6 & Komputer Penguji 4 & 192.168.99.103 \\ \hline
+                7 & Komputer Penguji 5 & 192.168.99.104 \\ \hline
+                8 & Komputer Penguji 6 & 192.168.99.105 \\ \hline
 			\end{longtable}
    
 \section{Skenario Uji Coba} \label{skenarioujicoba}
@@ -128,59 +134,58 @@ Daftar uji fungsionalitas \textit{docker host} dapat menerima permintaan penyedi
 \end{longtable}
 
 \subsubsection{Uji \textit{Client} dapat Mengakses Internet}
+Pengujian ini dilakukan untuk mengetahui apakah \textit{client} dapat mengakses internet setelah berhasil \textit{login} ke dalam sistem dan telah dibuatkan sebuah kontainer \textit{docker} pada \textit{docker host}. Pengujian menggunakan enam buah komputer penguji.
 
-\subsubsection{Uji Fungsionalitas Menu Aplikasi Halaman Administrator}
+Pengujian ini dapat dilakukan dengan membuka \textit{browser} dan membuka \textit{website} HTTP ataupun juga HTTPS. Daftar uji fungsionalitas \textit{client} dapat mengakses internet dijelaskan pada Tabel \ref{ujicoba4}.
+\begin{longtable}{|p{0.05\textwidth}|p{0.38\textwidth}|p{0.39\textwidth}|}					\caption{Skenario Uji \textit{Client} dapat Mengakses Internet} \label{ujicoba4} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endfirsthead
+	\caption[]{Skenario Uji Mengelola Aplikasi Berbasis Docker} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endhead
+	\endfoot
+	\endlastfoot
+	
+	1 & \textit{Client} membuka website HTTP maupun HTTPS dengan menggunakan \textit{browser}. & \textit{Client} dapat membuka website HTTP maupun HTTPS dengan menggunakan \textit{browser} yang ada.\\ \hline
+\end{longtable}
 
+\subsubsection{Uji Fungsionalitas Menu Aplikasi Halaman \textit{Administrator}}
+Aplikasi halaman \textit{administrator} digunakan untuk membaca \textit{log traffic} dari \textit{client} yang sedang mengakses internet dan juga untuk melihat rekap \textit{client} yang telah menggunakan internet pada hari-hari sebelumnya. Aplikasi halaman \textit{administraotr} terdiri dari dua bagian utama, yaitu halaman \textit{user list}, dan \textit{history}. Rancangan pengujian dan hasil yang diharapkan ditunjukkan dengan Tabel \ref{ujicoba5}.
 
-        
-        \subsubsection{Uji Mengelola Aplikasi Berbasis Docker} \label{ujimengelolaaplikasiberbasisdocker}
-        	Pengujian ini dilakukan untuk mengetahui apakah sistem sudah bisa menyimpan dan mengelola data \textit{docker image} dari aplikasi yang dimasukkan oleh pengembang. Pengujian menggunakan VPS yang berperan sebagai \textit{docker} klien. Pengujian dilakukan dengan memasukkan data \textit{docker image} ke \textit{server docker registry} yang sudah disediakan. Dengan menggunakan sebuah komputer lain yang digunakan untuk membuat aplikasi web berbasis \textit{docker}, dari sana aplikasi tersebut akan ditaruh ke \textit{server docker registry}. \\
-            \indent Alamat dari Docker \textit{registry} yang digunakan adalah \texttt{https://registry.nota-no.life}. Setelah berhasil melakukan login pada \textit{server docker registry}, selanjutnya adalah memasukkan \textit{image} baru tersebut. \textit{Image} yang dibuat adalah sebuah aplikasi web berbasis PHP 7 dengan \textit{web server} Apache. Aplikasi web tersebut menyediakan sebuah halaman yang berisi sebuah teks yang dibuat melalui pemanggilan fungsi PHP. \\
-            \indent Pertama kali \textit{image} tersebut dimasukkan ke \textit{server docker registry}, kemudian data dari \textit{image} tersebut akan disimpan di \textit{server controller}. Setelah data tersimpan, selanjutnya adalah menjalankan aplikasi melalui dasbor yang disediakan. Sebelum menjalankan aplikasi, terlebih dahulu mengatur \textit{port} dari aplikasi yang akan berjalan. Setelah mengatur \textit{port} dengan benar, selanjutnya adalah menjalankan aplikasinya. Jika aplikasi berhasil dijalankan, maka aplikasi dapat diakses melalui domain yang disediakan. \\
-            \indent Setelah aplikasi berjalan, selanjutnya adalah memperbarui aplikasi dengan mengganti teks yang ditampilkan. Untuk itu, pada komputer yang digunakan untuk membuat \textit{image} sebelumnya, maka dibuatkan image baru dari aplikasi dengan versi terbaru. Image versi terbaru ini kemudian di \textit{push} ke \textit{docker registry}. Setelah selesai melakukan \textit{push}, harapannya aplikasi yang sebelumnya sudah berjalan, akan diperbarui secara otomatis oleh sistem. \\
-            \indent Terakhir, pengujian yang dilakukan adalah menghentikan aplikasi yang sudah berjalan. Fungsi untuk menghentikan aplikasi yang sedang berjalan ini terdapat pada dasbor. Jika proses ini berhasil, maka domain yang sebelumnya digunakan untuk mengakses aplikasi akan hilang dan pengguna tidak bisa lagi melakukan akses terhadap aplikasi. \\
-            \indent Daftar uji fungsionalitas menambahkan dan memperbarui aplikasi dijelaskan pada Tabel \ref{ujiaplikasi}.
-            \begin{longtable}{|p{0.05\textwidth}|p{0.38\textwidth}|p{0.39\textwidth}|}					\caption{Skenario Uji Mengelola Aplikasi Berbasis Docker} \label{ujiaplikasi} \\
-					\hline
-					\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
-					\endfirsthead
-					\caption[]{Skenario Uji Mengelola Aplikasi Berbasis Docker} \\
-					\hline
-					\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
-					\endhead
-					\endfoot
-					\endlastfoot
-					
-                    1 & Pengguna melakukan \textit{login} ke \textit{server docker registry} & Pengguna berhasil melakukan \textit{login} dengan menggunakan \textit{username} dan \textit{password} yang sudah ditentukan. \\ \hline
-                    2 & Pengguna menambahkan \textit{image} baru dari sebuah aplikasi ke \textit{server docker registry}. & Pengguna berhasil menambahkan \textit{image} baru dan data tersimpan pada \textit{server controller}. \\ \hline
-                    3 & Pengguna bisa mengatur \textit{port} dari aplikasi menggunakan dasbor yang disediakan & Data \textit{port} dari aplikasi yang tersimpan bisa diganti sesuai dengan kebutuhan pengguna. \\ \hline
-                    4 & Pengguna bisa menjalankan aplikasi melalui fitur yang ada pada dasbor & Aplikasi berhasil berjalan dan pengguna mendapatkan domain yang digunakan untuk mengakses aplikasi. \\ \hline
-					5 & Pengguna memperbarui aplikasi yang sedang berjalan dengan melakukan \textit{push} ke \textit{server docker registry}. & Aplikasi yang sedang berjalan akan diperbarui secara otomatis tanpa perlu perintah dari pengguna. \\ \hline
-                    6 & Penggua menghentikan aplikasi yang sedang berjalan. & Aplikasi berhasil dihentikan dan pengguna tidak bisa lagi melakukan akses aplikasi. \\ \hline
-				\end{longtable}
-            
-        \subsubsection{Uji Fungsionalitas Menu Aplikasi Dasbor}
-        	Aplikasi Dasbor digunakan untuk mengelola dan memantau aplikasi. Aplikasi Dasbor terdiri dari 4 bagian utama, yaitu halaman beranda, informasi aplikasi, informasi \textit{container}, dan metrik dari aplikasi. Rancangan pengujian dan hasil yang diharapkan ditunjukkan dengan Tabel \ref{skenarioUjiDasboard}.
-            
-            \begin{longtable}{|p{0.05\textwidth}|p{0.20\textwidth}|p{0.30\textwidth}|p{0.27\textwidth}|}
-						\caption{Skenario Uji Fungsionalitas Aplikasi Dasbor} \label{skenarioUjiDasboard} \\
-						\hline
-						\textbf{No} & \textbf{Menu} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
-						\endfirsthead
-						\caption[]{Skenario Uji Fungsionalitas Aplikasi Dasbor}  \\
-						\hline
-						\textbf{No} & \textbf{Menu} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
-						\endhead
-						\endfoot
-						\endlastfoot
-						1 & Kelola aplikasi & Menambahkan aplikasi baru atau memperbarui aplikasi & Dasbor dapat menampilkan daftar aplikasi terbaru yang dimasukkan atau diperbarui oleh pengembang. \\ \cline{3-4}
-                        && Menjalankan aplikasi yang sudah masuk ke dalam sistem & Aplikasi dapat berjalan dan pengguna mendapatkan domain untuk mengakses aplikasi. \\ \cline{3-4}
-                        && Menghentikan aplikasi yang sedang berjalan & Aplikasi yang sedang berjalan dapat dihentikan dan pengguna tidak bisa lagi melakukan akses terhadap aplikasi. \\ \cline{3-4}
-                        && Mengganti \textit{port} aplikasi agar dapat berjalan dengan baik & Pengguna dapat mengganti \textit{port} aplikasi agar aplikasi dapat berjalan dengan benar. \\ \hline
-						2 & Lihat informasi aplikasi & Memilih salah satu aplikasi yang ada  & Pengguna dapat melihat infromasi secara lengkap tentang aplikasi. \\ \hline
-                        3 & Lihat informasi \textit{container} & Memilih salah satu aplikasi yang ada  & Pengguna dapat melihat infromasi secara lengkap tentang \textit{container} yang sedang berjalan untuk aplikasi tersebut. \\ \hline
-                        4 & Lihat metrik aplikasi & Memilih salah satu aplikasi yang ada  & Pengguna dapat melihat grafik penggunaan CPU dan \textit{memory} dari aplikasi . \\ \hline
-					\end{longtable}
+\begin{longtable}{|p{0.05\textwidth}|p{0.20\textwidth}|p{0.30\textwidth}|p{0.27\textwidth}|}
+	\caption{Skenario Uji Fungsionalitas Aplikasi Halaman \textit{Administrator}} \label{ujicoba5} \\
+	\hline
+	\textbf{No} & \textbf{Menu} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endfirsthead
+	\caption[]{Skenario Uji Fungsionalitas Aplikasi Dasbor}  \\
+	\hline
+	\textbf{No} & \textbf{Menu} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endhead
+	\endfoot
+	\endlastfoot
+	1 & User List & Menampilkan halaman \textit{user list} pada web. & Halaman \textit{user list} dapat tampil pada web. \\ \cline{3-4}
+	&& Melihat secara \textit{live} atau langsung \textit{log traffic} dari \textit{client}. & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} dapat melihat secara \textit{live} atau langsung \textit{log traffic} dari \textit{client}. \\ \cline{3-4}
+	&& Melihat \textit{log traffic} terakhir dari \textit{client}. & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} dapat melihat \textit{log traffic} terakhir dari \textit{client}. \\ \hline
+	2 & History & Melihat \textit{log traffic} dari \textit{client} pada hari-harisebelumnya.  & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} dapat melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya. \\ \hline
+\end{longtable}
+
+\subsection{Skenario Uji Coba Performa}
+Uji performa dilakukan dengan menggunakan enam buah desktop yang berperan sebagai \textit{client} untuk melakukan akses ke internet secara bergantian. \textit{Client} akan mencoba mengakses internet dengan membuka website HTTP maupun HTTPS.
+
+Percobaan dilakukan dengan dua skenario, yaitu mengakses website HTTP dan mengakses website HTTPS
+
+\subsubsection{Uji Performa Penggunaan CPU}
+Pengujian dilakukan dengan menghitung penggunaan CPU yang terjadi pada \textit{docker host}. Penggunaan CPU di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan. 
+
+\subsubsection{Uji Performa Penggunaan \textit{Memory}}
+Pengujian dilakukan dengan menghitung penggunaan \textit{memory} yang terjadi pada \textit{docker host}. Penggunaan \textit{memory} di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan.
+
+\subsubsection{Uji Performa Kecepatan Menangani \textit{Request}}
+Pengujian dilakukan dengan menghitung jumlah \textit{request}
+
+\subsubsection{Uji Performa Keberhasilan \textit{Request}}
         
     \subsection{Skenario Uji Coba Performa}
     	Uji performa dilakukan dengan menggunakan lima buah desktop untuk melakukan akses secara bersamaan ke aplikasi menggunakan aplikasi JMeter. Desktop akan mencoba mengaskses halaman dari aplikasi web yang sudah berjalan, dengan domain aplikasi.nota-no.life. Halaman yang akan diakses berisi sebuah teks yang dihasilkan dari pemanggilan fungsi PHP. \\
