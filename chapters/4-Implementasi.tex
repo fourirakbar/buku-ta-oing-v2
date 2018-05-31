@@ -185,12 +185,25 @@ Saat kontainer \textit{docker} yang berisikan \textit{mitmproxy} akan dibuat pad
 
 Setelah kontainer \textit{docker} yang berisikan \textit{mitmproxy} berhasil dibuat, maka sistem akan membuat \textit{rules} yang berfungsi untuk mengarahkan \textit{traffic} dari \textit{client} menuju ke kontainer \textit{docker} milik \textit{client} tersebut, dan memperbolehkan \textit{client} untuk mengakses internet. Pada Kode Sumber \ref{pseudocodeoing} diperlihatkan bagaimana implementasinya dalam bentuk \textit{pseduocode}.
 \newline
+\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk \textit{Pull} Ubuntu,language=Python,label=pullubuntu]
+Check whether the client is already login or not yet
+
+if session.get login
+create container
+add new rules to container
+return
+else
+add new rules
+client open page login
+client login
+return  	
+\end{lstlisting}
 \begin{minipage}{\linewidth}  
 	\begin{lstlisting}[numbers=left, frame=single,tabsize=2,breaklines,caption={Pseudocode Web Service},label=pseudocodeoing]
 	Check whether the client is already login or not yet
 	
 	if session.get login
-	create container
+		create container
 	add new rules to container
 	return
 	else
