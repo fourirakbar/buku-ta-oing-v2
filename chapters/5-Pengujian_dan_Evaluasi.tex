@@ -64,13 +64,28 @@ Uji coba fungsionalitas dilakukan dengan cara menjalankan sistem yang telah dibu
 \item Pengujian fungsionalitas menu aplikasi halaman administrator.
 \end{enumerate}
 
-\subsubsection{Uji \textit{client} dapat Mengakses Internet}
+\subsubsection{Uji \textit{client} dapat Mengakses Internet} \label{keempat}
 Pengujian ini dilakukan untuk mengetahui apakah \textit{client} dapat mengakses internet atau tidak. Pada uji \textit{client} dapat mengakses internet akan dibagi lagi menjadi beberapa bagian, antara lain:
 \begin{enumerate}
 \item Pengujian \textit{client} dapat \textit{login} ke dalam sistem.
 \item Pengujian \textit{client} dapat mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker host}.
 \item Pengujian \textit{docker host} dapat menerima permintaan penyediaan kontainer \textit{docker}.
 \end{enumerate}
+
+Pengujian menggunakan enam buah komputer penguji. Pengujian ini dapat dilakukan dengan membuka \textit{browser} dan membuka \textit{website} HTTP ataupun juga HTTPS. Daftar uji fungsionalitas \textit{client} dapat mengakses internet dijelaskan pada Tabel \ref{ujicoba4}.
+\begin{longtable}{|p{0.05\textwidth}|p{0.38\textwidth}|p{0.39\textwidth}|}					\caption{Skenario Uji \textit{Client} dapat Mengakses Internet} \label{ujicoba4} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endfirsthead
+	\caption[]{Skenario Uji Mengelola Aplikasi Berbasis Docker} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endhead
+	\endfoot
+	\endlastfoot
+	
+	1 & \textit{Client} membuka website HTTP maupun HTTPS dengan menggunakan \textit{browser}. & \textit{Client} dapat membuka website HTTP maupun HTTPS dengan menggunakan \textit{browser} yang ada.\\ \hline
+\end{longtable}
 
 \paragraph{Uji \textit{Client} dapat \textit{Login} ke Dalam Sistem} \label{pertama}
 Pengujian ini dilakukan untuk mengetahui apakah \textit{client} sudah bisa \textit{login} ke dalam sistem saat \textit{client} akan mengakses internet. Pengujian menggunakan satu buah \textit{server} yang berperan sebagai \textit{server login} untuk \textit{client} dan menggunakan enam buah Komputer Penguji yang dijalankan dengan VirtualBox berperan sebagai \textit{client}. Pengujian dilakukan oleh \textit{client} dalam keadaan belum \textit{login} ke dalam sistem. Ketika \textit{client} mencoba membuka sebuah web, maka \textit{client} akan diarahkan ke \textit{server login} terlebih dahulu.
@@ -138,24 +153,6 @@ Daftar uji fungsionalitas \textit{docker host} dapat menerima permintaan penyedi
 	3 & Sistem membuat sebuah \textit{directory} pada \textit{docker host} sesuai dengan tanggal dan informasi dari \textit{client}. & Sistem berhasil membuat sebuah \textit{directory} pada \textit{docker host} sesuai dengan tanggal dan informasi dari \textit{client} yang sudah dituliskan pada basis data.\\ \hline
 \end{longtable}
 
-\subsubsection{Uji \textit{Client} dapat Mengakses Internet} \label{keempat}
-Pengujian ini dilakukan untuk mengetahui apakah \textit{client} dapat mengakses internet setelah berhasil \textit{login} ke dalam sistem dan telah dibuatkan sebuah kontainer \textit{docker} pada \textit{docker host}. Pengujian menggunakan enam buah komputer penguji.
-
-Pengujian ini dapat dilakukan dengan membuka \textit{browser} dan membuka \textit{website} HTTP ataupun juga HTTPS. Daftar uji fungsionalitas \textit{client} dapat mengakses internet dijelaskan pada Tabel \ref{ujicoba4}.
-\begin{longtable}{|p{0.05\textwidth}|p{0.38\textwidth}|p{0.39\textwidth}|}					\caption{Skenario Uji \textit{Client} dapat Mengakses Internet} \label{ujicoba4} \\
-	\hline
-	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
-	\endfirsthead
-	\caption[]{Skenario Uji Mengelola Aplikasi Berbasis Docker} \\
-	\hline
-	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
-	\endhead
-	\endfoot
-	\endlastfoot
-	
-	1 & \textit{Client} membuka website HTTP maupun HTTPS dengan menggunakan \textit{browser}. & \textit{Client} dapat membuka website HTTP maupun HTTPS dengan menggunakan \textit{browser} yang ada.\\ \hline
-\end{longtable}
-
 \subsubsection{Uji Fungsionalitas Menu Aplikasi Halaman \textit{Administrator}} \label{kelima}
 Aplikasi halaman \textit{administrator} digunakan untuk membaca \textit{log traffic} dari \textit{client} yang sedang mengakses internet dan juga untuk melihat rekap \textit{client} yang telah menggunakan internet pada hari-hari sebelumnya. Aplikasi halaman \textit{administraotr} terdiri dari dua bagian utama, yaitu halaman \textit{user list}, dan \textit{history}. Rancangan pengujian dan hasil yang diharapkan ditunjukkan dengan Tabel \ref{ujicoba5}.
 
@@ -190,6 +187,8 @@ Pengujian dilakukan dengan menghitung penggunaan \textit{memory} yang terjadi pa
 \subsubsection{Uji Performa Kecepatan Menangani \textit{Request}}
 Pengujian dilakukan dengan mengukur jumlah waktu yang diperlukan untuk menyelesaikan \textit{request} yang dilakukan oleh komputer penguji. Waktu yang diukur adalah saat \textit{client} berhasil melakukan \textit{login} ke dalam sistem sampai dengan \textit{client} selesai dibuatkan sebuah kontainer \textit{docker}.
 
+Pengujian performa kecepatan menangani \textit{request} juga dilakukan dengan membandingkan performa kecepatan dari \textit{client} ketika \textit{client} melakukan \textit{download} maupun \textit{upload} sebuah file dengan menggunakan \textit{server} internet \textit{access management} secara konvensional dengan menggunakan \textit{server} internet \textit{access management} berbasis kontainer.
+
 \subsubsection{Uji Performa Keberhasilan \textit{Request}}
 Pengujian dilakukan dengan menghitung jumlah \textit{request} atau jumlah permintaan penyediaan kontainer \textit{docker} yang gagal dilakukan selama skenario dijalankan. Dari semua jumlah \textit{request} yang dikirimkan selama pengujian, akan didapatkan persen \textit{request} yang gagal dilakukan.
     
@@ -199,7 +198,33 @@ Berikut dijelaskan hasil uji coba dan evaluasi berdasarkan skenario yang telah d
 \subsection{Uji Fungsionalitas}
 Berikut dijelaskan hasil pengujian fungsionalitas pada sistem yang dibangun.
 
-\subsubsection{Uji \textit{Client} dapat \textit{Login} ke Dalam Sistem}
+\subsubsection{Uji \textit{Client} dapat Mengakses Internet}
+Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{keempat} dan pada Tabel \ref{ujicoba4}. Pada hasil uji \textit{client} dapat mengakses internet akan dibagi lagi menjadi beberapa bagian, antara lain
+\begin{enumerate}
+\item Pengujian \textit{client} dapat \textit{login} ke dalam sistem.
+\item Pengujian \textit{client} dapat mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker host}.
+\item Pengujian \textit{docker host} dapat menerima permintaan penyediaan kontainer \textit{docker}.
+\end{enumerate}
+
+Setelah melalui hasil uji yang telah disebutkan diatas, hasil pengujian \textit{client} dapat mengakses internet seperti tertera pada Tabel \ref{hasilujicoba5}
+
+\begin{longtable}{|p{0.05\textwidth}|p{0.55\textwidth}|p{0.22\textwidth}|}					\caption{Hasil Uji Coba \textit{Client} dapat Mengakses Internet} \label{hasilujicoba5} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
+	\endfirsthead
+	\caption[]{Hasil Uji Coba Mengelola Aplikasi Berbasis Docker} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
+	\endhead
+	\endfoot
+	\endlastfoot
+	
+	1 & \textit{Client} membuka sebuah website HTTP maupun HTTPS dengan menggunakan \textit{browser}. & OK. \\ \hline
+\end{longtable}
+Sesuai dengan skenario uji coba  yang diberikan pada Tabel \ref{ujicoba4}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
+
+
+\paragraph{Uji \textit{Client} dapat \textit{Login} ke Dalam Sistem}
 Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{pertama} dan pada Tabel \ref{ujicoba1}. Hasil pengujian seperti tertera pada Tabel \ref{hasilujicoba1}.
         
 \begin{longtable}{|p{0.05\textwidth}|p{0.55\textwidth}|p{0.22\textwidth}|}					\caption{Hasil Uji Coba \textit{Client} dapat \textit{Login} ke Dalam Sistem} \label{hasilujicoba1} \\
@@ -218,7 +243,7 @@ Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{pert
 \end{longtable}
 Sesuai dengan skenario uji coba  yang diberikan pada Tabel \ref{ujicoba1}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
 
-\subsubsection{Uji \textit{Client} dapat Mengirimkan Permintaan Penyediaan Kontainer \textit{Docker} ke \textit{Docker Host}}
+\paragraph{Uji \textit{Client} dapat Mengirimkan Permintaan Penyediaan Kontainer \textit{Docker} ke \textit{Docker Host}}
 Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{kedua} dan pada Tabel \ref{ujicoba2}. Hasil pengujian seperti tertera pada Tabel \ref{hasilujicoba2}.
 
 \begin{longtable}{|p{0.05\textwidth}|p{0.55\textwidth}|p{0.22\textwidth}|}					\caption{Hasil Uji Coba \textit{Client} dapat Mengirimkan Permintaan Penyediaan Kontainer \textit{Docker} ke \textit{Docker Host}} \label{hasilujicoba2} \\
@@ -236,7 +261,7 @@ Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{kedu
 \end{longtable}
 Sesuai dengan skenario uji coba  yang diberikan pada Tabel \ref{ujicoba2}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
 
-\subsubsection{Uji \textit{Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit{Docker}}
+\paragraph{Uji \textit{Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit{Docker}}
 Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{ketiga} dan pada Tabel \ref{ujicoba3}. Hasil pengujian seperti tertera pada Tabel \ref{hasilujicoba3}.
 
 \begin{longtable}{|p{0.05\textwidth}|p{0.55\textwidth}|p{0.22\textwidth}|}					\caption{Hasil Uji Coba \textit{Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit{Docker}} \label{hasilujicoba3} \\
@@ -255,43 +280,28 @@ Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{keti
 	3 & Sistem membuat sebuah \textit{directory} pada \textit{docker host} sesuai dengan tanggal dan informasi dari \textit{client}. & OK. \\ \hline
 \end{longtable}
 Sesuai dengan skenario uji coba  yang diberikan pada Tabel \ref{ujicoba3}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
-
-\subsubsection{Uji \textit{Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit{Docker}}
-Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{keempat} dan pada Tabel \ref{ujicoba4}. Hasil pengujian seperti tertera pada Tabel \ref{hasilujicoba4}.
-
-\begin{longtable}{|p{0.05\textwidth}|p{0.55\textwidth}|p{0.22\textwidth}|}					\caption{Hasil Uji Coba \textit{Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit{Docker}} \label{hasilujicoba4} \\
-	\hline
-	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
-	\endfirsthead
-	\caption[]{Hasil Uji Coba Mengelola Aplikasi Berbasis Docker} \\
-	\hline
-	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
-	\endhead
-	\endfoot
-	\endlastfoot
-	
-	1 & \textit{Client} membuka website HTTP maupun HTTPS dengan menggunakan \textit{browser}. & OK. \\ \hline
-\end{longtable}
-Sesuai dengan skenario uji coba  yang diberikan pada Tabel \ref{ujicoba4}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
         
-\subsubsection{Uji Fungsionalitas Menu Aplikasi Dasbor}
-Sesuai dengan skenario pengujian yang dilakukan pada aplikasi halaman \textit{administrator}. Pengujian dilakukan dengan menguji setiap menu pada aplikasi halaman \textit{administrator}. Hasil uji coba dapat dilihat pada Table \ref{ujicobahalamanadmin}. Semua skenario yang direncanakan berhasil ditangani.
+\subsubsection{Uji Fungsionalitas Menu Aplikasi Halaman \textit{Administrator}}
+Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{kelima} dan pada Tabel \ref{ujicoba5}. Hasil pengujian seperti tertera pada Tabel \ref{hasilujicoba6}
+
 \begin{longtable}{|p{0.05\textwidth}|p{0.20\textwidth}|p{0.30\textwidth}|p{0.27\textwidth}|}
-	\caption{Hasil Uji Fungsionalitas Aplikasi Halaman \textit{Administrator}} \label{ujicobahalamanadmin} \\
+	\caption{Hasil Uji Fungsionalitas Aplikasi Halaman \textit{Administrator}} \label{hasilujicoba6} \\
 	\hline
 	\textbf{No} & \textbf{Menu} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
 	\endfirsthead
-	\caption[]{Skenario Uji Fungsionalitas Aplikasi Halaman \textit{Administrator}}  \\
+	\caption[]{Hasil Uji Fungsionalitas Aplikasi Halaman \textit{Administrator}}  \\
 	\hline
 	\textbf{No} & \textbf{Menu} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
 	\endhead
 	\endfoot
 	\endlastfoot
-	1 & User List & Menampilkan halaman \textit{user list} pada web. & Halaman \textit{user list} berhasil muncul pada web. \\ \cline{3-4}
-	&& Melihat secara \textit{live} atau langsung \textit{log traffic} dari \textit{client}. & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} berhasil melihat secara \textit{live} atau langsung \textit{log traffic} dari \textit{client}. \\ \cline{3-4}
-	&& Melihat \textit{log traffic} terakhir dari \textit{client}. & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} berhasil melihat \textit{log traffic} terakhir dari \textit{client}. \\ \hline
-	2 & History & Melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya.  & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} berhasil melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya. \\ \hline
+	1 & User List & Menampilkan halaman \textit{user list} pada web. & OK. \\ \cline{3-4}
+	&& Melihat secara \textit{live} atau langsung \textit{log traffic} dari \textit{client}. & OK. \\ \cline{3-4}
+	&& Melihat \textit{log traffic} terakhir dari \textit{client}. & OK. \\ \hline
+	2 & History & Melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya.  & OK. \\ \hline
 \end{longtable}
+
+Sesuai dengan skenario uji coba yang diberikan pada Tabel \ref{ujicoba5}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
 
 \subsection{Hasil Uji Performa}
 Seperti yang sudah dijelaskan pada subbab \ref{skenarioujicoba} pengujian performa dilakukan dengan menggunakan enam buah desktop yang berperan sebagai \textit{client} untuk melakukan akses ke internet secara bergantian. \textit{Clint} akan mencoba mengakses internet dengan membuka website HTTP maupun HTTPS.
@@ -313,102 +323,7 @@ Pengujian dilakukan dengan menghitung jumlah \textit{request} atau jumlah permin
 \section{Hasil Uji Coba dan Evaluasi}
 Berikut dijelaskan hasil uji coba dan evaluasi berdasarkan skenario yang telah dijelaskan pada subbab \ref{skenarioujicoba}.
 
-\subsection{Uji Fungsionalitas}
-Berikut dijelaskan hasil pengujian fungsionalitas pada sistem yang dibangun.
-
-\subsubsection{Uji \textit{Client} dapat \textit{Login} ke Dalam Sistem}
-Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{pertama} dan pada Tabel \ref{ujicoba1}. Hasil pengujian seperti tertera pada Tabel \ref{hasilujicoba1}.
-
-\begin{longtable}{|p{0.05\textwidth}|p{0.55\textwidth}|p{0.22\textwidth}|}					\caption{Hasil Uji Coba Mengelola Aplikasi Berbasis Docker} \label{hasilujicoba1} \\
-	\hline
-	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
-	\endfirsthead
-	\caption[]{Hasil Uji Coba Mengelola Aplikasi Berbasis Docker} \\
-	\hline
-	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
-	\endhead
-	\endfoot
-	\endlastfoot
-	
-	1 & \textit{Client} membuka sebuah website ketika belum \textit{login} ke dalam sistem. & OK. \\ \hline
-	2 & \textit{Client} melakukan \textit{login} ke \textit{server login}. & OK. \\ \hline
-\end{longtable}
-Sesuai dengan skenario uji coba  yang diberikan pada Tabel \ref{ujicoba1}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
-
-\subsubsection{Uji \textit{Client} dapat Mengirimkan Permintaan Penyediaan Kontainer \textit{Docker} ke \textit{Docker Host}}
-Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{kedua} dan pada Tabel \ref{ujicoba2}. Hasil pengujian seperti tertera pada Tabel \ref{hasilujicoba2}.
-
-\begin{longtable}{|p{0.05\textwidth}|p{0.55\textwidth}|p{0.22\textwidth}|}					\caption{Hasil Uji Coba Mengelola Aplikasi Berbasis Docker} \label{hasilujicoba2} \\
-	\hline
-	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
-	\endfirsthead
-	\caption[]{Hasil Uji Coba Mengelola Aplikasi Berbasis Docker} \\
-	\hline
-	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
-	\endhead
-	\endfoot
-	\endlastfoot
-	
-	1 & \textit{Client} mengirimkan permintaan penyediaan kontainer \textit{docker} kepada \textit{docker host}. & OK. \\ \hline
-\end{longtable}
-Sesuai dengan skenario uji coba  yang diberikan pada Tabel \ref{ujicoba2}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
-
-\subsubsection{Uji \textit{Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit{Docker}}
-Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{ketiga} dan pada Tabel \ref{ujicoba3}. Hasil pengujian seperti tertera pada Tabel \ref{hasilujicoba3}.
-
-\begin{longtable}{|p{0.05\textwidth}|p{0.55\textwidth}|p{0.22\textwidth}|}					\caption{Hasil Uji Coba Mengelola Aplikasi Berbasis Docker} \label{hasilujicoba3} \\
-	\hline
-	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
-	\endfirsthead
-	\caption[]{Hasil Uji Coba Mengelola Aplikasi Berbasis Docker} \\
-	\hline
-	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
-	\endhead
-	\endfoot
-	\endlastfoot
-	
-	1 & Sistem menerima permintaan penyediaan kontainer \textit{docker} dari \textit{client} pada \textit{docker host}. & OK. \\ \hline
-	2 & Sistem membuat satu buah kontainer \textit{docker} untuk \textit{client} pada \textit{docker host}. & OK. \\ \hline
-	3 & Sistem membuat sebuah \textit{directory} pada \textit{docker host} sesuai dengan tanggal dan informasi dari \textit{client}. & OK. \\ \hline
-\end{longtable}
-Sesuai dengan skenario uji coba  yang diberikan pada Tabel \ref{ujicoba3}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
-
-\subsubsection{Uji \textit{Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit{Docker}}
-Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{keempat} dan pada Tabel \ref{ujicoba4}. Hasil pengujian seperti tertera pada Tabel \ref{hasilujicoba4}.
-
-\begin{longtable}{|p{0.05\textwidth}|p{0.55\textwidth}|p{0.22\textwidth}|}					\caption{Hasil Uji Coba Mengelola Aplikasi Berbasis Docker} \label{hasilujicoba4} \\
-	\hline
-	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
-	\endfirsthead
-	\caption[]{Hasil Uji Coba Mengelola Aplikasi Berbasis Docker} \\
-	\hline
-	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
-	\endhead
-	\endfoot
-	\endlastfoot
-	
-	1 & \textit{Client} membuka website HTTP maupun HTTPS dengan menggunakan \textit{browser}. & OK. \\ \hline
-\end{longtable}
-Sesuai dengan skenario uji coba  yang diberikan pada Tabel \ref{ujicoba4}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
-
-\subsubsection{Uji Fungsionalitas Menu Aplikasi Dasbor}
-Sesuai dengan skenario pengujian yang dilakukan pada aplikasi halaman \textit{administrator}. Pengujian dilakukan dengan menguji setiap menu pada aplikasi halaman \textit{administrator}. Hasil uji coba dapat dilihat pada Table \ref{ujicobahalamanadmin}. Semua skenario yang direncanakan berhasil ditangani.
-\begin{longtable}{|p{0.05\textwidth}|p{0.20\textwidth}|p{0.30\textwidth}|p{0.27\textwidth}|}
-	\caption{Hasil Uji Fungsionalitas Aplikasi Halaman \textit{Administrator}} \label{ujicobahalamanadmin} \\
-	\hline
-	\textbf{No} & \textbf{Menu} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
-	\endfirsthead
-	\caption[]{Skenario Uji Fungsionalitas Aplikasi Dasbor}  \\
-	\hline
-	\textbf{No} & \textbf{Menu} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
-	\endhead
-	\endfoot
-	\endlastfoot
-	1 & User List & Menampilkan halaman \textit{user list} pada web. & Halaman \textit{user list} berhasil muncul pada web. \\ \cline{3-4}
-	&& Melihat secara \textit{live} atau langsung \textit{log traffic} dari \textit{client}. & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} berhasil melihat secara \textit{live} atau langsung \textit{log traffic} dari \textit{client}. \\ \cline{3-4}
-	&& Melihat \textit{log traffic} terakhir dari \textit{client}. & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} berhasil melihat \textit{log traffic} terakhir dari \textit{client}. \\ \hline
-	2 & History & Melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya.  & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} berhasil melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya. \\ \hline
-\end{longtable}
+zzzzzzzzzzzzzzzzzz
 
 \subsection{Hasil Uji Performa}
 Seperti yang sudah dijelaskan pada subbab \ref{skenarioujicoba} pengujian performa dilakukan dengan menggunakan enam buah desktop yang berperan sebagai \textit{client} untuk melakukan akses ke internet secara bergantian. \textit{Clint} akan mencoba mengakses internet dengan membuka website HTTP maupun HTTPS.
