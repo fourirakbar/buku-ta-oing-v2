@@ -380,32 +380,49 @@ Pada Tabel \ref{tjumlahcontainer} dapat dilihat jumlah \textit{container} yang t
 \end{figure}
 
 \subsubsection{Kecepatan Menangani \textit{Request}}
-Dari hasil uji coba kecepatan menangani \textit{request}, dapat dilihat pada Table \ref{kecepatanrequest} dalam satuan detik bahwa semakin banyak \textit{concurrent users}, semakin lama pula waktu yang diperlukan untuk menyeselaikannya. Request paling cepat ditangani dengan menggunakan prediksi ARIMA(4,1,0) dan paling lambat menggunakan ARIMA(1,1,0). Hal tersebut terjadi karena kurang bagusnya hasil prediksi yang dihasilkan oleh ARIMA(1,1,0) yang mana kadang hasil prediksinya terlalu rendah atau terlalu tinggi.
-Dari hasil percobaan tersebut, dapat dilihat bahwa hampir semua \textit{request} dapat ditangani di bawah satu menit. Lalu grafik hasil uji coba perhitungan kecepatan menangani \textit{request} ditunjukkan pada Gambar \ref{grunningtime}.
-\begin{longtable}{|p{0.22\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|}
-	\caption{Kecepatan Menangani \textit{Request}} \label{kecepatanrequest} \\
+Dari hasil uji coba kecepatan menangani \textit{request}, mengukur jumlah waktu yang diperlukan untuk menyelesaikan \textit{request} yang dilakukan oleh saat \textit{client} berhasil \textit{login} ke dalam sistem sampai dengan sistem selesai menyediakan sebuah kontainer \textit{docker} untuk \textit{client} tersebut, dapat dilihat pada Tabel \ref{kecepatanrequest1} dalam satuan \textit{millisecond}.
+
+\begin{longtable}{|p{0.33\textwidth}|p{0.35\textwidth}|}
+	\caption{Kecepatan Menangai \textit{Request} Penyediaan Kontainer} \label{kecepatanrequest1} \\
 	\hline
-	& \textbf{800} & \textbf{1600} & \textbf{2400} & \textbf{3200} & \textbf{4000} \\ \hline
+	\textbf{\textit{Jumlah \textit{Client}}} & \textbf{Waktu (\textit{millisecond})} \\ \hline
 	\endfirsthead
-	\caption[]{Kecepatan Menangani \textit{Request}} \\
+	\caption[]{Kecepatan Menangai \textit{Request} Penyediaan Kontainer} \\
 	\hline
-	& \textbf{800} & \textbf{1600} & \textbf{2400} & \textbf{3200} & \textbf{4000} \\ \hline
+	\textbf{\textit{Jumlah \textit{Client}}} & \textbf{Waktu (\textit{millisecond})} \\ \hline
 	\endhead
 	\endfoot
 	\endlastfoot
 	
-	ARIMA(1,1,0) & 34.167 & 43.286 & 48.143 & 63.857 & 62.286 \\ \hline
-	ARIMA(2,1,0) & 27.429 & 38.571 & 44.143 & 42.143 & 57.857 \\ \hline
-	ARIMA(3,1,0) & 32.429 & 36.000 & 38.429 & 41.571 & 43.857 \\ \hline
-	ARIMA(4,1,0) & 24.857 & 31.571 & 34.429 & 42.143 & 52.714 \\ \hline
+	1 & $\pm$ 10010 \\ \hline
+	2 & $\pm$ 10010 \\ \hline
+	3 & $\pm$ 10010 \\ \hline
+	4 & $\pm$ 10010 \\ \hline
+	5 & $\pm$ 10010 \\ \hline
+	6 & $\pm$ 10010 \\ \hline
+	
 \end{longtable}
+Dari Tabel \ref{kecepatanrequest1} dapat dilihat dibutuhkan waktu kurang lebih selama 10010 \textit{millisecond} atau selama 10 detik. Hal tersebut terjadi karena spesifikasi dari \textit{docker host} yang berfungsi sebagai penyedia kontainer \textit{docker} mempunyai spesifikasi yang terbatas. Semakin bagus spesifikasi \textit{docker host}, maka akan semakin cepat proses penyediaan kontainer \textit{docker}.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=8.7cm,height=4.7cm]{Images/C-5/runningtime.png}
-	\caption{Grafik Kecepatan Menangani \textit{Request}}
-	\label{grunningtime}
-\end{figure}
+Lalu untuk kecepatan unduh dari \textit{client}, ujicoba dilakukan dengan mengunduh sebuah file dari platform Google Drive. Hasil dari uji coba kecepatan unduh dan juga \textit{upload} dapat dilihat pada Tabel \ref{kecepatanrequest2} dalam satuan detik.
+
+\begin{longtable}{|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
+	\caption{Kecepatan Menangai \textit{Request} Unduh} \label{kecepatanrequest2} \\
+	\hline
+	\textbf{Ukuran File} & \textbf{Rata-Rata Kecepatan} & \textbf{Waktu (detik)} \\ \hline
+	\endfirsthead
+	\caption[]{Kecepatan Menangai \textit{Request} Unduh} \\
+	\hline
+	\endhead
+	\endfoot
+	\endlastfoot
+	
+	126 MB & $\pm$ 2,1 MB & 65 \\ \hline
+	247 MB & $\pm$ 2,1 MB & 133\\ \hline
+	510 MB & $\pm$ 2,1 MB & 337\\ \hline
+	1000 MB & $\pm$ 2,1 MB & 580 \\ \hline
+	
+\end{longtable}
 
 \subsubsection{Penggunaan CPU}
 Dari hasil uji coba penggunaan CPU pada \textit{server master host}, penggunaan CPU berada di bawah 15\%. Penggunaan CPU yang diukur adalah penggunaan CPU yang dilakukan oleh \textit{container} dari aplikasi, tidak termasuk sistem. Jumlah \textit{core} yang dimiliki oleh \textit{processor} di \textit{server master host} adalah 8 buah, yang artinya kurang lebih hanya satu core yang digunakan untuk menangani semua \textit{request}. Hasil pengukuran penggunaan CPU dapat dilihat pada Tabel \ref{penggunaancpu}
@@ -438,60 +455,50 @@ Dari hasil uji coba, penggunaan prediksi yang berbeda tidak terlalu berpengaruh 
 	\label{gcpuusage}
 \end{figure}
 
-\subsubsection{Penggunaan \textit{Memory}}            
-Dari hasil uji coba penggunaan \textit{memory}, semakin banyak \textit{request} yang diterima, semakin banyak \textit{memory} yang diperlukan. Perhitungan penggunaan \textit{memory} adalah rata-rata penggunaan dari masing-masing \textit{container} sebuah aplikasi. Untuk masing-masing \textit{container}, dibatasi penggunaan maksimal \textit{memory} adalah 512 MB. Dari hasil uji coba ini, dapat dilihat pada Tabel \ref{penggunaanmemory} bahwa penggunaan terbesar hanya sebesar 158.71 MB. Artinya jumlah tersebut hanya menggunakan sepertiga dari keseluruhan \textit{memory} yang bisa digunakan.
-\begin{longtable}{|p{0.22\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|}
-	\caption{Penggunaan \textit{Memory}} \label{penggunaanmemory} \\
+\subsubsection{Penggunaan \textit{Memory}}
+Dari hasil uji coba penggunaan \textit{memory}, semakin banyak \textit{request} yang diterima, semakin banyak \textit{memory} ynag diperlukan. Perhitungan penggunaan \textit{memory} adalah jumlah penggunaan dari masing-masing kontainer \textit{docker} dari \textit{client}. Dari hasil uji coba ini, dapat dilihat pada Tabel \ref{penggunaanmemory1}.
+
+\begin{longtable}{|p{0.3\textwidth}|p{0.3\textwidth}|}
+	\caption{\textit{Penggunaan \textit{Memory}}} \label{penggunaanmemory1} \\
 	\hline
-	& \textbf{800} & \textbf{1600} & \textbf{2400} & \textbf{3200} & \textbf{4000} \\ \hline
+	\textbf{Jumlah \textit{Client}} & \textbf{Jumlah \textit{Memory} yang Digunakan} \\ \hline
 	\endfirsthead
-	\caption[]{Penggunaan \textit{Memory}} \\
-	\hline
-	& \textbf{800} & \textbf{1600} & \textbf{2400} & \textbf{3200} & \textbf{4000} \\ \hline
+
 	\endhead
 	\endfoot
 	\endlastfoot
 	
-	ARIMA(1,1,0) & 67.91 & 88.97 & 130.79 & 120.14 & 157.73 \\ \hline
-	ARIMA(2,1,0) & 65.89 & 97.98 & 123.47 & 156.64 & 158.33 \\ \hline
-	ARIMA(3,1,0) & 72.20 & 99.72 & 125.56 & 144.42 & 152.14 \\ \hline
-	ARIMA(4,1,0) & 69.60 & 77.34 & 117.39 & 149.76 & 158.71 \\ \hline
-	
+	1 & 0,9 MB \\ \hline
+	2 & 1,8 MB \\ \hline
+	3 & 2,7 MB \\ \hline
+	4 & 3,6 MB \\ \hline
+	5 & 4,5 MB \\ \hline
+	6 & 5,4 MB \\ \hline
 \end{longtable}
+Dari Tabel \ref{penggunaanmemory1} dapat dilihat bahwa penggunaan \textit{memory} tiap satu \textit{client} yang telah disediakan kontainer \textit{docker} sebesar 0,9 MB. Artinya jika \textit{docker host} mempunyai \textit{memory} sebesar 8192 MB, \textit{docker host} dapat menampung $\pm$ 9102 \textit{client} dalam satu \textit{docker host}. Penggunaan \textit{memory} tersebut juga dapat dibatasi jika \textit{server} yang digunakan sebagai \textit{docker host} tidak memiliki \textit{memory} yang terlalu besar.
 
-Hasil uji coba performa penggunaan \textit{memory} dalam grafik ditunjukkan pada Gambar \ref{gmemoryusage}.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=8.7cm,height=4.7cm]{Images/C-5/memoryusage.png}
-	\caption{Grafik Penggunaan Memory}
-	\label{gmemoryusage}
-\end{figure}
+Hasil uji coba performa penggunaan \textit{memory} dalam grafik ditunjukkan pada Gambar xx.
 
 \subsubsection{Keberhasilan \textit{Request}}
-Pada uji coba ini, dilakukan perhitungan seberapa besar jumlah \textit{request} yang gagal dilakukan. Untuk jumlah \textit{concurrent user} pada tingkat 800 dan 1600, dapat dilihat pada Table \ref{keberhasilanrequest} \textit{error} yang terjadi hampir sama. Prediksi menggunakan ARIMA(4,1,0) berhasil unggul karena menggunakan parameter yang lebih banyak. Namun hal tersebut tidak berlaku untuk ARIMA(3,1,0) karena walaupun parameternya lebih banyak dari ARIMA(2,1,0), tapi hasil prediksinya bisa meleset saat terjadi kondisi dimana koefisien negatif atau koefisien ke dua dikalikan dengan sebuah parameter bukan nol, dan koefisien lain dikalikan dengan parameter nol, maka hasil prediksinya akan negatif, yang mana seharusnya tidak mungkin ada \textit{request} negatif.
-\begin{longtable}{|p{0.22\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|}
-	\caption{\textit{Error Ratio Request}} \label{keberhasilanrequest} \\
+Pada uji coba ini, dilakukan perhitungan seberapa besar jumlah \textit{request} yang berhasil dilakukan. Untuk jumlah \textit{client}, dapat dilihat pada Tabel \ref{keberhasilanrequest1}.
+
+\begin{longtable}{|p{0.3\textwidth}|p{0.3\textwidth}|}
+	\caption{\textit{Success Ratio Request}} \label{keberhasilanrequest1} \\
 	\hline
-	& \textbf{800} & \textbf{1600} & \textbf{2400} & \textbf{3200} & \textbf{4000} \\ \hline
+	\textbf{\textit{Client}} & \textbf{Persen Sukses} \\ \hline
 	\endfirsthead
-	\caption[]{\textit{Error Ratio Request}} \\
+	\caption[]{\textit{Success Ratio Request}} \\
 	\hline
-	& \textbf{800} & \textbf{1600} & \textbf{2400} & \textbf{3200} & \textbf{4000} \\ \hline
+	\textbf{\textit{Client}} & \textbf{Persen Sukses} \\ \hline
 	\endhead
 	\endfoot
 	\endlastfoot
 	
-	ARIMA(1,1,0) & 5.72\% & 8.96\% & 12.85\% & 12.54\% & 13.38\% \\ \hline
-	ARIMA(2,1,0) & 4.31\% & 9.35\% & 10.68\% & 8.11\% & 9.04\% \\ \hline
-	ARIMA(3,1,0) & 4.84\% & 10.02\% & 13.22\% & 8.63\% & 12.24\% \\ \hline
-	ARIMA(4,1,0) & 4.62\% & 8.41\% & 9.39\% & 7.52\% & 9.21\% \\ \hline
+	\textit{Client} 1 & 100\% \\ \hline
+	\textit{Client} 2 & 100\% \\ \hline
+	\textit{Client} 3 & 100\% \\ \hline
+	\textit{Client} 4 & 100\% \\ \hline
+	\textit{Client} 5 & 100\% \\ \hline
+	\textit{Client} 6 & 100\% \\ \hline
 \end{longtable}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=8.7cm,height=4.4cm]{Images/C-5/errorratio.png}
-	\caption{Grafik Error Ratio}
-	\label{gerrorratio}
-\end{figure}
-Dari uji coba itu, 90\% lebih \textit{request} berhasil ditangani. Hasil uji coba jumlah \textit{request} yang gagal ditunjukkan dengan grafik pada Gambar \ref{gerrorratio}.
+Dari Tabel \ref{keberhasilanrequest1} dapat dilihat bahwa semua \textit{request} dari \textit{client} sukses dijalankan dan tidak ada \textit{error} sama sekali. Hasil uji coba tersebut berdasarkan keberhasilan \textit{client} untuk mengakses internet, mulai dari \textit{client} login ke dalam sistem sampai dengan sistem menyediakan sebuah kontainer \textit{docker} untuk \textit{client tersebut} dan berdasarkan keberhasilan \textit{client} untuk mengakses website HTTP maupun HTTPS.
