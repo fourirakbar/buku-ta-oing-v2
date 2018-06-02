@@ -404,12 +404,12 @@ Dari hasil uji coba kecepatan menangani \textit{request}, mengukur jumlah waktu 
 \end{longtable}
 Dari Tabel \ref{kecepatanrequest1} dapat dilihat dibutuhkan waktu kurang lebih selama 10010 \textit{millisecond} atau selama 10 detik. Hal tersebut terjadi karena spesifikasi dari \textit{docker host} yang berfungsi sebagai penyedia kontainer \textit{docker} mempunyai spesifikasi yang terbatas. Semakin bagus spesifikasi \textit{docker host}, maka akan semakin cepat proses penyediaan kontainer \textit{docker}.
 
-Lalu untuk kecepatan unduh dari \textit{client}, ujicoba dilakukan dengan mengunduh sebuah file dari platform Google Drive. Hasil dari uji coba kecepatan unduh dan juga \textit{upload} dapat dilihat pada Tabel \ref{kecepatanrequest2} dalam satuan detik.
+Lalu untuk kecepatan unduh dan \textit{upload} dari \textit{client}, uji coba dilakukan dengan melakukan cek kecepatan pada website \texttt{http://www.speedtest.net/id}. Hasil dari uji coba kecepatan unduh dan juga \textit{upload} dapat dilihat pada Tabel \ref{kecepatanrequest2} dalam satuan detik.
 
-\begin{longtable}{|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
-	\caption{Kecepatan Menangai \textit{Request} Unduh} \label{kecepatanrequest2} \\
+\begin{longtable}{|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
+	\caption{Kecepatan Menangai \textit{Request} Unduh dan \textit{Upload}} \label{kecepatanrequest2} \\
 	\hline
-	\textbf{Ukuran File} & \textbf{Rata-Rata Kecepatan} & \textbf{Waktu (detik)} \\ \hline
+	& \textbf{Ping} & \textbf{Kecepatan unduh} & \textbf{Kecepatan \textit{Upload}} \\ \hline
 	\endfirsthead
 	\caption[]{Kecepatan Menangai \textit{Request} Unduh} \\
 	\hline
@@ -417,12 +417,22 @@ Lalu untuk kecepatan unduh dari \textit{client}, ujicoba dilakukan dengan mengun
 	\endfoot
 	\endlastfoot
 	
-	126 MB & $\pm$ 2,1 MB & 65 \\ \hline
-	247 MB & $\pm$ 2,1 MB & 133\\ \hline
-	510 MB & $\pm$ 2,1 MB & 337\\ \hline
-	1000 MB & $\pm$ 2,1 MB & 580 \\ \hline
+	\textit{Client} 1 & 4 ms & $\pm$ 10,60 Mb & $\pm$ 8,04 Mb \\ \hline
+	\textit{Client} 2 & 4 ms & $\pm$ 10,60 Mb & $\pm$ 8,04 Mb \\ \hline
+	\textit{Client} 3 & 4 ms & $\pm$ 10,60 Mb & $\pm$ 8,04 Mb \\ \hline
+	\textit{Client} 4 & 4 ms & $\pm$ 10,60 MB & $\pm$ 8,04 Mb \\ \hline
+	\textit{Client} 5 & 4 ms & $\pm$ 10,60 MB & $\pm$ 8,04 Mb \\ \hline
+	\textit{Client} 6 & 4 ms & $\pm$ 10,60 MB & $\pm$ 8,04 Mb \\ \hline
 	
 \end{longtable}
+Pada gambar \ref{speedtest} dapat dilihat \textit{screenshoot} dari cek kecepatan pada \texttt{http://www.speedtest.net/id}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/bab5/speedtest}
+	\caption{\textit{Screenshoot} pada Halaman \texttt{http://www.speedtest.net/id}}
+	\label{speedtest}
+\end{figure}
 
 \subsubsection{Penggunaan CPU}
 Dari hasil uji coba penggunaan CPU pada \textit{server master host}, penggunaan CPU berada di bawah 15\%. Penggunaan CPU yang diukur adalah penggunaan CPU yang dilakukan oleh \textit{container} dari aplikasi, tidak termasuk sistem. Jumlah \textit{core} yang dimiliki oleh \textit{processor} di \textit{server master host} adalah 8 buah, yang artinya kurang lebih hanya satu core yang digunakan untuk menangani semua \textit{request}. Hasil pengukuran penggunaan CPU dapat dilihat pada Tabel \ref{penggunaancpu}

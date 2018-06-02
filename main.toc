@@ -103,13 +103,13 @@
 \contentsline {subsection}{\numberline {5.4.1}Hasil Uji Performa}{70}{subsection.5.4.1}
 \contentsline {subsection}{\numberline {5.4.2}Hasil Uji Performa}{70}{subsection.5.4.2}
 \contentsline {subsubsection}{\numberline {5.4.2.1}Kecepatan Menangani \textit {Request}}{72}{subsubsection.5.4.2.1}
-\contentsline {subsubsection}{\numberline {5.4.2.2}Penggunaan CPU}{73}{subsubsection.5.4.2.2}
-\contentsline {subsubsection}{\numberline {5.4.2.3}Penggunaan \textit {Memory}}{74}{subsubsection.5.4.2.3}
-\contentsline {subsubsection}{\numberline {5.4.2.4}Keberhasilan \textit {Request}}{75}{subsubsection.5.4.2.4}
+\contentsline {subsubsection}{\numberline {5.4.2.2}Penggunaan CPU}{74}{subsubsection.5.4.2.2}
+\contentsline {subsubsection}{\numberline {5.4.2.3}Penggunaan \textit {Memory}}{75}{subsubsection.5.4.2.3}
+\contentsline {subsubsection}{\numberline {5.4.2.4}Keberhasilan \textit {Request}}{76}{subsubsection.5.4.2.4}
 \contentsline {chapter}{\numberline {VI}PENUTUP}{77}{chapter.6}
 \contentsline {section}{\numberline {6.1}Kesimpulan}{77}{section.6.1}
 \contentsline {section}{\numberline {6.2}Saran}{77}{section.6.2}
-\contentsline {chapter}{DAFTAR PUSTAKA}{79}{chapter*.22}
+\contentsline {chapter}{DAFTAR PUSTAKA}{79}{chapter*.23}
 \contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{81}{appendix.A}
 \contentsline {chapter}{\numberline {B}Konfigurasi}{85}{appendix.B}
-\contentsline {chapter}{BIODATA PENULIS}{87}{appendix*.23}
+\contentsline {chapter}{BIODATA PENULIS}{87}{appendix*.24}

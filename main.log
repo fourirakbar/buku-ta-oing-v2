@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  2 JUN 2018 01:53
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  2 JUN 2018 13:14
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1370,7 +1370,10 @@ File: img/bismillah.png Graphic file (type QTm)
 \openout5 = `main.lot'.
 
  [20]
-(./main.lof)
+(./main.lof
+LaTeX Font Info:    Font shape `EU1/CourierNew(0)/m/n' will be
+(Font)              scaled to size 9.85492pt on input line 22.
+)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
@@ -1399,10 +1402,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 BAB II.
 [7
 
-] [8]
-LaTeX Font Info:    Font shape `EU1/CourierNew(0)/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 20.
- [9] [10] [11]
+] [8] [9] [10] [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
@@ -1639,29 +1639,39 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [71]
 [72]
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 442--442
+File: images/bab5/speedtest.png Graphic file (type QTm)
+ <use  "images/bab5/speedtest.png" >
+LaTeX Font Info:    Font shape `EU1/CourierNew(0)/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 433.
+
+Underfull \vbox (badness 1314) has occurred while \output is active []
+
+ [73]
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 452--452
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(1,1,0)| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 443--443
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 453--453
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(2,1,0)| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 444--444
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 454--454
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(3,1,0)| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 445--445
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 455--455
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(4,1,0)| 
  []
 
-[73]
 File: Images/C-5/cpuusage.png Graphic file (type QTm)
- <use  "Images/C-5/cpuusage.png" > [74] [75]) (./chapters/6-Penutup.tex
-[76]
+<use  "Images/C-5/cpuusage.png" >
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74]
+[75]) (./chapters/6-Penutup.tex [76]
 BAB VI.
 [77
 
@@ -1693,11 +1703,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 27808 strings out of 493638
- 485088 string characters out of 6146796
- 609669 words of memory out of 5000000
+ 27811 strings out of 493638
+ 485147 string characters out of 6146796
+ 609586 words of memory out of 5000000
  30839 multiletter control sequences out of 15000+600000
- 7051 words of font info for 63 fonts, out of 8000000 for 9000
+ 7059 words of font info for 64 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,12n,63p,10396b,981s stack positions out of 5000i,500n,10000p,200000b,80000s
 
