@@ -76,40 +76,40 @@
 \contentsline {chapter}{\numberline {V}PENGUJIAN DAN EVALUASI}{55}{chapter.5}
 \contentsline {section}{\numberline {5.1}Lingkungan Uji Coba}{55}{section.5.1}
 \contentsline {section}{\numberline {5.2}Skenario Uji Coba}{57}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Skenario Uji Coba Fungsionalitas}{57}{subsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.1.1}Uji \textit {client} dapat Mengakses Internet}{57}{subsubsection.5.2.1.1}
-\contentsline {paragraph}{\numberline {5.2.1.1.1}Uji \textit {Client} dapat \textit {Login} ke Dalam Sistem}{58}{paragraph.5.2.1.1.1}
-\contentsline {paragraph}{\numberline {5.2.1.1.2}Uji \textit {Client} dapat Mengirimkan Permintaan Penyediaan Kontainer \textit {Docker} ke \textit {Docker Host}}{59}{paragraph.5.2.1.1.2}
-\contentsline {paragraph}{\numberline {5.2.1.1.3}Uji \textit {Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit {Docker}}{60}{paragraph.5.2.1.1.3}
+\contentsline {subsection}{\numberline {5.2.1}Skenario Uji Coba Fungsionalitas}{58}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}Uji \textit {client} dapat Mengakses Internet}{58}{subsubsection.5.2.1.1}
+\contentsline {paragraph}{\numberline {5.2.1.1.1}Uji \textit {Client} dapat \textit {Login} ke Dalam Sistem}{59}{paragraph.5.2.1.1.1}
+\contentsline {paragraph}{\numberline {5.2.1.1.2}Uji \textit {Client} dapat Mengirimkan Permintaan Penyediaan Kontainer \textit {Docker} ke \textit {Docker Host}}{60}{paragraph.5.2.1.1.2}
+\contentsline {paragraph}{\numberline {5.2.1.1.3}Uji \textit {Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit {Docker}}{61}{paragraph.5.2.1.1.3}
 \contentsline {subsubsection}{\numberline {5.2.1.2}Uji Fungsionalitas Menu Aplikasi Halaman \textit {Administrator}}{62}{subsubsection.5.2.1.2}
-\contentsline {subsection}{\numberline {5.2.2}Skenario Uji Coba Performa}{63}{subsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.2.1}Uji Performa Penggunaan CPU}{63}{subsubsection.5.2.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2.2}Uji Performa Penggunaan \textit {Memory}}{63}{subsubsection.5.2.2.2}
-\contentsline {subsubsection}{\numberline {5.2.2.3}Uji Performa Kecepatan Menangani \textit {Request}}{64}{subsubsection.5.2.2.3}
-\contentsline {subsubsection}{\numberline {5.2.2.4}Uji Performa Keberhasilan \textit {Request}}{64}{subsubsection.5.2.2.4}
-\contentsline {section}{\numberline {5.3}Hasil Uji Coba dan Evaluasi}{64}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Uji Fungsionalitas}{65}{subsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.1.1}Uji \textit {Client} dapat Mengakses Internet}{65}{subsubsection.5.3.1.1}
-\contentsline {paragraph}{\numberline {5.3.1.1.1}Uji \textit {Client} dapat \textit {Login} ke Dalam Sistem}{65}{paragraph.5.3.1.1.1}
-\contentsline {paragraph}{\numberline {5.3.1.1.2}Uji \textit {Client} dapat Mengirimkan Permintaan Penyediaan Kontainer \textit {Docker} ke \textit {Docker Host}}{66}{paragraph.5.3.1.1.2}
-\contentsline {paragraph}{\numberline {5.3.1.1.3}Uji \textit {Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit {Docker}}{67}{paragraph.5.3.1.1.3}
-\contentsline {subsubsection}{\numberline {5.3.1.2}Uji Fungsionalitas Menu Aplikasi Halaman \textit {Administrator}}{67}{subsubsection.5.3.1.2}
-\contentsline {subsection}{\numberline {5.3.2}Hasil Uji Performa}{68}{subsection.5.3.2}
-\contentsline {subsubsection}{\numberline {5.3.2.1}Penggunaan CPU}{68}{subsubsection.5.3.2.1}
-\contentsline {subsubsection}{\numberline {5.3.2.2}Penggunaan \textit {Memory}}{69}{subsubsection.5.3.2.2}
-\contentsline {subsubsection}{\numberline {5.3.2.3}Kecepatan Menangani \textit {Request}}{69}{subsubsection.5.3.2.3}
-\contentsline {subsubsection}{\numberline {5.3.2.4}Keberhasilan \textit {Request}}{69}{subsubsection.5.3.2.4}
-\contentsline {section}{\numberline {5.4}Hasil Uji Coba dan Evaluasi}{69}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Hasil Uji Performa}{70}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Hasil Uji Performa}{70}{subsection.5.4.2}
-\contentsline {subsubsection}{\numberline {5.4.2.1}Kecepatan Menangani \textit {Request}}{72}{subsubsection.5.4.2.1}
-\contentsline {subsubsection}{\numberline {5.4.2.2}Penggunaan CPU}{74}{subsubsection.5.4.2.2}
-\contentsline {subsubsection}{\numberline {5.4.2.3}Penggunaan \textit {Memory}}{75}{subsubsection.5.4.2.3}
-\contentsline {subsubsection}{\numberline {5.4.2.4}Keberhasilan \textit {Request}}{76}{subsubsection.5.4.2.4}
-\contentsline {chapter}{\numberline {VI}PENUTUP}{77}{chapter.6}
-\contentsline {section}{\numberline {6.1}Kesimpulan}{77}{section.6.1}
-\contentsline {section}{\numberline {6.2}Saran}{77}{section.6.2}
-\contentsline {chapter}{DAFTAR PUSTAKA}{79}{chapter*.23}
-\contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{81}{appendix.A}
-\contentsline {chapter}{\numberline {B}Konfigurasi}{85}{appendix.B}
-\contentsline {chapter}{BIODATA PENULIS}{87}{appendix*.24}
+\contentsline {subsection}{\numberline {5.2.2}Skenario Uji Coba Performa}{64}{subsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.1}Uji Performa Penggunaan CPU}{64}{subsubsection.5.2.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2.2}Uji Performa Penggunaan \textit {Memory}}{64}{subsubsection.5.2.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.3}Uji Performa Kecepatan Menangani \textit {Request}}{65}{subsubsection.5.2.2.3}
+\contentsline {subsubsection}{\numberline {5.2.2.4}Uji Performa Keberhasilan \textit {Request}}{65}{subsubsection.5.2.2.4}
+\contentsline {section}{\numberline {5.3}Hasil Uji Coba dan Evaluasi}{65}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Uji Fungsionalitas}{66}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Uji \textit {Client} dapat Mengakses Internet}{66}{subsubsection.5.3.1.1}
+\contentsline {paragraph}{\numberline {5.3.1.1.1}Uji \textit {Client} dapat \textit {Login} ke Dalam Sistem}{66}{paragraph.5.3.1.1.1}
+\contentsline {paragraph}{\numberline {5.3.1.1.2}Uji \textit {Client} dapat Mengirimkan Permintaan Penyediaan Kontainer \textit {Docker} ke \textit {Docker Host}}{67}{paragraph.5.3.1.1.2}
+\contentsline {paragraph}{\numberline {5.3.1.1.3}Uji \textit {Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit {Docker}}{68}{paragraph.5.3.1.1.3}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Uji Fungsionalitas Menu Aplikasi Halaman \textit {Administrator}}{68}{subsubsection.5.3.1.2}
+\contentsline {subsection}{\numberline {5.3.2}Hasil Uji Performa}{69}{subsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.2.1}Penggunaan CPU}{69}{subsubsection.5.3.2.1}
+\contentsline {subsubsection}{\numberline {5.3.2.2}Penggunaan \textit {Memory}}{70}{subsubsection.5.3.2.2}
+\contentsline {subsubsection}{\numberline {5.3.2.3}Kecepatan Menangani \textit {Request}}{70}{subsubsection.5.3.2.3}
+\contentsline {subsubsection}{\numberline {5.3.2.4}Keberhasilan \textit {Request}}{70}{subsubsection.5.3.2.4}
+\contentsline {section}{\numberline {5.4}Hasil Uji Coba dan Evaluasi}{70}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Hasil Uji Performa}{71}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Hasil Uji Performa}{71}{subsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}Kecepatan Menangani \textit {Request}}{73}{subsubsection.5.4.2.1}
+\contentsline {subsubsection}{\numberline {5.4.2.2}Penggunaan CPU}{75}{subsubsection.5.4.2.2}
+\contentsline {subsubsection}{\numberline {5.4.2.3}Penggunaan \textit {Memory}}{76}{subsubsection.5.4.2.3}
+\contentsline {subsubsection}{\numberline {5.4.2.4}Keberhasilan \textit {Request}}{77}{subsubsection.5.4.2.4}
+\contentsline {chapter}{\numberline {VI}PENUTUP}{79}{chapter.6}
+\contentsline {section}{\numberline {6.1}Kesimpulan}{79}{section.6.1}
+\contentsline {section}{\numberline {6.2}Saran}{79}{section.6.2}
+\contentsline {chapter}{DAFTAR PUSTAKA}{81}{chapter*.24}
+\contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{83}{appendix.A}
+\contentsline {chapter}{\numberline {B}Konfigurasi}{87}{appendix.B}
+\contentsline {chapter}{BIODATA PENULIS}{89}{appendix*.25}

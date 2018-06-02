@@ -15,23 +15,23 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Spesifikasi Komponen\relax }}{55}{table.5.1}
 \contentsline {table}{\numberline {5.2}{\ignorespaces IP dan Domain Server\relax }}{56}{table.5.2}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Skenario Uji \textit {Client} dapat Mengakses Internet\relax }}{58}{table.5.3}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Skenario Uji \textit {Client} dapat Mengakses Internet\relax }}{59}{table.5.3}
 \contentsline {table}{\numberline {5.4}{\ignorespaces Skenario Uji \textit {Client} dapat \textit {Login} ke Dalam Sistem\relax }}{59}{table.5.4}
 \contentsline {table}{\numberline {5.5}{\ignorespaces Skenario Uji \textit {Client} dapat \textit {Login} Mengirimkan Permintaan Penyediaan Kontainer \textit {Docker}\relax }}{60}{table.5.5}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Skenario Uji \textit {Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit {Docker}\relax }}{61}{table.5.6}
-\contentsline {table}{\numberline {5.7}{\ignorespaces Skenario Uji Fungsionalitas Aplikasi Halaman \textit {Administrator}\relax }}{62}{table.5.7}
-\contentsline {table}{\numberline {5.8}{\ignorespaces Hasil Uji Coba \textit {Client} dapat Mengakses Internet\relax }}{65}{table.5.8}
-\contentsline {table}{\numberline {5.9}{\ignorespaces Hasil Uji Coba \textit {Client} dapat \textit {Login} ke Dalam Sistem\relax }}{66}{table.5.9}
-\contentsline {table}{\numberline {5.10}{\ignorespaces Hasil Uji Coba \textit {Client} dapat Mengirimkan Permintaan Penyediaan Kontainer \textit {Docker} ke \textit {Docker Host}\relax }}{66}{table.5.10}
-\contentsline {table}{\numberline {5.11}{\ignorespaces Hasil Uji Coba \textit {Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit {Docker}\relax }}{67}{table.5.11}
-\contentsline {table}{\numberline {5.12}{\ignorespaces Hasil Uji Fungsionalitas Aplikasi Halaman \textit {Administrator}\relax }}{68}{table.5.12}
-\contentsline {table}{\numberline {5.13}{\ignorespaces Jumlah \textit {Request} ke Aplikasi\relax }}{70}{table.5.13}
-\contentsline {table}{\numberline {5.14}{\ignorespaces Jumlah \textit {Container}\relax }}{71}{table.5.14}
-\contentsline {table}{\numberline {5.15}{\ignorespaces Kecepatan Menangai \textit {Request} Penyediaan Kontainer\relax }}{72}{table.5.15}
-\contentsline {table}{\numberline {5.16}{\ignorespaces Kecepatan Menangai \textit {Request} Unduh dan \textit {Upload}\relax }}{73}{table.5.16}
-\contentsline {table}{\numberline {5.17}{\ignorespaces Penggunaan CPU\relax }}{74}{table.5.17}
-\contentsline {table}{\numberline {5.18}{\ignorespaces \textit {Penggunaan \textit {Memory}}\relax }}{75}{table.5.18}
-\contentsline {table}{\numberline {5.19}{\ignorespaces \textit {Success Ratio Request}\relax }}{76}{table.5.19}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Skenario Uji \textit {Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit {Docker}\relax }}{62}{table.5.6}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Skenario Uji Fungsionalitas Aplikasi Halaman \textit {Administrator}\relax }}{63}{table.5.7}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Hasil Uji Coba \textit {Client} dapat Mengakses Internet\relax }}{66}{table.5.8}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Hasil Uji Coba \textit {Client} dapat \textit {Login} ke Dalam Sistem\relax }}{67}{table.5.9}
+\contentsline {table}{\numberline {5.10}{\ignorespaces Hasil Uji Coba \textit {Client} dapat Mengirimkan Permintaan Penyediaan Kontainer \textit {Docker} ke \textit {Docker Host}\relax }}{67}{table.5.10}
+\contentsline {table}{\numberline {5.11}{\ignorespaces Hasil Uji Coba \textit {Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit {Docker}\relax }}{68}{table.5.11}
+\contentsline {table}{\numberline {5.12}{\ignorespaces Hasil Uji Fungsionalitas Aplikasi Halaman \textit {Administrator}\relax }}{69}{table.5.12}
+\contentsline {table}{\numberline {5.13}{\ignorespaces Jumlah \textit {Request} ke Aplikasi\relax }}{71}{table.5.13}
+\contentsline {table}{\numberline {5.14}{\ignorespaces Jumlah \textit {Container}\relax }}{72}{table.5.14}
+\contentsline {table}{\numberline {5.15}{\ignorespaces Kecepatan Menangai \textit {Request} Penyediaan Kontainer\relax }}{73}{table.5.15}
+\contentsline {table}{\numberline {5.16}{\ignorespaces Kecepatan Menangai \textit {Request} Unduh dan \textit {Upload}\relax }}{74}{table.5.16}
+\contentsline {table}{\numberline {5.17}{\ignorespaces Penggunaan CPU\relax }}{75}{table.5.17}
+\contentsline {table}{\numberline {5.18}{\ignorespaces \textit {Penggunaan \textit {Memory}}\relax }}{76}{table.5.18}
+\contentsline {table}{\numberline {5.19}{\ignorespaces \textit {Success Ratio Request}\relax }}{77}{table.5.19}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

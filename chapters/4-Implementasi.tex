@@ -98,16 +98,16 @@ Pada halaman \textit{login} diperlukan adanya rute-rute yang bisa diakses untuk 
 Ketika \textit{client} belum \textit{login} ke dalam sistem, maka akan diarahkan ke tampilan grafis antar muka dari halaman \textit{login}. Lalu setelah \textit{client} berhasil \textit{login} ke dalam sistem, maka akan diarahkan ke tampilan grafis antar muka halaman sukses \textit{login}. Pada Kode Sumber \ref{pseudocodehalamanlogin} diperlihatkan bagaimana implementasinya dalam bentuk \textit{pseduocode}.
 
 \begin{minipage}{\linewidth}  
-	\begin{lstlisting}[numbers=left, frame=single,tabsize=2,breaklines,caption={Pseudocode Web Service},label=pseudocodehalamanlogin]
+	\begin{lstlisting}[numbers=left, frame=single,tabsize=2,breaklines,caption={Pseudocode Web Service},label=pseudocodehalamanlogin,language=json]
 	Check whether the client is already login or not yet
 	
 	if session.get login
-	open welcome page
+		open welcome page
 	else
-	open login page
-	if login success
-	session.get login = True	  
-	return  	
+		open login page
+		if login success
+		session.get login = True	  
+		return  	
 	\end{lstlisting}
 \end{minipage}
 
@@ -199,18 +199,18 @@ client login
 return  	
 \end{lstlisting}
 \begin{minipage}{\linewidth}  
-	\begin{lstlisting}[numbers=left, frame=single,tabsize=2,breaklines,caption={Pseudocode Web Service},label=pseudocodeoing]
+	\begin{lstlisting}[numbers=left, frame=single,tabsize=2,breaklines,caption={Pseudocode Web Service},label=pseudocodeoing,language=json]
 	Check whether the client is already login or not yet
 	
 	if session.get login
 		create container
-	add new rules to container
-	return
+		add new rules to container
+		return
 	else
-	add new rules
-	client open page login
-	client login
-	return  	
+		add new rules
+		client open page login
+		client login
+		return  	
 	\end{lstlisting}
 \end{minipage}
 
