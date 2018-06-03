@@ -3,49 +3,151 @@
 	
 \section{Lingkungan Uji Coba}
 	Lingkungan pengujian menggunakan komponen-komponen yang terdiri dari: satu \textit{server docker host}, satu \textit{server login}, dan tiga komputer penguji.Semua komputer penguji menggunakan tiga buah desktop dengan sistem operasi Ubuntu 16.04 dan tiga buah desktop dengan sistem operasi Windows 7. Pengujian dilakukan di Laboratoriom Arsitektur dan Jaringan Komputer Jurusan Teknik Informatika ITS. \\
-    \indent Spesifikasi untuk setiap komponen yang digunakan ditunjukkan pada Tabel \ref{spesifikasikomponen}.
-    \begin{longtable}{|p{0.05\textwidth}|p{0.18\textwidth}|p{0.33\textwidth}|p{0.33\textwidth}|}					\caption{Spesifikasi Komponen} \label{spesifikasikomponen} \\
-        \hline
-        \textbf{No} & \textbf{Komponen} & \textbf{Perangkat Keras} & \textbf{Perangkat Lunak} \\ \hline
-        \endfirsthead
-        \caption[]{Spesifikasi Komponen} \\
-        \hline
-        \textbf{No} & \textbf{Komponen} & \textbf{Perangkat Keras} & \textbf{Perangkat Lunak} \\ \hline
-        \endhead
-        \endfoot
-        \endlastfoot
+    \indent Spesifikasi untuk setiap komponen yang digunakan ditunjukkan pada Tabel \ref{spesifikasidockerhost} untuk \textit{docker host}, Tabel \ref{spesifikasihalamanlogin} untuk \textit{server} halaman login, Tabel \ref{spesifikasikomputerpenguji1} untuk Komputer Penguji 1, Tabel \ref{spesifikasikomputerpenguji2} untuk Komputer Penguji 2, Tabel \ref{spesifikasikomputerpenguji3} untuk Komputer Penguji 3, Tabel \ref{spesifikasikomputerpenguji4} untuk Komputer Penguji 4, Tabel \ref{spesifikasikomputerpenguji5} untuk Komputer Penguji 5, dan Tabel \ref{spesifikasikomputerpenguji6} untuk Komputer Penguji 6.
 
-    	1 & Docker Host & 4 core processor, 8GB RAM, 500GB HDD & Ubuntu 16.04.5 LTS, Docker 1.13.1, Python 3.5.2, MySQL 5.7.18, Flask 1.0.2, Iptables 1.6. \\ \hline
-        2 & Server Login & 2 core processor, 2GB RAM, 20GB HDD & Ubuntu 16.04.5 LTS,  Python 3.5.2, Flask 1.0.2, Supervisor 3.2, Nginx 1.10.3, Gunicorn 19.9.1. \\ \hline
-        3 & Komputer Penguji 1 & Processor Core2Duo E7300, 2GB RAM & Ubuntu 14.04 LTS, Firefox Quantum 60.0.1 \\ \hline
-        4 & Komputer Penguji 2 & Processor Core2Duo E7300, 2GB RAM & Ubuntu 14.04 LTS, Firefox Quantum 60.0.1 \\ \hline
-        5 & Komputer Penguji 3 & Processor Core2Duo E7300, 2GB RAM & Ubuntu 14.04 LTS, Firefox Quantum 60.0.1 \\ \hline
-        6 & Komputer Penguji 4 & Processor Core2Duo E7300, 2GB RAM & Windows 7, Firefox Quantum 60.0.1 \\ \hline
-        7 & Komputer Penguji 5 & Processor Core2Duo E7300, 2GB RAM & Windows 7, Firefox Quantum 60.0.1 \\ \hline
-        8 & Komputer Penguji 6 & Processor Core2Duo E7300, 2GB RAM & Windows 7, Firefox Quantum 60.0.1 \\ \hline
-    \end{longtable}
-    
-    \indent Untuk akses ke masing-masing komponen, digunakan komputer yang sudah tersedia di Laboratorium Arsitektur dan Jaringan Komputer Jurusan Teknik Informatika ITS. Detailnya ditunjukkan pada Tabel \ref{ipdomainserver}.
-   			\begin{longtable}{|p{0.05\textwidth}|p{0.33\textwidth}|p{0.44\textwidth}|}					\caption{IP dan Domain Server} \label{ipdomainserver} \\
-				\hline
-				\textbf{No} & \textbf{Server} & \textbf{IP dan Domain} \\ \hline
-				\endfirsthead
-				\caption[]{IP dan Domain Server} \\
-				\hline
-				\textbf{No} & \textbf{Server} & \textbf{IP Address} \\ \hline
-				\endhead
-				\endfoot
-				\endlastfoot
-				
-                1 & Docker Host & 10.151.36.134 \\ \hline
-                2 & Server Login & 10.151.36.173 \\ \hline
-                3 & Komputer Penguji 1 & 10.151.36.33 \\ \hline
-                4 & Komputer Penguji 2 & 10.151.36.34 \\ \hline
-                5 & Komputer Penguji 3 & 10.151.36.37 \\ \hline
-                6 & Komputer Penguji 4 & 10.151.36.38 \\ \hline
-                7 & Komputer Penguji 5 & 10.151.36.39 \\ \hline
-                8 & Komputer Penguji 6 & 10.151.36.41 \\ \hline
-			\end{longtable}
+\begin{enumerate}
+	\item \textbf{\textit{Server} Untuk \textit{Docker Host}}
+	\begin{longtable}{|l|l|}
+		\caption{\textit{Server} Untuk \textit{Docker Host}}
+		\label{spesifikasidockerhost} \\
+		\hline
+		\textbf{Perangkat Keras}      & \begin{tabular}[c]{@{}l@{}} Processor Intel(R) Core(TM) \\ i5-2120 CPU @ 3.30GHz\end{tabular} \\ \cline{2-2} 
+		& RAM 8GB	\\ \cline{2-2} 
+		& Hard disk 500GB \\ \hline
+		\textbf{Perangkat Lunak}      & Linux Mint 18.03 64 bit \\ \cline{2-2} 
+		& Docker-CE versi 1.13.1. \\ \cline{2-2} 
+		& MySQL versi 5.7.18. \\ \cline{2-2} 
+		& Iptables versi 1.6. \\ \cline{2-2} 
+		& Python versi 3.5.2. \\ \cline{2-2} 
+		& Flask versi 1.0.2.\\ \hline
+		\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.134 \\ \cline{2-2} 
+		& Netmask : 255.255.255.0 \\ \cline{2-2} 
+		& Gateway : 10.151.36.1 \\ \cline{2-2} 
+		& Hostname : X450LD \\ \hline
+	\end{longtable}
+	
+	\item \textbf{\textit{Server} Untuk Halaman Login}
+	\begin{longtable}{|l|l|}
+		\caption{\textit{Server} Untuk Halaman Login}
+		\label{spesifikasihalamanlogin} \\
+		\hline
+		\textbf{Perangkat Keras}      & \begin{tabular}[c]{@{}l@{}} Processor Intel(R) Core(TM)2Duo \\ CPU E7200 @ 2.53GHz\end{tabular} \\ \cline{2-2} 
+		& RAM 1GB	\\ \cline{2-2} 
+		& Hard disk 20GB \\ \hline
+		\textbf{Perangkat Lunak}      & Ubuntu 16.04 64 bit \\ \cline{2-2} 
+		& Nginx versi 1.10.3. \\ \cline{2-2} 
+		& Gunicorn versi 19.9.1. \\ \cline{2-2} 
+		& Supervisor versi 3.2. \\ \cline{2-2} 
+		& Python versi 3.5.2. \\ \cline{2-2} 
+		& Flask versi 1.0.2.\\ \hline
+		\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.173 \\ \cline{2-2} 
+		& Netmask : 255.255.255.0 \\ \cline{2-2} 
+		& Gateway : 10.151.36.1 \\ \cline{2-2} 
+		& Hostname : SERVERLOGIN \\ \hline
+	\end{longtable}
+	
+	\item \textbf{Komputer Penguji}
+	\begin{enumerate}
+		\item \textbf{Komputer Penguji 1}
+		\begin{longtable}{|l|l|}
+			\caption{Komputer Penguji 1}
+			\label{spesifikasikomputerpenguji1} \\
+			\hline
+			\textbf{Perangkat Keras}      & \begin{tabular}[c]{@{}l@{}} Processor Intel(R) Core(TM) \\ i5-2120 CPU @ 3.30GHz\end{tabular} \\ \cline{2-2} 
+			& RAM 8GB	\\ \cline{2-2} 
+			& Hard disk 500GB \\ \hline
+			\textbf{Perangkat Lunak}      & Ubuntu 16.04 64 bit \\ \cline{2-2} 
+			& Firefox Quantum versi 60.0.1.\\ \hline
+			\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.33 \\ \cline{2-2} 
+			& Netmask : 255.255.255.0 \\ \cline{2-2} 
+			& Gateway : 10.151.36.1 \\ \cline{2-2} 
+			& Hostname : DRONA \\ \hline
+		\end{longtable}
+		
+		\item \textbf{Komputer Penguji 2}
+		\begin{longtable}{|l|l|}
+			\caption{Komputer Penguji 2}
+			\label{spesifikasikomputerpenguji2} \\
+			\hline
+			\textbf{Perangkat Keras}      & \begin{tabular}[c]{@{}l@{}} Processor Intel(R) Core(TM) \\ i3-2120 CPU @ 3.30GHz\end{tabular} \\ \cline{2-2} 
+			& RAM 6GB	\\ \cline{2-2} 
+			& Hard disk 1TB \\ \hline
+			\textbf{Perangkat Lunak}      & Ubuntu 16.04 64 bit \\ \cline{2-2} 
+			& Firefox Quantum versi 60.0.1.\\ \hline
+			\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.34 \\ \cline{2-2} 
+			& Netmask : 255.255.255.0 \\ \cline{2-2} 
+			& Gateway : 10.151.36.1 \\ \cline{2-2} 
+			& Hostname : BHISMA \\ \hline
+		\end{longtable}
+		\pagebreak
+		
+		\item \textbf{Komputer Penguji 3}
+		\begin{longtable}{|l|l|}
+			\caption{Komputer Penguji 3}
+			\label{spesifikasikomputerpenguji3} \\
+			\hline
+			\textbf{Perangkat Keras}      & \begin{tabular}[c]{@{}l@{}} Processor Intel(R) Core(TM) \\ i3-2120 CPU @ 3.30GHz\end{tabular} \\ \cline{2-2} 
+			& RAM 4GB	\\ \cline{2-2} 
+			& Hard disk 250GB \\ \hline
+			\textbf{Perangkat Lunak}      & Ubuntu 16.04 64 bit \\ \cline{2-2} 
+			& Firefox Quantum versi 60.0.1.\\ \hline
+			\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.33 \\ \cline{2-2} 
+			& Netmask : 255.255.255.0 \\ \cline{2-2} 
+			& Gateway : 10.151.36.1 \\ \cline{2-2} 
+			& Hostname : ARJUNA \\ \hline
+		\end{longtable}
+		
+		\item \textbf{Komputer Penguji 4}
+		\begin{longtable}{|l|l|}
+			\caption{Komputer Penguji 4}
+			\label{spesifikasikomputerpenguji4} \\
+			\hline
+			\textbf{Perangkat Keras}      & \begin{tabular}[c]{@{}l@{}} Processor Intel(R) Core(TM) \\ i3-2120 CPU @ 3.30GHz\end{tabular} \\ \cline{2-2} 
+			& RAM 8GB	\\ \cline{2-2} 
+			& Hard disk 1TB \\ \hline
+			\textbf{Perangkat Lunak}      & Windows 10 64 bit \\ \cline{2-2} 
+			& Firefox Quantum versi 60.0.1.\\ \hline
+			\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.38 \\ \cline{2-2} 
+			& Netmask : 255.255.255.0 \\ \cline{2-2} 
+			& Gateway : 10.151.36.1 \\ \cline{2-2} 
+			& Hostname : KRESNA \\ \hline
+		\end{longtable}
+		\pagebreak
+		
+		\item \textbf{Komputer Penguji 5}
+		\begin{longtable}{|l|l|}
+			\caption{Komputer Penguji 5}
+			\label{spesifikasikomputerpenguji5} \\
+			\hline
+			\textbf{Perangkat Keras}      & \begin{tabular}[c]{@{}l@{}} Processor Intel(R) Core(TM)2Duo \\ CPU E7200 @ 2.53GHz\end{tabular} \\ \cline{2-2} 
+			& RAM 2GB	\\ \cline{2-2} 
+			& Hard disk 120GB \\ \hline
+			\textbf{Perangkat Lunak}      & Windows 7 64 bit \\ \cline{2-2} 
+			& Firefox Quantum versi 60.0.1.\\ \hline
+			\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.39 \\ \cline{2-2} 
+			& Netmask : 255.255.255.0 \\ \cline{2-2} 
+			& Gateway : 10.151.36.1 \\ \cline{2-2} 
+			& Hostname : NARASOMA \\ \hline
+		\end{longtable}
+		
+		\item \textbf{Komputer Penguji 6}
+		\begin{longtable}{|l|l|}
+			\caption{Komputer Penguji 6}
+			\label{spesifikasikomputerpenguji6} \\
+			\hline
+			\textbf{Perangkat Keras}      & \begin{tabular}[c]{@{}l@{}} Processor Intel(R) Core(TM)2Duo \\ CPU E7200 @ 2.53GHz\end{tabular} \\ \cline{2-2} 
+			& RAM 2GB	\\ \cline{2-2} 
+			& Hard disk 120GB \\ \hline
+			\textbf{Perangkat Lunak}      & Windows 7 64 bit \\ \cline{2-2} 
+			& Firefox Quantum versi 60.0.1.\\ \hline
+			\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.41 \\ \cline{2-2} 
+			& Netmask : 255.255.255.0 \\ \cline{2-2} 
+			& Gateway : 10.151.36.1 \\ \cline{2-2} 
+			& Hostname : ANGGADA \\ \hline
+		\end{longtable}
+		
+	\end{enumerate}
+\end{enumerate}
 			
 			Untuk gambar arsitektur dari setiap komponen yang digunakan dapat dilihat pada Gambar \ref{arsitekturbab5}.
 			

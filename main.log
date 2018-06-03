@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  2 JUN 2018 14:41
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  3 JUN 2018 11:13
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1591,76 +1591,68 @@ File: images/bab4/userrekap.png Graphic file (type QTm)
 
 ]
 BAB V.
-
-Overfull \hbox (17.76279pt too wide) in alignment at lines 7--10
- [] [] [] [] 
- []
-
-
-Overfull \hbox (17.76279pt too wide) in alignment at lines 10--14
- [] [] [] [] 
- []
-
-
-Overfull \hbox (17.76279pt too wide) in alignment at lines 14--15
- [] [] [] [] 
- []
-
-
-Overfull \hbox (17.76279pt too wide) in alignment at lines 15--16
- [] [] [] [] 
- []
-
-
-Overfull \hbox (17.76279pt too wide) in alignment at lines 16--26
- [] [] [] [] 
- []
-
 [55] [56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
 File: images/bab5/arsitekturbab5.png Graphic file (type QTm)
- <use  "images/bab5/arsitekturbab5.png" > [57] [58] [59]
-Overfull \vbox (4.70494pt too high) has occurred while \output is active []
 
-
-[60] [61] [62] [63] [64] [65] [66]
+<use  "images/bab5/arsitekturbab5.png" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67]
-[68] [69] [70]
+ [59]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71]
+ [60]
+Overfull \vbox (0.68417pt too high) has occurred while \output is active []
+
+
+[61]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62]
+[63] [64] [65] [66] [67] [68] [69]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
+[71] [72] [73]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74]
 File: Images/C-5/jumlahcontainer.png Graphic file (type QTm)
 
 <use  "Images/C-5/jumlahcontainer.png" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [72]
-[73]
+ [75]
+[76]
 File: images/bab5/speedtest.png Graphic file (type QTm)
  <use  "images/bab5/speedtest.png" >
 LaTeX Font Info:    Font shape `EU1/CourierNew(0)/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 443.
+(Font)              scaled to size 8.09995pt on input line 545.
 
 Underfull \vbox (badness 1314) has occurred while \output is active []
 
- [74]
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 462--462
+ [77]
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 564--564
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(1,1,0)| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 463--463
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 565--565
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(2,1,0)| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 464--464
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 566--566
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(3,1,0)| 
  []
 
 
-Overfull \hbox (2.86229pt too wide) in paragraph at lines 465--465
+Overfull \hbox (2.86229pt too wide) in paragraph at lines 567--567
 []|\EU1/TimesNewRoman(0)/m/n/10.95 ARIMA(4,1,0)| 
  []
 
@@ -1668,26 +1660,26 @@ File: Images/C-5/cpuusage.png Graphic file (type QTm)
 <use  "Images/C-5/cpuusage.png" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [75]
-[76]) (./chapters/6-Penutup.tex [77] [78
-
-]
+ [78]
+[79]) (./chapters/6-Penutup.tex [80]
 BAB VI.
-[79]) (./main.bbl [80] [81
+[81
 
-]) (./chapters/7-Lampiran_A.tex [82]
+]) (./main.bbl [82] [83
+
+]) (./chapters/7-Lampiran_A.tex [84]
 Lampiran A.
-[83
+[85
 
-] [84]) (./chapters/8-Lampiran_B.tex [85] [86
+] [86]) (./chapters/8-Lampiran_B.tex [87] [88
 
 ]
 Lampiran B.
-[87] [88])
+[89] [90])
 File: images/cover/pic.JPG Graphic file (type QTm)
  <use  "images/cover/pic.JPG" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
- [89
+ [91
 
 
 ]
@@ -1701,12 +1693,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 27833 strings out of 493638
- 485352 string characters out of 6146796
- 609661 words of memory out of 5000000
- 30860 multiletter control sequences out of 15000+600000
+ 27847 strings out of 493638
+ 485605 string characters out of 6146796
+ 610131 words of memory out of 5000000
+ 30874 multiletter control sequences out of 15000+600000
  7059 words of font info for 64 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,12n,63p,10396b,1056s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (115 pages).
+Output written on main.pdf (117 pages).
