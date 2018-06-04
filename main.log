@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  4 JUN 2018 13:17
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  4 JUN 2018 15:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1593,57 +1593,66 @@ File: images/bab4/userrekap.png Graphic file (type QTm)
 
 ]
 BAB V.
-[55] [56]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [57]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [58]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
 File: images/bab5/arsitekturbab5.png Graphic file (type QTm)
 
 <use  "images/bab5/arsitekturbab5.png" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59]
+ [60]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [60]
+ [61]
 Overfull \vbox (0.68417pt too high) has occurred while \output is active []
 
 
-[61]
+[62]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62]
-[63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73]
+ [63]
+[64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74]
 File: images/bab5/kecepatan1.png Graphic file (type QTm)
 
-<use  "images/bab5/kecepatan1.png" > [74]
+<use  "images/bab5/kecepatan1.png" > [75]
 File: images/bab5/kecepatan2.png Graphic file (type QTm)
  <use  "images/bab5/kecepatan2.png" >
-[75] [76]
+[76] [77]
 File: images/bab5/ram1.png Graphic file (type QTm)
- <use  "images/bab5/ram1.png" > [77]) (./chapters/6-Penutup.tex
-[78]
+ <use  "images/bab5/ram1.png" > [78]) (./chapters/6-Penutup.tex
+[79] [80
+
+]
 BAB VI.
-[79
+[81]) (./main.bbl [82] [83
 
-]) (./main.bbl [80] [81
-
-]) (./chapters/7-Lampiran_A.tex [82]
+]) (./chapters/7-Lampiran_A.tex [84]
 Lampiran A.
-[83
+[85
 
-] [84]) (./chapters/8-Lampiran_B.tex [85] [86
+] [86]) (./chapters/8-Lampiran_B.tex [87] [88
 
 ]
 Lampiran B.
-[87] [88])
+[89] [90])
 File: images/cover/pic.JPG Graphic file (type QTm)
  <use  "images/cover/pic.JPG" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
- [89
+ [91
 
 
 ]
@@ -1665,4 +1674,4 @@ Here is how much of TeX's memory you used:
  1328 hyphenation exceptions out of 8191
  55i,12n,63p,10396b,1746s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (115 pages).
+Output written on main.pdf (117 pages).
