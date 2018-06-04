@@ -22,6 +22,24 @@ enviroment = PATH = "/home/fourirakbar/flask-loginpage/flask-loginpageenv/bin",
 PRODUCTION=1
 \end{lstlisting}
 
+Perlu diperhatikan ketika menambahkan atau mengubah konfigurasi Supervisor pada \texttt{/etc/supervisor/conf.d/} yang telah di \textit{server} untuk halaman \textit{login}, perlu dilakukan \textit{reload Supervisor} dengan menjalankan \textit{command} pada terminal seperti pada Kode Sumber \ref{reloadsupervisor}.
+\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption=Command untuk Reload Supervisor,language=Python,label=reloadsupervisor,captionpos=b]
+sudo supervisorctl reread
+sudo supervisorctl reload
+sudo supervisorctl status
+\end{lstlisting}
+
+Perlu diperhatikan pula ketika menambahkan atau mengubah konfigurasi Nginx pada \texttt{/etc/nginx/sites-available/} yang telah di \textit{server} untuk halaman \textit{login}, perlu dilakukan aktifasi konfigurasi Nginx dengan menjalankan \textit{command} pada terminal seperti pada Kode Sumber \ref{aktifasikonfigurasinginx}.
+\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption=Command untuk mengaktifkan konfigurasi Nginx,language=Python,label=aktifasikonfigurasinginx,captionpos=b]
+sudo ln -s /etc/nginx/sites-available/app 
+/etc/nginx/sites-enabled/app
+\end{lstlisting}
+
+Setelah itu, jalankan Kode Sumber \ref{restartnginx} supaya konfigurasi yang baru saja diaktifkan dapat digunakan.\\
+\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Command untuk merestart Nginx,language=Python,label=restartnginx]
+sudo service nginx restart
+\end{lstlisting}
+
 \section*{Konfigurasi Nginx}
 
 Supaya web \textit{server} untuk halaman \textit{login} dapat dijalankan, penulis menambahkan konfigurasi perangkat lunak Nginx pada \texttt{/etc/nginx/sites-available/app} seperti pada Kode Sumber \ref{nginxapp}.

@@ -14,14 +14,14 @@
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Desain halaman dashboard \textit {administrator} \textit {traffic client} ke kontainer \textit {docker}\relax }}{33}{figure.caption.15}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Desain pembuatan aturan untuk mengarahkan \textit {traffic client} ke kontainer \textit {docker}\relax }}{33}{figure.caption.16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Halaman \textit {Login}\relax }}{38}{figure.caption.17}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Halaman \textit {Login}\relax }}{37}{figure.caption.17}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Halaman \textit {Administrator} Menu \textit {User List}\relax }}{53}{figure.caption.18}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Halaman \textit {Administrator} Menu \textit {History}\relax }}{53}{figure.caption.19}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Arsitektur dari Setiap Komponen Uji Coba\relax }}{61}{figure.caption.20}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Grafik Kecepatan Menangani \textit {Request}\relax }}{75}{figure.caption.21}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Grafik Kecepatan Menangani \textit {Request}\relax }}{76}{figure.caption.22}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Grafik Penggunaan \textit {Memory}\relax }}{78}{figure.caption.23}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Arsitektur dari Setiap Komponen Uji Coba\relax }}{60}{figure.caption.20}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Grafik Kecepatan Menangani \textit {Request}\relax }}{74}{figure.caption.21}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Grafik Kecepatan Menangani \textit {Request}\relax }}{75}{figure.caption.22}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Grafik Penggunaan \textit {Memory}\relax }}{77}{figure.caption.23}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

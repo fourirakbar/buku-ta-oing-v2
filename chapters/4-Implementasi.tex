@@ -6,7 +6,7 @@ Dalam mengimplementasikan sistem, digunakan beberapa perangkat pendukung sebagai
 Perangkat keras yang digunakan dalam pengembangan sistem adalah sebagai berikut:
 \begin{enumerate}
 	\item Komputer dengan \textit{processor} Intel(R) Core(TM) i5-2120 CPU @ 3.30GHz dan RAM 8GB
-	\item Dua Komputer dengan \textit{processor} Intel(R) Core(TM)2 Duo CPU E7200 @ 2.53GHz dan RAM 1GB
+	\item Komputer dengan \textit{processor} Intel(R) Core(TM)2 Duo CPU E7200 @ 2.53GHz dan RAM 1GB
 \end{enumerate}
 \subsection{Perangkat Lunak}
 Perangkat lunak yang digunakan dalam pengembangan sistem adalah sebagai berikut:
@@ -14,58 +14,40 @@ Perangkat lunak yang digunakan dalam pengembangan sistem adalah sebagai berikut:
 	\item Sistem Operasi Linux Mint 18.03 64 Bit sebagai \textit{docker host}.
 	\item Sistem Operasi Ubuntu 14.04 LTS 64 Bit sebagai \textit{client}.
 	\item Sistem Operasi Ubuntu Server 16.04 LTS 64 Bit sebagai \textit{server login}.
-	\item \textit{Python} versi 3.5.2 untuk pengembangan web service. 
-	\item \textit{Flask} versi 1.0.2 sebagai kerangka kerja \textit{Python}.
-	\item \textit{Gunicorn} versi 19.8.1
-	\item \textit{Supervisor} versi 3.2.0
-	\item \textit{Nginx} versi 1.10.3
-	\item \textit{Mitmproxy} versi 3.0.4 untuk mencatat semua \textit{traffic} dari \textit{client}.
+	\item Python versi 3.5.2 untuk pengembangan web service. 
+	\item Flask versi 1.0.2 sebagai kerangka kerja Python.
+	\item Gunicorn versi 19.8.1
+	\item Supervisor versi 3.2.0
+	\item Nginx versi 1.10.3
+	\item Mitmrproxy versi 3.0.4 untuk mencatat semua \textit{traffic} dari \textit{client}.
 	\item MySQL versi 5.7.18 untuk Sistem Manajemen Basis Data.
-	\item \textit{Docker} versi 1.13.1 sebagai kontainer yang akan di pasangkan pada \textit{server}.
-	\item \textit{Iptables} versi 1.6.0 untuk membuat aturan terhadap \textit{client}.
-	\item \textit{Laravel} versi 5.4 sebagai kerangka kerja untuk halaman \textit{administrator}. 
-	\item \textit{VIM} versi 7.4.1 sebagai \textit{text editor}.
+	\item Docker versi 1.13.1 sebagai kontainer yang akan di pasangkan pada \textit{server}.
+	\item Iptables versi 1.6.0 untuk membuat aturan terhadap \textit{client}.
 \end{enumerate}
 
 \section{Implementasi Pembuatan Halaman \textit{Login} dari Sebuah Sistem}
 Halaman \textit{login} dibangun pada sebuah \textit{server} dengan IP \texttt{10.151.36.173} dengan menggunakan sistem operasi Ubuntu Server 16.04 LTS 64 Bit. Pada implementasi pembuatan halaman \textit{login} dari sebuah sistem menggunakan perangkat lunak antara lain:
 \begin{enumerate}
-	\item \textit{Python} versi 3.5.2.
-	\item \textit{Flask} versi 1.0.2.
-	\item \textit{Gunicorn} versi 19.8.1.
-	\item \textit{Supervisor} versi 3.2.0.
-	\item \textit{Nginx} versi 1.10.3.
+	\item Python versi 3.5.2.
+	\item Flask versi 1.0.2.
+	\item Gunicorn versi 19.8.1.
+	\item Supervisor versi 3.2.0.
+	\item Nginx versi 1.10.3.
 \end{enumerate}
 
-Lalu sistem operasi yang digunakan adalah sistem operasi Ubuntu Server 16.04 LTS 64 Bit, yang akan dipasang pada \textit{virtual machine} di \textit{Proxmox}. \textit{Python} akan berfungsi sebagai komponen dasar pembangunan sistem yang akan dibangun dengan menggunakan kerangka kerja \textit{Flask} dan dijalankan dengan \textit{Gunicorn} pada \textit{server} dengan IP \texttt{10.151.36.173} dengan \textit{port} 4000. Lalu \textit{Supervisor} akan berfungsi sebagai sebuah \textit{service} yang akan selalu menajalankan \textit{Gunicorn}. Sedangkan \textit{Nginx} akan berfungsi sebagai \textit{web server} untuk perangkat lunak halaman \textit{login} yang dijalankan oleh \textit{Gunicorn} pada \textit{server} dengan IP \texttt{10.151.36.173} dengan \textit{port} 4000 supaya bisa diakses oleh \textit{client}. Implementasi pembuatan halaman \textit{login} dari sebuah sistem akan terbagi menjadi implementasi \textit{web service} dan implementasi basis data.
+Lalu sistem operasi yang digunakan adalah sistem operasi Ubuntu Server 16.04 LTS 64 Bit, yang akan dipasang pada \textit{virtual machine} dengan menggunakan VirtualBox. Python akan berfungsi sebagai komponen dasar pembangunan sistem yang akan dibangun dengan menggunakan kerangka kerja Flask dan dijalankan dengan Gunicorn pada \textit{server} dengan IP \texttt{10.151.36.173} dengan \textit{port} 4000. Lalu Supervisor akan berfungsi sebagai sebuah \textit{service} yang akan selalu menajalankan Gunicorn. Sedangkan Nginx akan berfungsi sebagai \textit{web server} untuk perangkat lunak halaman \textit{login} yang dijalankan oleh Gunicorn pada \textit{server} dengan IP \texttt{10.151.36.173} dengan \textit{port} 4000 supaya bisa diakses oleh \textit{client}. Implementasi pembuatan halaman \textit{login} dari sebuah sistem akan terbagi menjadi implementasi \textit{web service} dan implementasi basis data.
 
 \subsection{Implementasi \textit{Web Service} pada Halaman \textit{Login}}
 Diperlukan beberapa tahap, antara lain pemasangan perangkat lunak dan tahap konfigurasi. Tahap pemasangan perangkat lunak dan tahap konfigurasi pada \textit{server} untuk halaman \textit{login} dijelaskan pada Lampiran A. 
 
-Perlu diperhatikan ketika menambahkan atau mengubah konfigurasi \textit{Supervisor} pada \texttt{/etc/supervisor/conf.d/} di \textit{server} untuk halaman \textit{login}, perlu dilakukan \textit{reload Supervisor} dengan menjalankan \textit{command} pada terminal seperti pada Kode Sumber \ref{reloadsupervisor}.
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption=Command untuk Reload Supervisor,language=Python,label=reloadsupervisor,captionpos=b]
-sudo supervisorctl reread
-sudo supervisorctl reload
-sudo supervisorctl status
-\end{lstlisting}
-
-Perlu diperhatikan pula ketika menambahkan atau mengubah konfigurasi \textit{Nginx} pada \texttt{/etc/nginx/sites-available/} di \textit{server} untuk halaman \textit{login}, perlu dilakukan aktifasi konfigurasi \textit{Nginx} dengan menjalankan \textit{command} pada terminal seperti pada Kode Sumber \ref{aktifasikonfigurasinginx}.
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,caption=Command untuk mengaktifkan konfigurasi Nginx,language=Python,label=aktifasikonfigurasinginx,captionpos=b]
-sudo ln -s /etc/nginx/sites-available/app 
-	/etc/nginx/sites-enabled/app
-\end{lstlisting}
-
-Setelah itu, jalankan Kode Sumber \ref{restartnginx} supaya konfigurasi yang baru saja diaktifkan dapat digunakan.\\
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Command untuk merestart Nginx,language=Python,label=restartnginx]
-sudo service nginx restart
-\end{lstlisting}
+Pada sub-bab implementasi \textit{web service} pada halaman \textit{login} akan dibagi lagi menjadi tiga bagian, antara lain implementasi tampilan antarmuka halaman \textit{login}, rute \textit{web service} pada halaman \textit{login} dan \textit{pseduocode web service} pada halaman \textit{login}.
 
 \subsubsection{Implementasi Tampilan Antarmuka Halaman \textit{Login}}
 Halaman \textit{login} merupakan halaman utama yang menampilkan sebuah \textit{form input} untuk \textit{client}. Pada halaman ini terdapat dua \textit{form input}, yaitu \textit{form input} untuk \texttt{Username} atau NRP dari \textit{client} dan juga \textit{form input} untuk \texttt{Password} dari \textit{client}. Implementasi antarmuka halaman \textit{login} dapat dilihat pada Gambar \ref{implementasihalamanlogin}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{images/bab4/halamanlogin}
+	\includegraphics[width=10cm,height=4.35cm]{images/bab4/halamanlogin}
 	\caption{Halaman \textit{Login}}
 	\label{implementasihalamanlogin}
 \end{figure}
@@ -91,7 +73,9 @@ Pada halaman \textit{login} diperlukan adanya rute-rute yang bisa diakses untuk 
 	% Isi Tabel
 	GET & / & Berfungsi untuk mengarahkan \textit{redirect} ke rute \textit{login} dengan \textit{method} GET.\\ \hline
 	GET & /login & Berfungsi untuk menampilkan tampilan grafis antar muka halaman \textit{login} ketika \textit{client} belum \textit{login} ke dalam sistem dan untuk menampilkan tampilan grafis antar muka halaman sukses \textit{login} ketika \textit{client} telah berasil \textit{login} ke dalam sistem.\\ \hline
-	POST & /login & Berfungsi untuk menyimpan data hasil \textit{input} dari \textit{client} dan mengirimkan perintah untuk membuat kontainer \textit{docker} yang berisikan \textit{mitmproxy} secara otomatis pada \textit{docker host}.\\ \hline
+	POST & /login & Berfungsi untuk menyimpan data hasil \textit{input} dari \textit{client} dan mengirimkan perintah untuk membuat kontainer \textit{docker} yang berisikan Mitmproxy secara otomatis pada \textit{docker host}.\\ \hline
+	GET & /logout & Berfungsi untuk keluar dari sistem dan kontainer \textit{docker} yang sudah dibuat untuk \textit{client} yang telah berhasil \textit{login} dengan menggunakan \textit{username} tersebut akan di-\textit{destroy}. Lalu aturan-aturan yang sudah dibuat dengan menggunakan Iptables untuk \textit{client} tersebut juga dihapuskan.\\ \hline
+	
 \end{longtable}
 
 \subsubsection{\textit{Pseduocode Web Service} pada Halaman \textit{Login}}
@@ -103,10 +87,13 @@ Ketika \textit{client} belum \textit{login} ke dalam sistem, maka akan diarahkan
 	
 	if session.get login
 		open welcome page
+		
 	else
 		open login page
+		
 		if login success
-			session.get login = True	  
+			session.get login = True
+			send request to docker host
 	
 	return  	
 	\end{lstlisting}
@@ -126,7 +113,7 @@ CREATE TABLE nrp-mahasiswa (
 
 
 \section{Implementasi Pembuatan Aturan untuk Mengarahkan \textit{Traffic Client} ke Halaman \textit{Login} dari Sistem}
-Pada implementasi pembuatan aturan untuk mengarahkan \textit{traffic client} ke halaman \textit{login} dari sistem diasumsikan bahwa belum ada \textit{client} yang telah \textit{login} ke dalam sistem. Karena diasumsikan bahwa belum ada \textit{client} yang telah berhasil \textit{login} ke dalam sistem, maka semua \textit{client} tidak diperbolehkan untuk mengakses internet. Kemudian untuk mengarahkan \textit{traffic} dari \textit{client} dibuatkan beberapa \textit{rules} dengan menggunakan \textit{iptables} pada \textit{Docker Host} dengan IP \texttt{10.151.36.134}. seperti Kode Sumber \ref{iptablesbeforelogin}.
+Pada implementasi pembuatan aturan untuk mengarahkan \textit{traffic client} ke halaman \textit{login} dari sistem diasumsikan bahwa belum ada \textit{client} yang telah \textit{login} ke dalam sistem. Karena diasumsikan bahwa belum ada \textit{client} yang telah berhasil \textit{login} ke dalam sistem, maka semua \textit{client} tidak diperbolehkan untuk mengakses internet. Kemudian untuk mengarahkan \textit{traffic} dari \textit{client} dibuatkan beberapa \textit{rules} dengan menggunakan iptables pada \textit{Docker Host} dengan IP \texttt{10.151.36.134}. seperti Kode Sumber \ref{iptablesbeforelogin}.
 \begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Command untuk mengarahkan \textit{client} ke halaman \textit{login},language=Python,label=iptablesbeforelogin]
 iptables -I FORWARD 1 -s 192.168.99.0/24 -j REJECT
 iptables -I FORWARD 1 -s 192.168.99.0/24 -p tcp d 10.151.36.173 --dport 4000 -j ACCEPT
@@ -140,20 +127,17 @@ iptables -t nat -I PREROUTING 1 -p tcp -s 192.168.99.0/24 --dport 80 -j DNAT --t
 
 Pada implementasi pembuatan \textit{middleware} menggunakan perangkat unak antara lain:
 \begin{enumerate}
-	\item \textit{Python} versi 3.5.2.
-	\item \textit{Flask} versi 1.0.2.
-	\item \textit{Docker} versi 1.13.1.
+	\item Python versi 3.5.2.
+	\item Flask versi 1.0.2.
+	\item Docker versi 1.13.1.
 \end{enumerate}
 
-\textit{Python} akan berfungsi sebagai komponen dasar pembangunan sistem, salah satunya adalah sebagai komponen dasar pembuatan \textit{middleware}, sedangkan \textit{Flask} akan berfungsi sebagai kerangka kerja untuk pembuatan \textit{middleware}. Implementasi pembuatan \textit{middleware} akan terbagi menjadi implementasi \textit{web service} dan implementasi basis data dan.
+Python akan berfungsi sebagai komponen dasar pembangunan sistem, salah satunya adalah sebagai komponen dasar pembuatan \textit{middleware}, sedangkan Flask akan berfungsi sebagai kerangka kerja untuk pembuatan \textit{middleware}. Implementasi pembuatan \textit{middleware} akan terbagi menjadi implementasi \textit{web service} dan implementasi basis data dan.
 
 \subsection{Implementasi \textit{Web Service} pada \textit{Middleware}}
-Diperlukan beberapa tahap, antara lain pemasangan perangkat lunak dan tahap konfigurasi. Tahap pemasangan perangkat lunak dan tahap konfigurasi pada \textit{middleware} di \textit{Docker Host} dijelaskan pada Lampiran B.
+Diperlukan beberapa tahap, antara lain pemasangan perangkat lunak dan tahap konfigurasi. Tahap pemasangan perangkat lunak dan tahap konfigurasi pada \textit{middleware} di \textit{Docker Host} dijelaskan pada Lampiran A.
 
-Perlu diperhatikan supaya \textit{docker} dapat dijalankan ketika \textit{docker host} menyala, jalankan Kode Sumber \ref{systemctldocker}.
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Command untuk installasi Flask,language=Python,label=systemctldocker]
-sudo systemctl enable docker
-\end{lstlisting}
+Pada sub-bab implementasi \textit{web service} pada \textit{middleware} akan dibagi lagi menjadi dua bagian, antara lain rute \textit{web service} pada \textit{middleware} dan juga \textit{pseduocode web service} pada \textit{middleware}.
 
 \subsubsection{Rute \textit{Web Service} pada \textit{Middleware}}
 \textit{Middleware} tidak memiliki antar muka grafis. Namun tetap diperlukan adanya rute-rute yang bisa diakses untuk melayani permintaan penyediaan kontainer \textit{docker} dari \textit{client}. Daftar rute yang disediakan oleh \textit{middleware} tertera pada Tabel \ref{tabelRuteWebServiceDockerHost}.\\
@@ -178,7 +162,7 @@ sudo systemctl enable docker
 \end{longtable}
 
 \subsubsection{\textit{Pseduocode Web Service} pada \textit{Middleware}}
-Saat \textit{client} telah memasukkan \textit{input} ke sistem, sistem akan mencocokkan terlebih dahulu dengan basis data \texttt{kontainer}. Jika benar, maka sistem akan mengirimkan data \textit{input} dari \textit{client} ke \textit{middleware}. Lalu \textit{middleware} akan menyimpan data \textit{input} dari \textit{client} ke dalam sebuah \textit{file}. Setelah itu \textit{middleware} akan mengirimkan perintah untuk membuat sebuah kontainer \textit{docker} yang berisikan \textit{mitmproxy} pada \textit{docker host}.
+Saat \textit{client} telah memasukkan \textit{input} ke sistem, sistem akan mencocokkan terlebih dahulu dengan basis data \texttt{kontainer}. Jika benar, maka sistem akan mengirimkan data \textit{input} dari \textit{client} ke \textit{middleware}. Lalu \textit{middleware} akan menyimpan data \textit{input} dari \textit{client} ke dalam sebuah \textit{file}. Setelah itu \textit{middleware} akan mengirimkan perintah untuk membuat sebuah kontainer \textit{docker} yang berisikan Mitmproxy pada \textit{docker host}.
 
 Saat \textit{middleware} menyimpan data \textit{input} dari \textit{client} ke dalam sebuah \textit{file}, yang disimpan adalah \textit{username} atau NRP, \textit{IP Address}, dan \textit{port}. Nantinya \textit{port} tersebut akan menjadi \textit{port} khusus untuk kontainer \textit{docker} yang berisikan \textit{mitmproxy} untuk \textit{client} tersebut.
 
@@ -194,12 +178,11 @@ Setelah kontainer \textit{docker} yang berisikan \textit{mitmproxy} berhasil dib
 	if session.get login
 		create container
 		add new rules to container
-		return
+	
 	else
-		add new rules
-		client open page login
-		client login
-		return  	
+		add new rules to page login
+	
+	return  	
 	\end{lstlisting}
 \end{minipage}
 
@@ -217,7 +200,7 @@ CREATE TABLE kontainer (
 \end{lstlisting}
 
 
-\section{Implementasi Pemasangan Kontainer \textit{Docker} pada \textit{Docker Host}}
+\section{Implementasi Pemasangan Kontainer Docker pada \textit{Docker Host}}
 Setelah berhasil melakukan pemasangan \textit{docker} versi 1.13.1 pada \textit{docker host} dengan IP \texttt{10.151.36.134}, sekarang lakukan konfigurasi supaya \textit{docker} tidak hanya dapat digunakan oleh \textit{root user} dari sebuah sistem. Hal ini dapat dilakukan dengan menjalankan perintah pada Kode Sumber \ref{konfigurasildocker1}.
 \newline
 \begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk installasi Ansible,language=Python,label=konfigurasildocker1]
@@ -225,8 +208,8 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 \end{lstlisting}
 
-\subsection{Menambahkan dan Memperbarui Kontainer \textit{Docker} yang Berisikan Mitmproxy}
-Setelah berhasil melakukan pemasangan \textit{docker} pada \textit{docker host} dan melakukan konfigurasi supaya \textit{docker} tidak hanya dapat digunakan oleh \textit{root user} dari sebuah sistem, selanjutnya dapat mencoba membuat sebuah kontainer \textit{docker} yang berisi aplikasi \textit{mitmproxy}. Untuk membuat sebuah kontainer \textit{docker} yang berisi \textit{mitmproxy}, penulis melakukannya dengan sistem operasi Ubuntu dalam format \textit{docker} yang disediakan oleh Docker Hub. Untuk melakukan unduh, jalankan perintah berikut pada Kode Sumber \ref{pullubuntu}.
+\subsection{Menambahkan dan Memperbarui Kontainer Docker yang Berisikan Mitmproxy}
+Setelah berhasil melakukan pemasangan \textit{docker} pada \textit{docker host} dan melakukan konfigurasi supaya \textit{docker} tidak hanya dapat digunakan oleh \textit{root user} dari sebuah sistem, selanjutnya dapat mencoba membuat sebuah kontainer \textit{docker} yang berisi aplikasi Mitmproxy. Untuk membuat sebuah kontainer \textit{docker} yang berisi Mitmproxy, penulis melakukannya dengan sistem operasi Ubuntu dalam format \textit{docker} yang disediakan oleh \textit{Docker Hub}. Untuk melakukan unduh, jalankan perintah berikut pada Kode Sumber \ref{pullubuntu}.
 \newline
 \begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk \textit{Pull} Ubuntu,language=Python,label=pullubuntu]
 docker pull ubuntu
@@ -235,32 +218,31 @@ docker pull ubuntu
 Setelah berhasil diunduh, selanjutnya jalankan sistem operasi Ubuntu dengan menggunakan perintah yang tertera pada Kode Sumber \ref{runubuntu}.
 \newline
 \begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Menjalankan \textit{Image} Ubuntu,language=Python,label=runubuntu]
-docker run --name testmitmproxy --privileged=True 
---network=host ubuntu
+docker run --name testmitmproxy --privileged=True --network=host ubuntu
 \end{lstlisting}
 Parameter \texttt{--name} berguna untuk memberikan nama pada kontainer \textit{docker} agar mudah dikenali dimana lokasi aplikasi saat dijalankan. Pada kasus ini kontainer \textit{docker} diberi nama dengan \texttt{testmitmproxy}. Parameter \texttt{--privileged=True} berguna untuk memberikan kendali hak akses penuh kepada kontainer \textit{docker} tersebut, sama seperti dengan \textit{root user}. Parameter \texttt{--network=host} berguna untuk mendefinisikan jaringan yang akan digunakan oleh kontainer \textit{docker} tersebut. Setelah menjalankannya, kontainer \textit{docker} yang terbentuk dapat digunakan lebih lanjut, misalnya dengan mengubah data yang ada didalamnya, menambahkan fitur baru, atau hanya sekedar mengganti nama dari aplikasi.\\
-\indent Dalam kasus ini penulis menambahkan fitur baru, yaitu menambah \textit{mitmproxy}. Untuk menambah atau memasang \textit{mitmproxy} pada kontainer \textit{docker} yang baru saja dibuat, jalankan perintah berikut pada Kode Sumber \ref{installmitmproxy}.
+\indent Dalam kasus ini penulis menambahkan fitur baru, yaitu menambah Mitmproxy. Untuk menambah atau memasang Mitmproxy pada kontainer \textit{docker} yang baru saja dibuat, jalankan perintah berikut pada Kode Sumber \ref{installmitmproxy}.
 \newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Pemasangan \textit{Mitmproxy},language=Python,label=installmitmproxy]
+\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Pemasangan Mitmrproxy,language=Python,label=installmitmproxy]
 sudo apt-get update
 sudo apt-get install python3 python3-dev python3-pip
 sudo pip3 install cryptography
 sudo pip3 install mitmproxy
 \end{lstlisting}
 
-\textit{Mitmproxy} versi 3.0.4 membutuhkan \textit{Python} minimal versi 3.5, maka dari itu penulis memasang \textit{Python} versi 3.5.2. \textit{Mitmproxy} juga membutuhkan modul \textit{cryptography} yang berguna untuk melakukan enkripsi maupun dekripsi ketika \textit{mitmproxy} sedang berjalan. Lalu aktifkan \texttt{ipv4.forwarding} dengan menjalankan perintah pada Kode Sumber \ref{ipv4forwarding}.
+Mitmrproxy versi 3.0.4 membutuhkan Python minimal versi 3.5, maka dari itu penulis memasang Python versi 3.5.2. Mitmrproxy juga membutuhkan modul \textit{cryptography} yang berguna untuk melakukan enkripsi maupun dekripsi ketika Mitmproxy sedang berjalan. Lalu aktifkan \texttt{ipv4.forwarding} dengan menjalankan perintah pada Kode Sumber \ref{ipv4forwarding}.
 \newline
 \begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Mengaktifkan \textit{ipv4.forwarding},language=Python,label=ipv4forwarding]
 sudo sysctl -w net.ipv4.ip_forward=1
 \end{lstlisting}
-\indent Setelah berhasil melakukan pemasangan \textit{mitmproxy} pada kontainer \textit{docker}, jika ingin membuat \textit{images} baru dari kontainer \textit{docker} tersebut, maka hal pertama yang harus dilakukan adalah menghentikan kontainer \textit{docker} yang sedang berjalan dengan menggunakan perintah seperti pada Kode Sumber \ref{dockerstop}.
+\indent Setelah berhasil melakukan pemasangan Mitmproxy pada kontainer \textit{docker}, jika ingin membuat \textit{images} baru dari kontainer \textit{docker} tersebut, maka hal pertama yang harus dilakukan adalah menghentikan kontainer \textit{docker} yang sedang berjalan dengan menggunakan perintah seperti pada Kode Sumber \ref{dockerstop}.
 \newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Menghentikan Kontainer \textit{Docker},language=Python,label=dockerstop]
+\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Menghentikan Kontainer Docker,language=Python,label=dockerstop]
 docker stop [nama_container]
 \end{lstlisting}
 Nama \textit{container} ini tergantung dari nama kontainer \textit{docker} yang sudah dibuat. Untuk kasus yang digunakan oleh penulis, penulis menggunakan perintah \texttt{docker stop testmitmproxy}. Setelah itu lakukan \textit{commit} dengan menjalankan perintah seperti pada Kode Sumber \ref{dockercommit}.
 \newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk \textit{Commit} Kontainer \textit{Docker},language=Python,label=dockercommit]
+\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk \textit{Commit} Kontainer Docker,language=Python,label=dockercommit]
 docker commit [nama_container] [nama_repository]
 \end{lstlisting}
 Nama \textit{container} ini tergantung dari nama kontainer \textit{docker} yang sudah dibuat. Sedangkan nama \textit{repository} ini tergantung dari nama \textit{repository} yang telah dibuat di Docker Hub. Untuk kasus yang digunakan oleh penulis, penulis menggunakan perintah \texttt{docker commit testmitmproxy fourirakbar/mitmproxy-oing:version1}. Pada bagian nama \textit{repository} ini memiliki tiga bagian dengan pola seperti \texttt{[URL]/[nama]:[versi]}. Artinya membuat \textit{image} dengan URL \textit{repository} pada Docker Hub dengan nama \texttt{fourirakbar}. Kemudian nama dari \textit{image}-nya sendiri adalah \texttt{mitmproxy-oing} dan versinya adalah \texttt{version1}. Setelah melakukan \textit{commit}, maka \textit{image} baru akan terbentuk. Langkah terakhir adalah melakukan \textit{push image} ke Docker Hub dengan menggunakan perintah seperti Kode Sumber \ref{dockerpush}.
@@ -269,8 +251,8 @@ Nama \textit{container} ini tergantung dari nama kontainer \textit{docker} yang 
 docker push [nama_container] [nama_repository]
 \end{lstlisting}
 
-\subsection{Menggunakan \textit{Image} Kontainer \textit{Docker} yang Sudah Dibuat}
-Setelah berhasil menambahkan dan memperbarui kontainer \textit{docker} yang berisikan \textit{mitmproxy}, penulis tidak perlu melakukannya lagi. Penulis hanya perlu memanggil kontainer \textit{docker} dengan menjalankan perintah pada Kode Sumber \ref{dockerpullmitm}.
+\subsection{Menggunakan \textit{Image} Kontainer Docker yang Sudah Dibuat}
+Setelah berhasil menambahkan dan memperbarui kontainer \textit{docker} yang berisi Mitmproxy, penulis tidak perlu melakukannya lagi. Penulis hanya perlu memanggil kontainer \textit{docker} dengan menjalankan perintah pada Kode Sumber \ref{dockerpullmitm}.
 \newline
 \begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk \textit{Pull Image mitmproxy},language=Python,label=dockerpullmitm]
 docker pull fourirakbar/mitmproxy-oing:version1
@@ -282,8 +264,8 @@ Lalu untuk menjalankan kontainer \textit{docker} yang sudah di \textit{pull}, ja
 docker run --name [IP_CLEINT] --privileged=True --network=host fourirakbar/mitmproxy-oing:version1
 \end{lstlisting}
 
-\section{Implementasi Pembuatan Aturan untuk Mengarahkan \textit{Traffic Client} ke Kontainer \textit{Docker} dari Tiap-Tiap \textit{Client}}
-Pada implementasi pembuatan aturan untuk mengarahkan \textit{traffic client} ke kontainer \textit{docker} dari tiap-tiap client dibuat ketika terdapat \textit{client} yang telah berhasil \textit{login} ke dalam sistem. Setelah \textit{client} berhasil \textit{login} ke dalam sistem, maka akan dibuatkan beberapa \textit{rules} dengan menggunakan \textit{iptables} seperti Kode Sumber \ref{iptablesafterlogin}.
+\section{Implementasi Pembuatan Aturan untuk Mengarahkan \textit{Traffic Client} ke Kontainer Docker dari Tiap-Tiap \textit{Client}}
+Pada implementasi pembuatan aturan untuk mengarahkan \textit{traffic client} ke kontainer \textit{docker} dari tiap-tiap client dibuat ketika terdapat \textit{client} yang telah berhasil \textit{login} ke dalam sistem. Setelah \textit{client} berhasil \textit{login} ke dalam sistem, maka akan dibuatkan beberapa \textit{rules} dengan menggunakan Iptables seperti Kode Sumber \ref{iptablesafterlogin}.
 \begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Command untuk mengarahkan \textit{client} ke halaman \textit{login},language=Python,label=iptablesafterlogin]
 iptables -I FORWARD 1 -s [IP_CLIENT] -j ACCEPT
 iptables -t nat -I PREROUTING 1 -s [IP_CLIENT] -p tcp --dport 80 -j REDIRECT --to-ports [PORTS_CLIENT]
@@ -323,7 +305,7 @@ Pada halaman \textit{administrator} diperlukan adanya rute-rute yang bisa diakse
 
 \subsection{Implementasi Pembacaan \textit{Log File} dari \textit{Client}}
 Pada implementasi pembacaan \textit{log file} dari \textit{client} dilakukan dengan membaca \textit{file} hasil \textit{output} dari \textit{mitmproxy}. \textit{File} hasil \textit{output} dari \textit{mitmproxy} berbentuk \textit{binary} dimana yang bisa membacanya hanya komputer saja. Maka dari itu perlu dilakukan pembacaan lagi \textit{file} yang berisi \textit{binary} tersebut dengan menjalankan \textit{command} seperti pada Kode Sumber \ref{parsemitmdump}.
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Membaca \textit{File Log} dari \textit{Mitmproxy},language=Python,label=parsemitmdump]
+\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Membaca \textit{File Log} dari Mitmrproxy,language=Python,label=parsemitmdump]
 mitmdump -nr [NAMA-FILE] --set flow_detail=2 --showhost > [NAMA-FILE]
 \end{lstlisting}
 

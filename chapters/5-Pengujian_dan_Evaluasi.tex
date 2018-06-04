@@ -18,7 +18,6 @@
 		\textbf{Perangkat Lunak}      & Linux Mint 18.03 64 bit \\ \cline{2-2} 
 		& Docker-CE versi 1.13.1. \\ \cline{2-2} 
 		& MySQL versi 5.7.18. \\ \cline{2-2} 
-		& Iptables versi 1.6. \\ \cline{2-2} 
 		& Python versi 3.5.2. \\ \cline{2-2} 
 		& Flask versi 1.0.2.\\ \hline
 		\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.134 \\ \cline{2-2} 
@@ -27,7 +26,6 @@
 		& Hostname : X450LD \\ \hline
 	\end{longtable}
 	
-	\pagebreak
 	\item \textbf{\textit{Server} Untuk Halaman Login}
 	\begin{longtable}{|l|l|}
 		\caption{\textit{Server} Untuk Halaman Login}
@@ -39,9 +37,7 @@
 		\textbf{Perangkat Lunak}      & Ubuntu 16.04 64 bit \\ \cline{2-2} 
 		& Nginx versi 1.10.3. \\ \cline{2-2} 
 		& Gunicorn versi 19.9.1. \\ \cline{2-2} 
-		& Supervisor versi 3.2. \\ \cline{2-2} 
-		& Python versi 3.5.2. \\ \cline{2-2} 
-		& Flask versi 1.0.2.\\ \hline
+		& Supervisor versi 3.2. \\ \hline
 		\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.173 \\ \cline{2-2} 
 		& Netmask : 255.255.255.0 \\ \cline{2-2} 
 		& Gateway : 10.151.36.1 \\ \cline{2-2} 
@@ -448,12 +444,12 @@ Dari hasil uji coba kecepatan menangani \textit{request}, yaitu kecepatan unduh 
 	\endfoot
 	\endlastfoot
 	
-	1 & $\pm$ 13,04 Mb & $\pm$ 13,62 Mb \\ \hline
-	2 & $\pm$ 10,16 Mb & $\pm$ 9,27 Mb \\ \hline
-	3 & $\pm$ 4,73 Mb & $\pm$ 4,47 Mb \\ \hline
-	4 & $\pm$ 4,45 MB & $\pm$ 5,61 Mb \\ \hline
-	5 & $\pm$ 3,93 MB & $\pm$ 4,55 Mb \\ \hline
-	6 & $\pm$ 2,82 MB & $\pm$ 2,73 Mb \\ \hline
+	1 & $\pm$ 13,04 Mbps & $\pm$ 13,62 Mbps \\ \hline
+	2 & $\pm$ 10,16 Mbps & $\pm$ 9,27 Mbps \\ \hline
+	3 & $\pm$ 4,73 Mbps & $\pm$ 4,47 Mbps \\ \hline
+	4 & $\pm$ 4,45 Mbps & $\pm$ 5,61 Mbps \\ \hline
+	5 & $\pm$ 3,93 Mbps & $\pm$ 4,55 Mbps \\ \hline
+	6 & $\pm$ 2,82 Mbps & $\pm$ 2,73 Mbps \\ \hline
 	
 \end{longtable}
 
@@ -479,12 +475,12 @@ Lalu untuk uji coba dilakukan dengan enam komputer penguji dan dengan menggunaka
 	\endfoot
 	\endlastfoot
 	
-	1 & $\pm$ 91,58 Mb & $\pm$ 91,27 Mb \\ \hline
-	2 & $\pm$ 47,97 Mb & $\pm$ 51,49 Mb \\ \hline
-	3 & $\pm$ 36,11 Mb & $\pm$ 35,28 Mb \\ \hline
-	4 & $\pm$ 23,09 MB & $\pm$ 29,88 Mb \\ \hline
-	5 & $\pm$ 22,50 MB & $\pm$ 26,20 Mb \\ \hline
-	6 & $\pm$ 19,70 MB & $\pm$ 21,12 Mb \\ \hline
+	1 & $\pm$ 91,58 Mbps & $\pm$ 91,27 Mbps \\ \hline
+	2 & $\pm$ 47,97 Mbps & $\pm$ 51,49 Mbps \\ \hline
+	3 & $\pm$ 36,11 Mbps & $\pm$ 35,28 Mbps \\ \hline
+	4 & $\pm$ 23,09 Mbps & $\pm$ 29,88 Mbps \\ \hline
+	5 & $\pm$ 22,50 Mbps & $\pm$ 26,20 Mbps \\ \hline
+	6 & $\pm$ 19,70 Mbps & $\pm$ 21,12 Mbps \\ \hline
 	
 \end{longtable}
 
@@ -499,6 +495,8 @@ Hasil uji coba kecepatan menangani \textit{request} dengan menggunakan Internet 
 
 Dari Tabel \ref{kecepatanrequest2} dan Tabel \ref{kecepatanrequest3} dapat dilihat bahwa semakin banyak jumlah \textit{client}, maka semakin berkurang kecepatan unduh maupun \textit{upload} dari masing-masing \textit{client}. Hal tersebut dikarenakan \textit{bandwith} dari \textit{server} yang digunakan sebagai \textit{docker host} juga terbatas. Jika semakin besar bandwith yang dapat diterima oleh \textit{server} yang akan digunakan sebagai \textit{docker host}, maka semakin cepat pula kecepatan unduh maupun \textit{upload} dari masing-masing \textit{client}. 
 
+Dari Tabel \ref{kecepatanrequest2}, uji coba menggunakan \textit{server} sebagai internet \textit{access management} berbasis kontainer dengan menggunakan Kabel UTP Cat 5 100Mb/s dan Tabel \ref{kecepatanrequest3}, uji coba menggunakan \textit{server} sebagai internet \textit{access management} konvensional dengan menggunakan Kabel UTP Cat 5 1Gb/s. Hal tersebut sangat mempengaruhi kecepatan saat uji coba berlangsung.
+ 
 \subsubsection{Penggunaan \textit{Memory}}
 Dari hasil uji coba penggunaan \textit{memory}, semakin banyak \textit{request} yang diterima, semakin banyak \textit{memory} ynag diperlukan. Perhitungan penggunaan \textit{memory} adalah jumlah penggunaan dari masing-masing kontainer \textit{docker} dari \textit{client}. Dari hasil uji coba ini, dapat dilihat pada Tabel \ref{penggunaanmemory1}.
 

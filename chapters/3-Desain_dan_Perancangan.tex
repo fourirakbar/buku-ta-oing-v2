@@ -3,7 +3,7 @@ Pada bab ini dibahas mengenai analisis dan perancangan dari sistem.
 \section{Deskripsi Umum Sistem}    
 Sistem yang akan dibuat adalah sebuah sebuah sistem yang dapat membuat sebuah kontainer \textit{docker} secara otomatis untuk setiap satu \textit{client} yang telah \textit{login} ke dalam sistem. Saat \textit{client} belum \textit{login} ke dalam sistem, maka \textit{client} tersebut akan diarahkan ke halaman \textit{login} dari sistem. Saat \textit{client} mencoba untuk \textit{login} ke dalam sistem, maka sistem akan melakukan pengecekan di dalam basis data apakah \textit{username} dan \textit{password} yang di\textit{input}kan sudah benar atau salah. 
 
-Setelah \textit{client} berhasil \textit{login} ke dalam sistem, sistem akan mengirimkan perintah untuk membuat kontainer \textit{docker} yang berisikan \textit{mitmproxy} ke \textit{docker host}. Setelah berhasil membuat kontainer \textit{docker} untuk client tersebut, maka \textit{traffic} internet dari \textit{client} tersebut akan diarahkan ke kontainer \textit{docker} berisikan \textit{mitmproxy} yang baru saja dibuat. Setelah itu client dapat mengakses internet.
+Setelah \textit{client} berhasil \textit{login} ke dalam sistem, sistem akan mengirimkan perintah untuk membuat kontainer \textit{docker} yang berisikan Mitmproxy ke \textit{docker host}. Setelah berhasil membuat kontainer \textit{docker} untuk client tersebut, maka \textit{traffic} internet dari \textit{client} tersebut akan diarahkan ke kontainer \textit{docker} berisikan Mitmproxy yang baru saja dibuat. Setelah itu client dapat mengakses internet.
 
 \section{Kasus Penggunaan}
 Terdapat empat aktor dalam sistem yang akan dibuat yaitu \textit{Client}, \textit{Server Login}, \textit{Administrator}, dan \textit{Docker Host}. \textit{Client} adalah aktor yang melakukan proses \textit{login} ke dalam sistem, \textit{server login} adalah aktor yang melakukan proses permintaan penyediaan kontainer \textit{docker}, \textit{administrator} adalah aktor yang melakukan monitoring kontainer \textit{docker} yang sedang berjalan, sedangkan \textit{docker host} adalah aktor yang akan menjadi tempat penyedia kontainer dan menerima perintah penyediaan kontainer. Diagram kasus penggunaan menggambarkan kebutuhan - kebutuhan yang harus dipenuhi sistem. Diagram kasus penggunaan digambarkan pada Gambar \ref{gambarDiagramKasusPenggunaan}.
@@ -37,7 +37,7 @@ Digram kasus penggunaan pada Gambar \ref{gambarDiagramKasusPenggunaan} dideskrip
 \end{longtable}
 
 \section{Arsitektur Sistem}
-Pada Sub-bab ini, dibahas mengenai tahap analisis arsitektur, analisis teknologi dan desain sistem yang akan dibangun.
+Pada sub-bab ini, dibahas mengenai tahap analisis arsitektur, analisis teknologi dan desain sistem yang akan dibangun.
 \subsection{Desain Umum Sistem}
 \indent Berdasarkan deskripsi umum sistem yang telah ditulis diatas, dapat diperoleh kebutuhan sistem ini, diantaranya :
 \begin{enumerate}
@@ -54,11 +54,11 @@ Pada Sub-bab ini, dibahas mengenai tahap analisis arsitektur, analisis teknologi
 	\item Pembuatan halaman \textit{login} dari sebuah sistem.\\
 	Berfungsi sebagai tampilan antarmuka dari halaman \textit{login} sebuah sistem untuk \textit{client}. Selain itu juga berfungsi untuk mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker host}.
 	\item Pembuatan aturan untuk mengarahkan \textit{traffic client} ke halaman \textit{login} dari sistem.\\
-	Berfungsi untuk mengarahkan tiap \textit{client} yang belum \textit{login} ke dalam sistem ke halaman \textit{login} dari sistem. Hal ini dilakukan dengan menjalankan sebuah \textit{script} dengan menggunakan \textit{iptables} pada \textit{docker host}.
-	\item Pembuatan \textit{middleware} untuk menerima permintaan dari \textit{client}.
+	Berfungsi untuk mengarahkan tiap \textit{client} yang belum \textit{login} ke dalam sistem, ke halaman \textit{login} dari sistem. Hal ini dilakukan dengan menjalankan sebuah \textit{script} dengan menggunakan Iptables pada \textit{docker host}.
+	\item Pembuatan \textit{middleware} untuk menerima permintaan dari \textit{client}.\\
 	Berfungsi untuk menerima permintaan pembuatan kontainer \textit{docker} dari \textit{client}. Selain itu juga berfungsi untuk membuat kontainer \textit{docker} secara otomatis.
 	\item Pembuatan aturan untuk mengarahkan \textit{traffic client} ke kontainer \textit{docker} dari tiap-tiap \textit{client}.\\
-	Berfungsi untuk mengarahkan tiap \textit{client} yang telah berhasil \textit{login} ke kontainer \textit{docker} dari tiap-tiap \textit{client}. Hal ini dilakukan dengan menjalankan sebuah \textit{script} dengan menggunakan \textit{iptables} pada \textit{docker host}.
+	Berfungsi untuk mengarahkan \textit{traffic} dari tiap \textit{client} yang telah berhasil \textit{login}, ke kontainer \textit{docker} dari tiap-tiap \textit{client}. Hal ini dilakukan dengan menjalankan sebuah \textit{script} dengan menggunakan Iptables pada \textit{docker host}.
 	\item Pemasangan kontainer pada \textit{docker host}.\\
 	Berfungsi untuk memasangkan kontainer \textit{docker} pada \textit{docker host} secara otomatis. Hal ini dilakukan dengan menjalankan sebuah perintah penyediaan kontainer pada \textit{docker host}.
 	\item Pembuatan halaman \textit{administrator} untuk membaca \textit{log file} dari \textit{client}.\\
@@ -85,10 +85,10 @@ Dikarenakan ada beberapa kebutuhan yang harus dipenuhi, komponen pada pembuatan 
 	\item Basis Data \\
 	Basis data pada komponen pembuatan halaman \textit{login} dari sebuah sistem berfungsi sebagai tempat penyimpanan data \textit{username} dan \textit{password} yang digunakan untuk \textit{login} ke dalam sistem. Basis data juga berfungsi sebagai tempat penyimpanan data kontainer \textit{docker} yang sudah dibuat.
 	\item \textit{Web Service} \\
-	\textit{Web service} berfungsi sebagai antarmuka untuk \textit{client} ketika \textit{client} akan \textit{login} ke dalam sistem. Selain itu \textit{web service} juga berfungsi untuk mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker host}. Selain itu \textit{web service} juga berfungsi sebagai penerima permintaan dari \textit{client}, yang nantinya akan membuat sebuah kontainer \textit{docker} secara otomatis pada \textit{docker host}.
+	\textit{Web service} berfungsi sebagai antarmuka untuk \textit{client} ketika \textit{client} akan \textit{login} ke dalam sistem. Selain itu \textit{web service} juga berfungsi untuk mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker host} ketika terdapat \textit{client} yang telah berhasil \textit{login} ke dalam sistem.
 \end{enumerate}
 
-Pada tugas akhir ini, bahasa Python dipilih sebagai bahasa pemrograman yang digunakan untuk mengimplementasikannya. Lalu, pada bagian penyimpanan data atau basis data, MySQL dipilih sebagai RDBMS untuk tugas akhir ini.
+Pada tugas akhir ini, bahasa Python dipilih sebagai bahasa pemrograman dan Flask dipilih sebagai kerangka kerja untuk bahasa pemrograman Python yang digunakan untuk mengimplementasikannya. Lalu, pada bagian penyimpanan data atau basis data, MySQL dipilih sebagai RDBMS untuk tugas akhir ini.
 
 \subsubsection{Desain Basis Data}
 Komponen basis data berfungsi sebagai tempat penyimpanan data \textit{username} dan \textit{password} yang digunakan untuk \textit{login} ke dalam sistem. Dalam basis data ini terdapat satu entitas dan empat atribut, ditunjukkan pada Tabel \ref{tabelnrpmahasiswa}
@@ -114,7 +114,7 @@ Komponen \textit{web service} berfungsi untuk menyediakan antar muka halaman \te
 	\label{mockuplogin}
 \end{figure}
 
-Lalu untuk desain \textit{backend} dari \textit{web serive} untuk halaman \textit{login} akan menggunakan bahasa pemrograman Python degan kerangka kerja \textit{flask} yang akan dijalankan dengan \textit{gunicorn}. Kemudian \textit{gunicorn} akan dijalankan dengan \textit{supervisor} sebagai \textit{service}. Lalu akan digunakan \textit{nginx} sebagai \textit{web server} dari halaman \textit{login} dari sebuah sistem. Desain \textit{backend} dari \textit{web service} untuk halaman \textit{login} dapat dilihat pada Gambar \ref{desainbackendhalamanlogin}.
+Lalu untuk desain \textit{backend} dari \textit{web serive} untuk halaman \textit{login} akan menggunakan bahasa pemrograman Python degan kerangka kerja Flask yang akan dijalankan dengan Gunicorn. Kemudian Gunicorn akan dijalankan dengan Supervisor sebagai \textit{service}. Lalu akan digunakan \textit{nginx} sebagai \textit{web server} dari halaman \textit{login} dari sebuah sistem. Desain \textit{backend} dari \textit{web service} untuk halaman \textit{login} dapat dilihat pada Gambar \ref{desainbackendhalamanlogin}.
 
 \begin{figure}[H]
 	\centering
@@ -124,7 +124,7 @@ Lalu untuk desain \textit{backend} dari \textit{web serive} untuk halaman \texti
 \end{figure}
 
 \subsection{Perancangan Pembuatan Aturan untuk Mengarahkan \textit{Traffic Client} ke Halaman \textit{Login} dari Sistem}
-Pembuatan aturan untuk mengarahkan \textit{traffic client} ke halaman \textit{login} dari sistem adalah komponen yang bertugas untuk membelokkan \textit{traffic} dari \textit{client} yang akan menuju ke internet. Awalnya semua \textit{traffic} dari satu \textit{subnet client} tersebut akan diarahkan ke halaman \textit{login} dari sistem dengan membuat sebuah aturan menggunakan \textit{iptables}, karena asumsinya adalah belum ada \textit{client} yang berhasil \textit{login} ke dalam sistem. Desain perancangan pembuatan aturan untuk mengarahkan \textit{traffic client} ke halaman \textit{login} dapat dilihat pada Gambar \ref{dessainmengarahkankehalamanlogin} .
+Pembuatan aturan untuk mengarahkan \textit{traffic client} ke halaman \textit{login} dari sistem adalah komponen yang bertugas untuk membelokkan \textit{traffic} dari \textit{client} yang akan menuju ke internet. Awalnya semua \textit{traffic} dari satu \textit{subnet client} tersebut akan diarahkan ke halaman \textit{login} dari sistem dengan membuat sebuah aturan menggunakan Iptables, karena asumsinya adalah belum ada \textit{client} yang berhasil \textit{login} ke dalam sistem. Desain perancangan pembuatan aturan untuk mengarahkan \textit{traffic client} ke halaman \textit{login} dapat dilihat pada Gambar \ref{dessainmengarahkankehalamanlogin} .
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{images/bab3/DIAGRAM2}
@@ -159,21 +159,21 @@ Komponen basis data berfungsi sebagai tempat penyimpanan data kontainer \textit{
 	1 & id & int(11) & Sebagai primary key pada tabel, nilai awal adalah \texttt{AUTO\_INCREMENT}. \\ \hline
 	2 & username & varchar(50) & Menunjukkan NRP dari mahasiswa yang telah berhasil dibuatkan satu kontainer \textit{docker}. \\ \hline
 	3 & ip & varchar(50) & Menunjukkan IP dari \textit{client} yang telah berhasil dibuatkan satu kontainer \textit{docker}. \\ \hline
-	4 & port & varchar(50) & Menunjukkan port dari \textit{client} yang telah berhasil dibuatkan satu kontainer \textit{docker}. \\ \hline
+	4 & port & varchar(50) & Menunjukkan \textit{port} dari \textit{client} yang telah berhasil dibuatkan satu kontainer \textit{docker}. \\ \hline
 	5 & createdAt & datetime & Menunjukkan waktu pertama kali kontainer \textit{docker} tersebut dibuat. \\ \hline
 	
 \end{longtable}
 
 
 \subsubsection{Desain \textit{Web Service}}
-Komponen \textit{web service} berfungsi untuk menerima permintaan dari \textit{client} untuk membuat satu kontainer \textit{docker} pada \textit{docker host}. Kontainer \textit{docker} yang akan dibuat pada \textit{docker host} akan dibuat secara otomatis oelh sistem, dan kontainer \textit{docker} yang dibuat akan memiliki nama sesuai dengan IP dari \textit{client} yang telah berhasil \textit{login} ke dalam sistem. Setelah menerima permintaan dari \textit{client}, maka sistem akan mengirimkan perintah untuk membuat kontainer \textit{docker} khusus untuk satu \textit{client}. 
+Komponen \textit{web service} berfungsi untuk menerima permintaan dari \textit{client} untuk membuat satu kontainer \textit{docker} pada \textit{docker host}. Kontainer \textit{docker} yang akan dibuat pada \textit{docker host} akan dibuat secara otomatis oleh sistem, dan kontainer \textit{docker} yang dibuat akan memiliki nama sesuai dengan IP dari \textit{client} yang telah berhasil \textit{login} ke dalam sistem. Setelah menerima permintaan dari \textit{client}, maka sistem akan mengirimkan perintah untuk membuat kontainer \textit{docker} khusus untuk satu \textit{client}. 
 
 \subsection{Perancangan Pemasangan Kontainer pada \textit{Docker Host}}
-Pemasangan kontainer adalah kompenen yang berfungsi untuk memasang kontainer \textit{docker} yang berisi \textit{mitmproxy} pada \textit{docker host} setelah ada permintaan dari \textit{client} yang telah berhasil \textit{login} ke dalam sistem. Proses ini dilakukan secara otomatis, dan nama dari kontainer \textit{docker} tersebut akan sesuai dengan IP dari \textit{client} yang telah berhasil \textit{login} ke dalam sistem.
+Pemasangan kontainer adalah kompenen yang berfungsi untuk memasang kontainer \textit{docker} yang berisi Mitmproxy pada \textit{docker host} setelah ada permintaan dari \textit{client} yang telah berhasil \textit{login} ke dalam sistem. Proses ini dilakukan secara otomatis, dan nama dari kontainer \textit{docker} tersebut akan sesuai dengan IP dari \textit{client} yang telah berhasil \textit{login} ke dalam sistem.
 
-Saat kontainer \textit{docker} telah berhasil dibuat, maka kontainer \textit{docker} tersebut akan mempunyai satu port khusus yang sama dengan \textit{client} yang baru saja \textit{login}. Port khusus nantinya akan digunakan untuk mengarahkan \textit{traffic} dari \textit{client} yang akan mengakses internet.
+Saat kontainer \textit{docker} telah berhasil dibuat, maka kontainer \textit{docker} tersebut akan mempunyai satu \textit{port} khusus yang sama dengan \textit{client} yang baru saja \textit{login}. \textit{Port} khusus nantinya akan digunakan untuk mengarahkan \textit{traffic} dari \textit{client} yang akan mengakses internet.
 
-\textit{Image mitmproxy} dipilih sebagai \textit{image} pada kontainer \textit{docker} karena \textit{mitmproxy} merupakan sebuah perangkat lunak yang interaktif dimana \textit{mitmproxy} memungkinkan dapat memotong dan memodifikasi HTTP \textit{requests} atau \textit{response} dengan sangat cepat. \textit{Mitmproxy} sendiri juga dapat berjalan dengan \textit{transparent mode} sehingga \textit{client} tidak mengetahui jika \textit{traffic} dari \textit{client} tersebut ternyata melalui \textit{mitmproxy}. Gambar alur kerja dari \textit{mitmproxy} dengan \textit{transparent mode} untuk HTTP dapat dilihat pada Gambar \ref{mitmproxyhttp}.
+\textit{Image} Mitmproxy dipilih sebagai \textit{image} pada kontainer \textit{docker} karena Mitmproxy merupakan sebuah perangkat lunak yang interaktif dimana Mitmproxy memungkinkan dapat memotong dan memodifikasi HTTP \textit{requests} atau \textit{response} dengan sangat cepat. Mitmproxy sendiri juga dapat berjalan dengan \textit{transparent mode} sehingga \textit{client} tidak mengetahui jika \textit{traffic} dari \textit{client} tersebut ternyata melalui Mitmproxy. Gambar alur kerja dari Mitmproxy dengan \textit{transparent mode} untuk HTTP dapat dilihat pada Gambar \ref{mitmproxyhttp}.
 
 \begin{figure}[H]
 	\centering
@@ -182,7 +182,7 @@ Saat kontainer \textit{docker} telah berhasil dibuat, maka kontainer \textit{doc
 	\label{mitmproxyhttp}
 \end{figure}
 
-Sedangkan gambar alur kerja dari \textit{mitmproxy} dengan \textit{transparent mode} untuk HTTPS dapat dilihat pada Gambar \ref{mitmproxyhttps}.
+Sedangkan gambar alur kerja dari Mitmproxy dengan \textit{transparent mode} untuk HTTPS dapat dilihat pada Gambar \ref{mitmproxyhttps}.
 
 \begin{figure}[H]
 	\centering
@@ -192,7 +192,7 @@ Sedangkan gambar alur kerja dari \textit{mitmproxy} dengan \textit{transparent m
 \end{figure}
 
 \subsection{Pembuatan Aturan untuk Mengarahkan \textit{Traffic Client} ke Kontainer \textit{Docker} dari Tiap-Tiap \textit{Client}}
-Pembuatan aturan untuk mengarahkan \textit{traffic client} ke kontainer \textit{docker} dari tiap-tiap \textit{client} adalah komponen yang bertugas untuk mengarahkan satu client ke satu kontainer \textit{docker} yang sesuai. Setelah \textit{client} berhasil \textit{login} ke dalam sistem, maka aturan ini akan dibuat menggunakan \textit{iptables}. Lalu \textit{client} juga akan diberikan sebuah aturan dengan menggunakan \textit{iptables} yang memperbolehkan \textit{client} tersebut mengakses internet. Desain dari pembuatan aturan untuk mengarahkan \textit{traffic client} ke kontainer \textit{docker} dari tiap-tiap \textit{client} dapat dilihat pada Gambar \ref{mengarahkankontainerdocker}.
+Pembuatan aturan untuk mengarahkan \textit{traffic client} ke kontainer \textit{docker} dari tiap-tiap \textit{client} adalah komponen yang bertugas untuk mengarahkan satu client ke satu kontainer \textit{docker} yang sesuai. Setelah \textit{client} berhasil \textit{login} ke dalam sistem, maka aturan ini akan dibuat menggunakan Iptables. Lalu \textit{client} juga akan diberikan sebuah aturan dengan menggunakan Iptables yang memperbolehkan \textit{client} tersebut mengakses internet. Desain dari pembuatan aturan untuk mengarahkan \textit{traffic client} ke kontainer \textit{docker} dari tiap-tiap \textit{client} dapat dilihat pada Gambar \ref{mengarahkankontainerdocker}.
 
 \begin{figure}[H]
 	\centering
