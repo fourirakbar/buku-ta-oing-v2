@@ -2,7 +2,8 @@
 	Pada bab ini akan dibahas uji coba dan evaluasi dari sistem yang telah dibuat. Sistem akan diuji coba fungsionalitas dan performanya dengan menjalankan skenario uji coba yang sudah ditentukan. Uji coba dilakukan untuk mengetahui hasil dari sistem ini sehingga dapat menjawab rumusan masalah pada tugas akhir ini.    
 	
 \section{Lingkungan Uji Coba}
-	Lingkungan pengujian menggunakan komponen-komponen yang terdiri dari: satu \textit{server docker host}, satu \textit{server login}, dan tiga komputer penguji.Semua komputer penguji menggunakan tiga buah desktop dengan sistem operasi Ubuntu 16.04 dan tiga buah desktop dengan sistem operasi Windows 7. Pengujian dilakukan di Laboratoriom Arsitektur dan Jaringan Komputer Jurusan Teknik Informatika ITS. \\
+	Lingkungan pengujian menggunakan komponen-komponen yang terdiri dari: satu \textit{server docker host}, satu \textit{server login}, dan tiga komputer penguji.Semua komputer penguji menggunakan enam buah desktop dengan sistem operasi Ubuntu 16.04
+	. Pengujian dilakukan di Laboratoriom Arsitektur dan Jaringan Komputer Jurusan Teknik Informatika ITS. \\
     \indent Spesifikasi untuk setiap komponen yang digunakan ditunjukkan pada Tabel \ref{spesifikasidockerhost} untuk \textit{docker host}, Tabel \ref{spesifikasihalamanlogin} untuk \textit{server} halaman login, Tabel \ref{spesifikasikomputerpenguji1} untuk Komputer Penguji 1, Tabel \ref{spesifikasikomputerpenguji2} untuk Komputer Penguji 2, Tabel \ref{spesifikasikomputerpenguji3} untuk Komputer Penguji 3, Tabel \ref{spesifikasikomputerpenguji4} untuk Komputer Penguji 4, Tabel \ref{spesifikasikomputerpenguji5} untuk Komputer Penguji 5, dan Tabel \ref{spesifikasikomputerpenguji6} untuk Komputer Penguji 6.
 
 \begin{enumerate}
@@ -60,7 +61,7 @@
 			& Firefox Quantum versi 60.0.1.\\ \hline
 			\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.33 \\ \cline{2-2} 
 			& Netmask : 255.255.255.0 \\ \cline{2-2} 
-			& Gateway : 10.151.36.1 \\ \cline{2-2} 
+			& Gateway : 10.151.36.134 \\ \cline{2-2} 
 			& Hostname : DRONA \\ \hline
 		\end{longtable}
 		
@@ -76,7 +77,7 @@
 			& Firefox Quantum versi 60.0.1.\\ \hline
 			\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.34 \\ \cline{2-2} 
 			& Netmask : 255.255.255.0 \\ \cline{2-2} 
-			& Gateway : 10.151.36.1 \\ \cline{2-2} 
+			& Gateway : 10.151.36.134 \\ \cline{2-2} 
 			& Hostname : BHISMA \\ \hline
 		\end{longtable}
 		\pagebreak
@@ -93,7 +94,7 @@
 			& Firefox Quantum versi 60.0.1.\\ \hline
 			\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.33 \\ \cline{2-2} 
 			& Netmask : 255.255.255.0 \\ \cline{2-2} 
-			& Gateway : 10.151.36.1 \\ \cline{2-2} 
+			& Gateway : 10.151.36.134 \\ \cline{2-2} 
 			& Hostname : ARJUNA \\ \hline
 		\end{longtable}
 		
@@ -105,11 +106,11 @@
 			\textbf{Perangkat Keras}      & \begin{tabular}[c]{@{}l@{}} Processor Intel(R) Core(TM) \\ i3-2120 CPU @ 3.30GHz\end{tabular} \\ \cline{2-2} 
 			& RAM 8GB	\\ \cline{2-2} 
 			& Hard disk 1TB \\ \hline
-			\textbf{Perangkat Lunak}      & Windows 10 64 bit \\ \cline{2-2} 
+			\textbf{Perangkat Lunak}      & Ubuntu 16.04 64 bit \\ \cline{2-2} 
 			& Firefox Quantum versi 60.0.1.\\ \hline
 			\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.38 \\ \cline{2-2} 
 			& Netmask : 255.255.255.0 \\ \cline{2-2} 
-			& Gateway : 10.151.36.1 \\ \cline{2-2} 
+			& Gateway : 10.151.36.134 \\ \cline{2-2} 
 			& Hostname : KRESNA \\ \hline
 		\end{longtable}
 		\pagebreak
@@ -122,11 +123,11 @@
 			\textbf{Perangkat Keras}      & \begin{tabular}[c]{@{}l@{}} Processor Intel(R) Core(TM)2Duo \\ CPU E7200 @ 2.53GHz\end{tabular} \\ \cline{2-2} 
 			& RAM 2GB	\\ \cline{2-2} 
 			& Hard disk 120GB \\ \hline
-			\textbf{Perangkat Lunak}      & Windows 7 64 bit \\ \cline{2-2} 
+			\textbf{Perangkat Lunak}      & Ubuntu 16.04 64 bit \\ \cline{2-2} 
 			& Firefox Quantum versi 60.0.1.\\ \hline
 			\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.39 \\ \cline{2-2} 
 			& Netmask : 255.255.255.0 \\ \cline{2-2} 
-			& Gateway : 10.151.36.1 \\ \cline{2-2} 
+			& Gateway : 10.151.36.134 \\ \cline{2-2} 
 			& Hostname : NARASOMA \\ \hline
 		\end{longtable}
 		
@@ -138,11 +139,11 @@
 			\textbf{Perangkat Keras}      & \begin{tabular}[c]{@{}l@{}} Processor Intel(R) Core(TM)2Duo \\ CPU E7200 @ 2.53GHz\end{tabular} \\ \cline{2-2} 
 			& RAM 2GB	\\ \cline{2-2} 
 			& Hard disk 120GB \\ \hline
-			\textbf{Perangkat Lunak}      & Windows 7 64 bit \\ \cline{2-2} 
+			\textbf{Perangkat Lunak}      & Ubuntu 16.04 64 bit \\ \cline{2-2} 
 			& Firefox Quantum versi 60.0.1.\\ \hline
 			\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.41 \\ \cline{2-2} 
 			& Netmask : 255.255.255.0 \\ \cline{2-2} 
-			& Gateway : 10.151.36.1 \\ \cline{2-2} 
+			& Gateway : 10.151.36.134 \\ \cline{2-2} 
 			& Hostname : ANGGADA \\ \hline
 		\end{longtable}
 		
@@ -163,7 +164,7 @@
 	Uji coba akan dilakukan untuk mengetahui keberhasilan sistem yang telah dibangun. Skenario pengujian dibedakan menjadi 2 bagian, yaitu:
     \begin{itemize}
     \item \textbf{Uji Fungsionalitas} \\
-    	Pengujian ini didasrkan pada fungsionalitas yang disajikan sistem.
+    	Pengujian ini didasarkan pada fungsionalitas yang disajikan sistem.
     \item \textbf{Uji Performa} \\
     	Pengujian ini untuk menguji ketahanan sistem terhadap sejumlah permintaan ke aplikasi secara bersamaan. Pengujian dilakukan dengan melakukan \textit{benchmark} pada sistem.
     \end{itemize}
@@ -222,7 +223,7 @@ Alamat / IP \textit{address} dari \textit{server login} yang digunakan adalah \t
 \paragraph{Uji \textit{Client} dapat Mengirimkan Permintaan Penyediaan Kontainer \textit{Docker} ke \textit{Docker Host}} \label{kedua}
 Pengujian ini dilakukan untuk memberikan perintah kepada \textit{docker host} untuk menyediakan kontainer \textit{docker} ke \textit{client} yang baru saja berhasil \textit{login} ke dalam sistem. Pengujian menggunakan satu buah \textit{server} yang berperan sebagai \textit{server login} yang akan mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker host}.
 
-Pengujian ini dapat dilakukan setelah \textit{client} berhasil memasukkan \textit{input username} dan \textit{password} ke sistem, dan berhasil \textit{login} ke dalam sistem. Setelah itu sistem akan mengirimkan permintaan penyediaan kontiner \textit{docker} ke \textit{docker host}. Daftar uji fungsionalitas \textit{client} dapat mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker} host dijelaskan pada Tabel \ref{ujicoba2}
+Pengujian ini dapat dilakukan setelah \textit{client} berhasil memasukkan \textit{username} dan \textit{password} ke sistem, dan berhasil \textit{login} ke dalam sistem. Setelah itu sistem akan mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker host}. Daftar uji fungsionalitas \textit{client} dapat mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker} host dijelaskan pada Tabel \ref{ujicoba2}
 
 \begin{longtable}{|p{0.05\textwidth}|p{0.38\textwidth}|p{0.39\textwidth}|}					\caption{Skenario Uji \textit{Client} dapat \textit{Login} Mengirimkan Permintaan Penyediaan Kontainer \textit{Docker}} \label{ujicoba2} \\
 	\hline
@@ -235,7 +236,7 @@ Pengujian ini dapat dilakukan setelah \textit{client} berhasil memasukkan \texti
 	\endfoot
 	\endlastfoot
 	
-	1 & \textit{Client} mengirimkan permintaan penyediaan kontainer \textit{docker} kepada \textit{docker host}. & \textit{Client} berhasil mengirimakn permintaan penyediaan kontainer \textit{docker} kepada \textit{docker host}.\\ \hline
+	1 & \textit{Client} mengirimkan permintaan penyediaan kontainer \textit{docker} kepada \textit{docker host}. & \textit{Client} berhasil mengirimkan permintaan penyediaan kontainer \textit{docker} kepada \textit{docker host}.\\ \hline
 \end{longtable}
 
 \paragraph{Uji \textit{Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit{Docker}} \label{ketiga}
@@ -282,16 +283,13 @@ Aplikasi halaman \textit{administrator} digunakan untuk membaca \textit{log traf
 	1 & User List & Menampilkan halaman \textit{user list} pada web. & Halaman \textit{user list} dapat tampil pada web. \\ \cline{3-4}
 	&& Melihat secara \textit{live} atau langsung \textit{log traffic} dari \textit{client}. & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} dapat melihat secara \textit{live} atau langsung \textit{log traffic} dari \textit{client}. \\ \cline{3-4}
 	&& Melihat \textit{log traffic} terakhir dari \textit{client}. & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} dapat melihat \textit{log traffic} terakhir dari \textit{client}. \\ \hline
-	2 & History & Melihat \textit{log traffic} dari \textit{client} pada hari-harisebelumnya.  & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} dapat melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya. \\ \hline
+	2 & History & Melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya.  & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} dapat melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya. \\ \hline
 \end{longtable}
 
 \subsection{Skenario Uji Coba Performa}
-Uji performa dilakukan dengan menggunakan enam buah desktop yang berperan sebagai \textit{client} untuk melakukan akses ke internet secara bergantian. \textit{Client} akan mencoba mengakses internet dengan membuka website HTTP maupun HTTPS.
+Uji performa dilakukan dengan menggunakan enam buah desktop yang berperan sebagai \textit{client} untuk melakukan akses ke internet secara bersama-sama. \textit{Client} akan mencoba mengakses internet dengan membuka website HTTP maupun HTTPS.
 
 Percobaan dilakukan dengan dua skenario, yaitu mengakses website HTTP dan mengakses website HTTPS
-
-\subsubsection{Uji Performa Penggunaan CPU}
-Pengujian dilakukan dengan menghitung penggunaan CPU yang terjadi pada \textit{docker host}. Penggunaan CPU di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan. Perhitungan dilakukan dengan mengambil nilai rata-rata penggunaan CPU dari masing-masing kontainer selama proses pengujian dilakukan.
 
 \subsubsection{Uji Performa Penggunaan \textit{Memory}}
 Pengujian dilakukan dengan menghitung penggunaan \textit{memory} yang terjadi pada \textit{docker host}. Penggunaan \textit{memory} di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan. Perhitungan dilakukan dengan mengambil nilai rata-rata penggunaan \textit{memory} dari masing-masing kontainer selama proses pengujian dilakukan.
@@ -416,10 +414,7 @@ Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{keli
 Sesuai dengan skenario uji coba yang diberikan pada Tabel \ref{ujicoba5}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
 
 \subsection{Hasil Uji Performa}
-Seperti yang sudah dijelaskan pada subbab \ref{skenarioujicoba} pengujian performa dilakukan dengan menggunakan enam buah desktop yang berperan sebagai \textit{client} untuk melakukan akses ke internet secara bergantian. \textit{Clint} akan mencoba mengakses internet dengan membuka website HTTP maupun HTTPS.
-
-\subsubsection{Penggunaan CPU}
-Pengujian dilakukan dengan menghitung penggunaan CPU yang terjadi pada \textit{docker host}. Penggunaan CPU di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan. Perhitungan dilakukan dengan mengambil nilai rata-rata penggunaan CPU dari masing-masing kontainer selama proses pengujian dilakukan.
+Seperti yang sudah dijelaskan pada subbab \ref{skenarioujicoba} pengujian performa dilakukan dengan menggunakan enam buah \textit{desktop} yang berperan sebagai \textit{client} untuk melakukan akses ke internet secara bergantian. \textit{Client} akan mencoba mengakses internet dengan membuka \textit{website} HTTP maupun HTTPS.
 
 \subsubsection{Penggunaan \textit{Memory}}
 Pengujian dilakukan dengan menghitung penggunaan \textit{memory} yang terjadi pada \textit{docker host}. Penggunaan \textit{memory} di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan. Perhitungan dilakukan dengan mengambil nilai rata-rata penggunaan \textit{memory} dari masing-masing kontainer selama proses pengujian dilakukan.
@@ -435,93 +430,16 @@ Pengujian dilakukan dengan menghitung jumlah \textit{request} atau jumlah permin
 \section{Hasil Uji Coba dan Evaluasi}
 Berikut dijelaskan hasil uji coba dan evaluasi berdasarkan skenario yang telah dijelaskan pada subbab \ref{skenarioujicoba}.
 
-zzzzzzzzzzzzzzzzzz
-
 \subsection{Hasil Uji Performa}
 Seperti yang sudah dijelaskan pada subbab \ref{skenarioujicoba} pengujian performa dilakukan dengan menggunakan enam buah desktop yang berperan sebagai \textit{client} untuk melakukan akses ke internet secara bergantian. \textit{Clint} akan mencoba mengakses internet dengan membuka website HTTP maupun HTTPS.
 
-\subsection{Hasil Uji Performa}
-Seperti yang sudah dijelaskan pada subbab \ref{skenarioujicoba} pengujian performa dilakukan dengan melakukan akses ke aplikasi dengan sejumlah pengguna secara bersama-sama. Pengujian dilaukan dengan memberikan \textit{request} secara berkelanjutan dengan jumlah pengguna terdiri dari lima bagian, yaitu 800, 1600, 2400, 3200, dan 4000 pengguna. Untuk jumlah \textit{request} yang dihasilkan dari masing-masing pengguna selama rentang waktu request $\pm$ 15 detik dapat dilihat pada Tabel \ref{trequest}. Jumlah tersebut akan diolah oleh \textit{reactive model}. Lalu jumlah penggunaan CPU dan memory selama menangani \textit{request} tersebut akan digunakan oleh \textit{proactive model} untuk menambahkan atau mengurangi \textit{container} yang ada.
-\begin{longtable}{|p{0.33\textwidth}|p{0.35\textwidth}|}
-	\caption{Jumlah \textit{Request} ke Aplikasi} \label{trequest} \\
-	\hline
-	\textbf{\textit{Concurrent Users}} & \textbf{Jumlah \textit{Request}} \\ \hline
-	\endfirsthead
-	\caption[]{Jumlah \textit{Request} ke Aplikasi} \\
-	\hline
-	\textbf{\textit{Concurrent Users}} & \textbf{Jumlah \textit{Request}} \\ \hline
-	\endhead
-	\endfoot
-	\endlastfoot
-	
-	800 & $\pm$ 16.925 \\ \hline
-	1.600 & $\pm$ 26.650 \\ \hline
-	2.400 & $\pm$ 34.943 \\ \hline
-	3.200 & $\pm$ 50.092 \\ \hline
-	4.000 & $\pm$ 57.750 \\ \hline
-	
-\end{longtable}
-
-Pada Tabel \ref{tjumlahcontainer} dapat dilihat jumlah \textit{container} yang terbentuk selama proses \textit{request} dari \textit{user} yang dilakukan selama enam kali. Nilai yang ditampilkan berupa nilai rata-rata selama percobaan dibulatkan ke atas. Sistem dapat menyediakan \textit{container} sesuai dengan jumlah \textit{request} yang diberikan, semakin banyak \textit{request} yang dilakukan, maka \textit{container} yang disediakan akan semakin banyak. Nilai \textit{container} tersebut didapatkan dari perhitungan \textit{proactive model}. Selain melihat jumlah \textit{request}, penentuan \textit{container} yang dibentuk juga dari jumlah sumber daya yang digunakan \textit{container} berdasarkan perhitungan menggunakan \textit{reactive model}. Pada Gambar \ref{gjumlahcontainer} dapat dilihat grafik dari jumlah \textit{container} yang terbentuk berdasarkan jumlah \textit{request} yang dilakukan.
-
-\begin{longtable}{|p{0.25\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|}
-	\caption{Jumlah \textit{Container}} \label{tjumlahcontainer} \\
-	\hline
-	\textbf{\textit{Concurrent Users}} & \textbf{Maksimal \textit{Container}} &  \textbf{Rata-rata \textit{Container}} \\ \hline
-	\endfirsthead
-	\caption[]{Jumlah \textit{Container}} \\
-	\hline
-	\textbf{\textit{Concurrent Users}} & \textbf{Maksimal \textit{Container}} &  \textbf{Rata-rata \textit{Container}} \\ \hline
-	\endhead
-	\endfoot
-	\endlastfoot
-	
-	800 & 6 & 2 \\ \hline
-	1.600 & 8 & 3 \\ \hline
-	2.400 & 14 & 6 \\ \hline
-	3.200 & 18 & 7 \\ \hline
-	4.000 & 30 & 11 \\ \hline
-	
-\end{longtable}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=8.7cm,height=4.7cm]{Images/C-5/jumlahcontainer.png}
-	\caption{Grafik Jumlah \textit{Container}}
-	\label{gjumlahcontainer}
-\end{figure}
-
 \subsubsection{Kecepatan Menangani \textit{Request}}
-Dari hasil uji coba kecepatan menangani \textit{request}, mengukur jumlah waktu yang diperlukan untuk menyelesaikan \textit{request} yang dilakukan oleh saat \textit{client} berhasil \textit{login} ke dalam sistem sampai dengan sistem selesai menyediakan sebuah kontainer \textit{docker} untuk \textit{client} tersebut, dapat dilihat pada Tabel \ref{kecepatanrequest1} dalam satuan \textit{millisecond}.
+Dari hasil uji coba kecepatan menangani \textit{request}, yaitu kecepatan unduh dan \textit{upload} dari \textit{client}. Uji coba dilakukan dengan melakukan cek kecepatan pada website \texttt{http://www.speedtest.net/id}. Uji coba dilakukan dengan menggunakan satu komputer penguji sampai dengan enam komputer penguji secara bersamaan. Hasil dari uji coba menangani \textit{request} dapat dilihat pada Tabel \ref{kecepatanrequest2}.
 
-\begin{longtable}{|p{0.33\textwidth}|p{0.35\textwidth}|}
-	\caption{Kecepatan Menangai \textit{Request} Penyediaan Kontainer} \label{kecepatanrequest1} \\
+\begin{longtable}{|p{0.2\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|p{0.2\textwidth}|}
+	\caption{Kecepatan Menangai \textit{Request} Unduh dan \textit{Upload} Menggunakan Internet \textit{Access Management} Berbasis Kontainer} \label{kecepatanrequest2} \\
 	\hline
-	\textbf{\textit{Jumlah \textit{Client}}} & \textbf{Waktu (\textit{millisecond})} \\ \hline
-	\endfirsthead
-	\caption[]{Kecepatan Menangai \textit{Request} Penyediaan Kontainer} \\
-	\hline
-	\textbf{\textit{Jumlah \textit{Client}}} & \textbf{Waktu (\textit{millisecond})} \\ \hline
-	\endhead
-	\endfoot
-	\endlastfoot
-	
-	1 & $\pm$ 10010 \\ \hline
-	2 & $\pm$ 10010 \\ \hline
-	3 & $\pm$ 10010 \\ \hline
-	4 & $\pm$ 10010 \\ \hline
-	5 & $\pm$ 10010 \\ \hline
-	6 & $\pm$ 10010 \\ \hline
-	
-\end{longtable}
-Dari Tabel \ref{kecepatanrequest1} dapat dilihat dibutuhkan waktu kurang lebih selama 10010 \textit{millisecond} atau selama 10 detik. Hal tersebut terjadi karena spesifikasi dari \textit{docker host} yang berfungsi sebagai penyedia kontainer \textit{docker} mempunyai spesifikasi yang terbatas. Semakin bagus spesifikasi \textit{docker host}, maka akan semakin cepat proses penyediaan kontainer \textit{docker}.
-
-Lalu untuk kecepatan unduh dan \textit{upload} dari \textit{client}, uji coba dilakukan dengan melakukan cek kecepatan pada website \texttt{http://www.speedtest.net/id}. Hasil dari uji coba kecepatan unduh dan juga \textit{upload} dapat dilihat pada Tabel \ref{kecepatanrequest2} dalam satuan detik.
-
-\begin{longtable}{|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
-	\caption{Kecepatan Menangai \textit{Request} Unduh dan \textit{Upload}} \label{kecepatanrequest2} \\
-	\hline
-	& \textbf{Ping} & \textbf{Kecepatan unduh} & \textbf{Kecepatan \textit{Upload}} \\ \hline
+	\textbf{Jumlah Client} & \textbf{Kecepatan unduh} & \textbf{Kecepatan \textit{Upload}} \\ \hline
 	\endfirsthead
 	\caption[]{Kecepatan Menangai \textit{Request} Unduh} \\
 	\hline
@@ -529,58 +447,61 @@ Lalu untuk kecepatan unduh dan \textit{upload} dari \textit{client}, uji coba di
 	\endfoot
 	\endlastfoot
 	
-	\textit{Client} 1 & 4 ms & $\pm$ 10,60 Mb & $\pm$ 8,04 Mb \\ \hline
-	\textit{Client} 2 & 4 ms & $\pm$ 10,60 Mb & $\pm$ 8,04 Mb \\ \hline
-	\textit{Client} 3 & 4 ms & $\pm$ 10,60 Mb & $\pm$ 8,04 Mb \\ \hline
-	\textit{Client} 4 & 4 ms & $\pm$ 10,60 MB & $\pm$ 8,04 Mb \\ \hline
-	\textit{Client} 5 & 4 ms & $\pm$ 10,60 MB & $\pm$ 8,04 Mb \\ \hline
-	\textit{Client} 6 & 4 ms & $\pm$ 10,60 MB & $\pm$ 8,04 Mb \\ \hline
+	1 & $\pm$ 13,04 Mb & $\pm$ 13,62 Mb \\ \hline
+	2 & $\pm$ 10,16 Mb & $\pm$ 9,27 Mb \\ \hline
+	3 & $\pm$ 4,73 Mb & $\pm$ 4,47 Mb \\ \hline
+	4 & $\pm$ 4,45 MB & $\pm$ 5,61 Mb \\ \hline
+	5 & $\pm$ 3,93 MB & $\pm$ 4,55 Mb \\ \hline
+	6 & $\pm$ 2,82 MB & $\pm$ 2,73 Mb \\ \hline
 	
 \end{longtable}
-Pada gambar \ref{speedtest} dapat dilihat \textit{screenshoot} dari cek kecepatan pada \texttt{http://www.speedtest.net/id}.
+
+Hasil uji coba kecepatan menangani \textit{request} dengan menggunakan Internet \textit{Access Management} berbasis kontainer ditunjukkan dalam grafik pada Gambar \ref{grafikkecepatan1}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{images/bab5/speedtest}
-	\caption{\textit{Screenshoot} pada Halaman \texttt{http://www.speedtest.net/id}}
-	\label{speedtest}
+	\includegraphics[width=\linewidth]{images/bab5/kecepatan1}
+	\caption{Grafik Kecepatan Menangani \textit{Request}}
+	\label{grafikkecepatan1}
 \end{figure}
 
-\subsubsection{Penggunaan CPU}
-Dari hasil uji coba penggunaan CPU pada \textit{server master host}, penggunaan CPU berada di bawah 15\%. Penggunaan CPU yang diukur adalah penggunaan CPU yang dilakukan oleh \textit{container} dari aplikasi, tidak termasuk sistem. Jumlah \textit{core} yang dimiliki oleh \textit{processor} di \textit{server master host} adalah 8 buah, yang artinya kurang lebih hanya satu core yang digunakan untuk menangani semua \textit{request}. Hasil pengukuran penggunaan CPU dapat dilihat pada Tabel \ref{penggunaancpu}
+Lalu untuk uji coba dilakukan dengan enam komputer penguji dan dengan menggunakan Internet \textit{Access Management} Konvensional dapat dilihat pada Tabel \ref{kecepatanrequest3}
 
-\begin{longtable}{|p{0.22\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|p{0.10\textwidth}|}
-	\caption{Penggunaan CPU} \label{penggunaancpu} \\
+\begin{longtable}{|p{0.2\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|p{0.2\textwidth}|}
+	\caption{Kecepatan Menangai \textit{Request} Unduh dan \textit{Upload} Menggunakan Internet \textit{Access Management} Konvensional} \label{kecepatanrequest3} \\
 	\hline
-	& \textbf{800} & \textbf{1600} & \textbf{2400} & \textbf{3200} & \textbf{4000} \\ \hline
+	\textbf{Jumlah Client} & \textbf{Kecepatan unduh} & \textbf{Kecepatan \textit{Upload}} \\ \hline
 	\endfirsthead
-	\caption[]{Penggunaan CPU} \\
+	\caption[]{Kecepatan Menangai \textit{Request} Unduh} \\
 	\hline
-	& \textbf{800} & \textbf{1600} & \textbf{2400} & \textbf{3200} & \textbf{4000} \\ \hline
 	\endhead
 	\endfoot
 	\endlastfoot
 	
-	ARIMA(1,1,0) & 7.1\% & 7.8\% & 9.1\% & 10.5\% & 10.7\% \\ \hline
-	ARIMA(2,1,0) & 8.5\% & 9.2\% & 10.1\% & 11.3\% & 10.7\% \\ \hline
-	ARIMA(3,1,0) & 8.8\% & 10.2\% & 11.6\% & 12.1\% & 10.3\% \\ \hline
-	ARIMA(4,1,0) & 8.0\% & 8.3\% & 10.1\% & 12.9\% & 10.5\% \\ \hline
+	1 & $\pm$ 91,58 Mb & $\pm$ 91,27 Mb \\ \hline
+	2 & $\pm$ 47,97 Mb & $\pm$ 51,49 Mb \\ \hline
+	3 & $\pm$ 36,11 Mb & $\pm$ 35,28 Mb \\ \hline
+	4 & $\pm$ 23,09 MB & $\pm$ 29,88 Mb \\ \hline
+	5 & $\pm$ 22,50 MB & $\pm$ 26,20 Mb \\ \hline
+	6 & $\pm$ 19,70 MB & $\pm$ 21,12 Mb \\ \hline
 	
 \end{longtable}
 
-Dari hasil uji coba, penggunaan prediksi yang berbeda tidak terlalu berpengaruh terhadap penggunaan CPU. Lalu, penggunaan CPU tergolong rendah, yaitu hanya sebesar $\pm 10 \%$ untuk menangani semua \textit{request} yang diberikan. Hasil uji coba performa penggunaan CPU ditunjukkan oleh dalam grafik pada Gambar \ref{gcpuusage}.
+Hasil uji coba kecepatan menangani \textit{request} dengan menggunakan Internet \textit{Access Management} konvensional ditunjukkan dalam grafik pada Gambar \ref{grafikkecepatan2}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=8.7cm,height=4.7cm]{Images/C-5/cpuusage.png}
-	\caption{Grafik Penggunaan CPU}
-	\label{gcpuusage}
+	\includegraphics[width=\linewidth]{images/bab5/kecepatan2}
+	\caption{Grafik Kecepatan Menangani \textit{Request}}
+	\label{grafikkecepatan2}
 \end{figure}
+
+Dari Tabel \ref{kecepatanrequest2} dan Tabel \ref{kecepatanrequest3} dapat dilihat bahwa semakin banyak jumlah \textit{client}, maka semakin berkurang kecepatan unduh maupun \textit{upload} dari masing-masing \textit{client}. Hal tersebut dikarenakan \textit{bandwith} dari \textit{server} yang digunakan sebagai \textit{docker host} juga terbatas. Jika semakin besar bandwith yang dapat diterima oleh \textit{server} yang akan digunakan sebagai \textit{docker host}, maka semakin cepat pula kecepatan unduh maupun \textit{upload} dari masing-masing \textit{client}. 
 
 \subsubsection{Penggunaan \textit{Memory}}
 Dari hasil uji coba penggunaan \textit{memory}, semakin banyak \textit{request} yang diterima, semakin banyak \textit{memory} ynag diperlukan. Perhitungan penggunaan \textit{memory} adalah jumlah penggunaan dari masing-masing kontainer \textit{docker} dari \textit{client}. Dari hasil uji coba ini, dapat dilihat pada Tabel \ref{penggunaanmemory1}.
 
-\begin{longtable}{|p{0.3\textwidth}|p{0.3\textwidth}|}
+\begin{longtable}{|p{0.2\textwidth}|p{0.3\textwidth}|}
 	\caption{\textit{Penggunaan \textit{Memory}}} \label{penggunaanmemory1} \\
 	\hline
 	\textbf{Jumlah \textit{Client}} & \textbf{Jumlah \textit{Memory} yang Digunakan} \\ \hline
@@ -590,16 +511,23 @@ Dari hasil uji coba penggunaan \textit{memory}, semakin banyak \textit{request} 
 	\endfoot
 	\endlastfoot
 	
-	1 & 0,9 MB \\ \hline
-	2 & 1,8 MB \\ \hline
-	3 & 2,7 MB \\ \hline
-	4 & 3,6 MB \\ \hline
-	5 & 4,5 MB \\ \hline
-	6 & 5,4 MB \\ \hline
+	1 & 145 MB \\ \hline
+	2 & 213 MB \\ \hline
+	3 & 254 MB \\ \hline
+	4 & 421 MB \\ \hline
+	5 & 571 MB \\ \hline
+	6 & 786 MB \\ \hline
 \end{longtable}
-Dari Tabel \ref{penggunaanmemory1} dapat dilihat bahwa penggunaan \textit{memory} tiap satu \textit{client} yang telah disediakan kontainer \textit{docker} sebesar 0,9 MB. Artinya jika \textit{docker host} mempunyai \textit{memory} sebesar 8192 MB, \textit{docker host} dapat menampung $\pm$ 9102 \textit{client} dalam satu \textit{docker host}. Penggunaan \textit{memory} tersebut juga dapat dibatasi jika \textit{server} yang digunakan sebagai \textit{docker host} tidak memiliki \textit{memory} yang terlalu besar.
+Dari Tabel \ref{penggunaanmemory1} dapat dilihat bahwa semakin banyak jumlah \textit{client} yang menggunakan Internet \textit{Access Management} berbasis kontainer, maka semakin meningkat pula penggunaan \textit{memory} dari \textit{server} yang digunakan sebagai \textit{docker host}. Rata-rata penggunaan \textit{memory} dari tiap kontainer \textit{docker} adalah sebesar $\pm$ 131 MB. Semakin besar jumlah \textit{memory} yang ada di \textit{docker host}, maka semakin banyak pula jumlah \textit{client} yang dapat ditampung.
 
-Hasil uji coba performa penggunaan \textit{memory} dalam grafik ditunjukkan pada Gambar xx.
+Penggunaan \textit{memory} dari tiap kontainer juga dapat dibatasi oleh sistem jika \textit{docker host} yang digunakan hanya mempunyai \textit{memory} yang tidak terlalu besar. Hasil uji coba penggunaan \textit{memroy} ditunjukkan dalam grafik pada Gambar \ref{ram1}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/bab5/ram1}
+	\caption{Grafik Penggunaan \textit{Memory}}
+	\label{ram1}
+\end{figure}
 
 \subsubsection{Keberhasilan \textit{Request}}
 Pada uji coba ini, dilakukan perhitungan seberapa besar jumlah \textit{request} yang berhasil dilakukan. Untuk jumlah \textit{client}, dapat dilihat pada Tabel \ref{keberhasilanrequest1}.
