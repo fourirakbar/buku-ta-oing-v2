@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.3.16)  4 JUN 2018 20:26
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  5 JUN 2018 10:21
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1629,9 +1629,9 @@ File: images/bab5/kecepatan2.png Graphic file (type QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [76]
-File: images/bab5/ram1.png Graphic file (type QTm)
+File: images/bab5/newmemory.png Graphic file (type QTm)
 
-<use  "images/bab5/ram1.png" > [77]) (./chapters/6-Penutup.tex [78]
+<use  "images/bab5/newmemory.png" > [77]) (./chapters/6-Penutup.tex [78]
 BAB VI.
 [79
 
@@ -1665,8 +1665,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  27837 strings out of 493638
- 485465 string characters out of 6146796
- 600489 words of memory out of 5000000
+ 485475 string characters out of 6146796
+ 600487 words of memory out of 5000000
  30866 multiletter control sequences out of 15000+600000
  7051 words of font info for 63 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191

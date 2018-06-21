@@ -1,10 +1,10 @@
 \chapter{PENGUJIAN DAN EVALUASI}
-	Pada bab ini akan dibahas uji coba dan evaluasi dari sistem yang telah dibuat. Sistem akan diuji coba fungsionalitas dan performanya dengan menjalankan skenario uji coba yang sudah ditentukan. Uji coba dilakukan untuk mengetahui hasil dari sistem ini sehingga dapat menjawab rumusan masalah pada tugas akhir ini.    
-	
+Pada bab ini akan dibahas uji coba dan evaluasi dari sistem yang telah dibuat. Sistem akan diuji coba fungsionalitas dan performanya dengan menjalankan skenario uji coba yang sudah ditentukan. Uji coba dilakukan untuk mengetahui hasil dari sistem ini sehingga dapat menjawab rumusan masalah pada tugas akhir ini.    
+
 \section{Lingkungan Uji Coba}
-	Lingkungan pengujian menggunakan komponen-komponen yang terdiri dari: satu \textit{server docker host}, satu \textit{server login}, dan tiga komputer penguji.Semua komputer penguji menggunakan enam buah desktop dengan sistem operasi Ubuntu 16.04
-	. Pengujian dilakukan di Laboratoriom Arsitektur dan Jaringan Komputer Jurusan Teknik Informatika ITS. \\
-    \indent Spesifikasi untuk setiap komponen yang digunakan ditunjukkan pada Tabel \ref{spesifikasidockerhost} untuk \textit{docker host}, Tabel \ref{spesifikasihalamanlogin} untuk \textit{server} halaman login, Tabel \ref{spesifikasikomputerpenguji1} untuk Komputer Penguji 1, Tabel \ref{spesifikasikomputerpenguji2} untuk Komputer Penguji 2, Tabel \ref{spesifikasikomputerpenguji3} untuk Komputer Penguji 3, Tabel \ref{spesifikasikomputerpenguji4} untuk Komputer Penguji 4, Tabel \ref{spesifikasikomputerpenguji5} untuk Komputer Penguji 5, dan Tabel \ref{spesifikasikomputerpenguji6} untuk Komputer Penguji 6.
+Lingkungan pengujian menggunakan komponen-komponen yang terdiri dari: satu \textit{server docker host}, satu \textit{server login}, dan enam komputer penguji.Semua komputer penguji menggunakan enam buah desktop dengan sistem operasi Ubuntu 16.04
+. Pengujian dilakukan di Laboratoriom Arsitektur dan Jaringan Komputer Jurusan Teknik Informatika ITS. \\
+\indent Spesifikasi untuk setiap komponen yang digunakan ditunjukkan pada Tabel \ref{spesifikasidockerhost} untuk \textit{docker host}, Tabel \ref{spesifikasihalamanlogin} untuk \textit{server} halaman login, Tabel \ref{spesifikasikomputerpenguji1} untuk Komputer Penguji 1, Tabel \ref{spesifikasikomputerpenguji2} untuk Komputer Penguji 2, Tabel \ref{spesifikasikomputerpenguji3} untuk Komputer Penguji 3, Tabel \ref{spesifikasikomputerpenguji4} untuk Komputer Penguji 4, Tabel \ref{spesifikasikomputerpenguji5} untuk Komputer Penguji 5, dan Tabel \ref{spesifikasikomputerpenguji6} untuk Komputer Penguji 6.
 \pagebreak
 \begin{enumerate}
 	\item \textbf{\textit{Server} Untuk \textit{Docker Host}}
@@ -146,40 +146,40 @@
 		
 	\end{enumerate}
 \end{enumerate}
-			
-			Untuk gambar arsitektur dari setiap komponen yang digunakan dapat dilihat pada Gambar \ref{arsitekturbab5}.
-			
-			\begin{figure}[H]
-				\centering
-				\includegraphics[width=\linewidth]{images/bab5/arsitekturbab5}
-				\caption{Arsitektur dari Setiap Komponen Uji Coba}
-				\label{arsitekturbab5}
-			\end{figure}
-			
-   
+
+Untuk gambar arsitektur dari setiap komponen yang digunakan dapat dilihat pada Gambar \ref{arsitekturbab5}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/bab5/arsitekturbab5}
+	\caption{Arsitektur dari Setiap Komponen Uji Coba}
+	\label{arsitekturbab5}
+\end{figure}
+
+
 \section{Skenario Uji Coba} \label{skenarioujicoba}
-	Uji coba akan dilakukan untuk mengetahui keberhasilan sistem yang telah dibangun. Skenario pengujian dibedakan menjadi 2 bagian, yaitu:
-    \begin{itemize}
-    \item \textbf{Uji Fungsionalitas} \\
-    	Pengujian ini didasarkan pada fungsionalitas yang disajikan sistem.
-    \item \textbf{Uji Performa} \\
-    	Pengujian ini untuk menguji ketahanan sistem terhadap sejumlah permintaan ke aplikasi secara bersamaan. Pengujian dilakukan dengan melakukan \textit{benchmark} pada sistem.
-    \end{itemize}
-    
+Uji coba akan dilakukan untuk mengetahui keberhasilan sistem yang telah dibangun. Skenario pengujian dibedakan menjadi 2 bagian, yaitu:
+\begin{itemize}
+	\item \textbf{Uji Fungsionalitas} \\
+	Pengujian ini didasarkan pada fungsionalitas yang disajikan sistem.
+	\item \textbf{Uji Performa} \\
+	Pengujian ini untuk menguji ketahanan sistem terhadap sejumlah permintaan ke aplikasi secara bersamaan. Pengujian dilakukan dengan melakukan \textit{benchmark} pada sistem.
+\end{itemize}
+
 \subsection{Skenario Uji Coba Fungsionalitas}
 Uji coba fungsionalitas dilakukan dengan cara menjalankan sistem yang telah dibuat, dan melakukan pengujian terhadap fitur yang telah dibuat. Uji coba fungsionalitas akan berfungsi untuk memastikan sistem sudah memenuhi kebutuhan yang tertera pada Bab 3, yaitu meliputi:
 
 \begin{enumerate}
-\item Pengujian \textit{client} dapat mengakses internet.
-\item Pengujian fungsionalitas menu aplikasi halaman administrator.
+	\item Pengujian \textit{client} dapat mengakses internet.
+	\item Pengujian fungsionalitas menu aplikasi halaman administrator.
 \end{enumerate}
 
 \subsubsection{Uji \textit{client} dapat Mengakses Internet} \label{keempat}
 Pengujian ini dilakukan untuk mengetahui apakah \textit{client} dapat mengakses internet atau tidak. Pada uji \textit{client} dapat mengakses internet akan dibagi lagi menjadi beberapa bagian, antara lain:
 \begin{enumerate}
-\item Pengujian \textit{client} dapat \textit{login} ke dalam sistem.
-\item Pengujian \textit{client} dapat mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker host}.
-\item Pengujian \textit{docker host} dapat menerima permintaan penyediaan kontainer \textit{docker}.
+	\item Pengujian \textit{client} dapat \textit{login} ke dalam sistem.
+	\item Pengujian \textit{client} dapat mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker host}.
+	\item Pengujian \textit{docker host} dapat menerima permintaan penyediaan kontainer \textit{docker}.
 \end{enumerate}
 
 Pengujian menggunakan enam buah komputer penguji. Pengujian ini dapat dilakukan dengan membuka \textit{browser} dan membuka \textit{website} HTTP ataupun juga HTTPS. Daftar uji fungsionalitas \textit{client} dapat mengakses internet dijelaskan pada Tabel \ref{ujicoba4}.
@@ -294,23 +294,23 @@ Pengujian dilakukan dengan menghitung penggunaan \textit{memory} yang terjadi pa
 \subsubsection{Uji Performa Kecepatan Menangani \textit{Request}}
 Pengujian dilakukan dengan mengukur jumlah waktu yang diperlukan untuk menyelesaikan \textit{request} yang dilakukan oleh komputer penguji. Waktu yang diukur adalah saat \textit{client} berhasil melakukan \textit{login} ke dalam sistem sampai dengan \textit{client} selesai dibuatkan sebuah kontainer \textit{docker}.
 
-Pengujian performa kecepatan menangani \textit{request} juga dilakukan dengan membandingkan performa kecepatan dari \textit{client} ketika \textit{client} melakukan \textit{download} maupun \textit{upload} sebuah file dengan menggunakan \textit{server} internet \textit{access management} secara konvensional dengan menggunakan \textit{server} internet \textit{access management} berbasis kontainer.
+Pengujian performa kecepatan menangani \textit{request} juga dilakukan dengan membandingkan performa kecepatan dari \textit{client} ketika \textit{client} melakukan \textit{download} maupun \textit{upload} sebuah file dengan menggunakan \textit{server} \textit{internet access management} secara konvensional dengan menggunakan \textit{server} \textit{internet access management} berbasis kontainer.
 
 \subsubsection{Uji Performa Keberhasilan \textit{Request}}
 Pengujian dilakukan dengan menghitung jumlah \textit{request} atau jumlah permintaan penyediaan kontainer \textit{docker} yang gagal dilakukan selama skenario dijalankan. Dari semua jumlah \textit{request} yang dikirimkan selama pengujian, akan didapatkan persen \textit{request} yang gagal dilakukan.
-    
+
 \section{Hasil Uji Coba dan Evaluasi}
 Berikut dijelaskan hasil uji coba dan evaluasi berdasarkan skenario yang telah dijelaskan pada subbab \ref{skenarioujicoba}.
-    
+
 \subsection{Uji Fungsionalitas}
 Berikut dijelaskan hasil pengujian fungsionalitas pada sistem yang dibangun.
 
 \subsubsection{Uji \textit{Client} dapat Mengakses Internet}
 Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{keempat} dan pada Tabel \ref{ujicoba4}. Pada hasil uji \textit{client} dapat mengakses internet akan dibagi lagi menjadi beberapa bagian, antara lain
 \begin{enumerate}
-\item Pengujian \textit{client} dapat \textit{login} ke dalam sistem.
-\item Pengujian \textit{client} dapat mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker host}.
-\item Pengujian \textit{docker host} dapat menerima permintaan penyediaan kontainer \textit{docker}.
+	\item Pengujian \textit{client} dapat \textit{login} ke dalam sistem.
+	\item Pengujian \textit{client} dapat mengirimkan permintaan penyediaan kontainer \textit{docker} ke \textit{docker host}.
+	\item Pengujian \textit{docker host} dapat menerima permintaan penyediaan kontainer \textit{docker}.
 \end{enumerate}
 
 Setelah melalui hasil uji yang telah disebutkan diatas, hasil pengujian \textit{client} dapat mengakses internet seperti tertera pada Tabel \ref{hasilujicoba5}
@@ -333,7 +333,7 @@ Sesuai dengan skenario uji coba  yang diberikan pada Tabel \ref{ujicoba4}, hasil
 
 \paragraph{Uji \textit{Client} dapat \textit{Login} ke Dalam Sistem}
 Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{pertama} dan pada Tabel \ref{ujicoba1}. Hasil pengujian seperti tertera pada Tabel \ref{hasilujicoba1}.
-        
+
 \begin{longtable}{|p{0.05\textwidth}|p{0.55\textwidth}|p{0.22\textwidth}|}					\caption{Hasil Uji Coba \textit{Client} dapat \textit{Login} ke Dalam Sistem} \label{hasilujicoba1} \\
 	\hline
 	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
@@ -345,8 +345,8 @@ Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{pert
 	\endfoot
 	\endlastfoot
 	
-    1 & \textit{Client} membuka sebuah website ketika belum \textit{login} ke dalam sistem. & OK. \\ \hline
-    2 & \textit{Client} melakukan \textit{login} ke \textit{server login}. & OK. \\ \hline
+	1 & \textit{Client} membuka sebuah website ketika belum \textit{login} ke dalam sistem. & OK. \\ \hline
+	2 & \textit{Client} melakukan \textit{login} ke \textit{server login}. & OK. \\ \hline
 \end{longtable}
 Sesuai dengan skenario uji coba  yang diberikan pada Tabel \ref{ujicoba1}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
 
@@ -387,7 +387,7 @@ Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{keti
 	3 & Sistem membuat sebuah \textit{directory} pada \textit{docker host} sesuai dengan tanggal dan informasi dari \textit{client}. & OK. \\ \hline
 \end{longtable}
 Sesuai dengan skenario uji coba  yang diberikan pada Tabel \ref{ujicoba3}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
-        
+
 \subsubsection{Uji Fungsionalitas Menu Aplikasi Halaman \textit{Administrator}}
 Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{kelima} dan pada Tabel \ref{ujicoba5}. Hasil pengujian seperti tertera pada Tabel \ref{hasilujicoba6}
 
@@ -434,7 +434,7 @@ Seperti yang sudah dijelaskan pada subbab \ref{skenarioujicoba} pengujian perfor
 Dari hasil uji coba kecepatan menangani \textit{request}, yaitu kecepatan unduh dan \textit{upload} dari \textit{client}. Uji coba dilakukan dengan melakukan cek kecepatan pada website \texttt{http://www.speedtest.net/id}. Uji coba dilakukan dengan menggunakan satu komputer penguji sampai dengan enam komputer penguji secara bersamaan. Hasil dari uji coba menangani \textit{request} dapat dilihat pada Tabel \ref{kecepatanrequest2}.
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|p{0.2\textwidth}|}
-	\caption{Kecepatan Menangai \textit{Request} Unduh dan \textit{Upload} Menggunakan Internet \textit{Access Management} Berbasis Kontainer} \label{kecepatanrequest2} \\
+	\caption{Kecepatan Menangai \textit{Request} Unduh dan \textit{Upload} Menggunakan \textit{Internet Access Management} Berbasis Kontainer} \label{kecepatanrequest2} \\
 	\hline
 	\textbf{Jumlah Client} & \textbf{Kecepatan unduh} & \textbf{Kecepatan \textit{Upload}} \\ \hline
 	\endfirsthead
@@ -453,7 +453,7 @@ Dari hasil uji coba kecepatan menangani \textit{request}, yaitu kecepatan unduh 
 	
 \end{longtable}
 
-Hasil uji coba kecepatan menangani \textit{request} dengan menggunakan Internet \textit{Access Management} berbasis kontainer ditunjukkan dalam grafik pada Gambar \ref{grafikkecepatan1}.
+Hasil uji coba kecepatan menangani \textit{request} dengan menggunakan \textit{Internet Access Management} berbasis kontainer ditunjukkan dalam grafik pada Gambar \ref{grafikkecepatan1}.
 
 \begin{figure}[H]
 	\centering
@@ -462,10 +462,10 @@ Hasil uji coba kecepatan menangani \textit{request} dengan menggunakan Internet 
 	\label{grafikkecepatan1}
 \end{figure}
 
-Lalu untuk uji coba dilakukan dengan enam komputer penguji dan dengan menggunakan Internet \textit{Access Management} Konvensional dapat dilihat pada Tabel \ref{kecepatanrequest3}
+Lalu untuk uji coba dilakukan dengan enam komputer penguji dan dengan menggunakan \textit{internet access management} konvensional dapat dilihat pada Tabel \ref{kecepatanrequest3}
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.25\textwidth}|p{0.25\textwidth}|p{0.2\textwidth}|}
-	\caption{Kecepatan Menangai \textit{Request} Unduh dan \textit{Upload} Menggunakan Internet \textit{Access Management} Konvensional} \label{kecepatanrequest3} \\
+	\caption{Kecepatan Menangai \textit{Request} Unduh dan \textit{Upload} Menggunakan \textit{Internet Access Management} Konvensional} \label{kecepatanrequest3} \\
 	\hline
 	\textbf{Jumlah Client} & \textbf{Kecepatan unduh} & \textbf{Kecepatan \textit{Upload}} \\ \hline
 	\endfirsthead
@@ -484,7 +484,7 @@ Lalu untuk uji coba dilakukan dengan enam komputer penguji dan dengan menggunaka
 	
 \end{longtable}
 
-Hasil uji coba kecepatan menangani \textit{request} dengan menggunakan Internet \textit{Access Management} konvensional ditunjukkan dalam grafik pada Gambar \ref{grafikkecepatan2}.
+Hasil uji coba kecepatan menangani \textit{request} dengan menggunakan \textit{Internet Access Management} konvensional ditunjukkan dalam grafik pada Gambar \ref{grafikkecepatan2}.
 
 \begin{figure}[H]
 	\centering
@@ -495,8 +495,8 @@ Hasil uji coba kecepatan menangani \textit{request} dengan menggunakan Internet 
 
 Dari Tabel \ref{kecepatanrequest2} dan Tabel \ref{kecepatanrequest3} dapat dilihat bahwa semakin banyak jumlah \textit{client}, maka semakin berkurang kecepatan unduh maupun \textit{upload} dari masing-masing \textit{client}. Hal tersebut dikarenakan \textit{bandwith} dari \textit{server} yang digunakan sebagai \textit{docker host} juga terbatas. Jika semakin besar bandwith yang dapat diterima oleh \textit{server} yang akan digunakan sebagai \textit{docker host}, maka semakin cepat pula kecepatan unduh maupun \textit{upload} dari masing-masing \textit{client}. 
 
-Dari Tabel \ref{kecepatanrequest2}, uji coba menggunakan \textit{server} sebagai internet \textit{access management} berbasis kontainer dengan menggunakan Kabel UTP Cat 5 100Mb/s dan Tabel \ref{kecepatanrequest3}, uji coba menggunakan \textit{server} sebagai internet \textit{access management} konvensional dengan menggunakan Kabel UTP Cat 5 1Gb/s. Hal tersebut sangat mempengaruhi kecepatan saat uji coba berlangsung.
- 
+Dari Tabel \ref{kecepatanrequest2}, uji coba menggunakan \textit{server} sebagai \textit{internet access management} berbasis kontainer dengan menggunakan Kabel UTP Cat 5 100Mb/s dan Tabel \ref{kecepatanrequest3}, uji coba menggunakan \textit{server} sebagai \textit{internet access management} konvensional dengan menggunakan Kabel UTP Cat 5 1Gb/s. Hal tersebut sangat mempengaruhi kecepatan saat uji coba berlangsung.
+
 \subsubsection{Penggunaan \textit{Memory}}
 Dari hasil uji coba penggunaan \textit{memory}, semakin banyak \textit{request} yang diterima, semakin banyak \textit{memory} ynag diperlukan. Perhitungan penggunaan \textit{memory} adalah jumlah penggunaan dari masing-masing kontainer \textit{docker} dari \textit{client}. Dari hasil uji coba ini, dapat dilihat pada Tabel \ref{penggunaanmemory1}.
 
@@ -505,7 +505,7 @@ Dari hasil uji coba penggunaan \textit{memory}, semakin banyak \textit{request} 
 	\hline
 	\textbf{Jumlah \textit{Client}} & \textbf{Jumlah \textit{Memory} yang Digunakan} \\ \hline
 	\endfirsthead
-
+	
 	\endhead
 	\endfoot
 	\endlastfoot
@@ -517,13 +517,13 @@ Dari hasil uji coba penggunaan \textit{memory}, semakin banyak \textit{request} 
 	5 & 571 MB \\ \hline
 	6 & 786 MB \\ \hline
 \end{longtable}
-Dari Tabel \ref{penggunaanmemory1} dapat dilihat bahwa semakin banyak jumlah \textit{client} yang menggunakan Internet \textit{Access Management} berbasis kontainer, maka semakin meningkat pula penggunaan \textit{memory} dari \textit{server} yang digunakan sebagai \textit{docker host}. Rata-rata penggunaan \textit{memory} dari tiap kontainer \textit{docker} adalah sebesar $\pm$ 131 MB. Semakin besar jumlah \textit{memory} yang ada di \textit{docker host}, maka semakin banyak pula jumlah \textit{client} yang dapat ditampung.
+Dari Tabel \ref{penggunaanmemory1} dapat dilihat bahwa semakin banyak jumlah \textit{client} yang menggunakan \textit{internet access management} berbasis kontainer, maka semakin meningkat pula penggunaan \textit{memory} dari \textit{server} yang digunakan sebagai \textit{docker host}. Rata-rata penggunaan \textit{memory} dari tiap kontainer \textit{docker} adalah sebesar $\pm$ 131 MB. Semakin besar jumlah \textit{memory} yang ada di \textit{docker host}, maka semakin banyak pula jumlah \textit{client} yang dapat ditampung.
 
 Penggunaan \textit{memory} dari tiap kontainer juga dapat dibatasi oleh sistem jika \textit{docker host} yang digunakan hanya mempunyai \textit{memory} yang tidak terlalu besar. Hasil uji coba penggunaan \textit{memroy} ditunjukkan dalam grafik pada Gambar \ref{ram1}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{images/bab5/ram1}
+	\includegraphics[width=\linewidth]{images/bab5/newmemory}
 	\caption{Grafik Penggunaan \textit{Memory}}
 	\label{ram1}
 \end{figure}

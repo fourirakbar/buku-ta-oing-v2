@@ -31,8 +31,8 @@
 \contentsline {table}{\numberline {5.16}{\ignorespaces Hasil Uji Coba \textit {Client} dapat Mengirimkan Permintaan Penyediaan Kontainer \textit {Docker} ke \textit {Docker Host}\relax }}{70}{table.5.16}
 \contentsline {table}{\numberline {5.17}{\ignorespaces Hasil Uji Coba \textit {Docker Host} dapat Menerima Permintaan Penyediaan Kontainer \textit {Docker}\relax }}{70}{table.5.17}
 \contentsline {table}{\numberline {5.18}{\ignorespaces Hasil Uji Fungsionalitas Aplikasi Halaman \textit {Administrator}\relax }}{71}{table.5.18}
-\contentsline {table}{\numberline {5.19}{\ignorespaces Kecepatan Menangai \textit {Request} Unduh dan \textit {Upload} Menggunakan Internet \textit {Access Management} Berbasis Kontainer\relax }}{74}{table.5.19}
-\contentsline {table}{\numberline {5.20}{\ignorespaces Kecepatan Menangai \textit {Request} Unduh dan \textit {Upload} Menggunakan Internet \textit {Access Management} Konvensional\relax }}{75}{table.5.20}
+\contentsline {table}{\numberline {5.19}{\ignorespaces Kecepatan Menangai \textit {Request} Unduh dan \textit {Upload} Menggunakan \textit {Internet Access Management} Berbasis Kontainer\relax }}{74}{table.5.19}
+\contentsline {table}{\numberline {5.20}{\ignorespaces Kecepatan Menangai \textit {Request} Unduh dan \textit {Upload} Menggunakan \textit {Internet Access Management} Konvensional\relax }}{75}{table.5.20}
 \contentsline {table}{\numberline {5.21}{\ignorespaces \textit {Penggunaan \textit {Memory}}\relax }}{76}{table.5.21}
 \contentsline {table}{\numberline {5.22}{\ignorespaces \textit {Success Ratio Request}\relax }}{78}{table.5.22}
 \addvspace {10\p@ }
