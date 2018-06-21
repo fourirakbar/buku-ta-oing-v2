@@ -18,7 +18,7 @@ Lingkungan pengujian menggunakan komponen-komponen yang terdiri dari: satu \text
 		\textbf{Perangkat Lunak}      & Linux Mint 18.03 64 bit \\ \cline{2-2} 
 		& Docker-CE versi 1.13.1. \\ \cline{2-2} 
 		& MySQL versi 5.7.18. \\ \cline{2-2} 
-		& Python versi 3.5.2. \\ \cline{2-2} 
+		& Python versi 2.7.12. \\ \cline{2-2} 
 		& Flask versi 1.0.2.\\ \hline
 		\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.134 \\ \cline{2-2} 
 		& Netmask : 255.255.255.0 \\ \cline{2-2} 
@@ -35,10 +35,9 @@ Lingkungan pengujian menggunakan komponen-komponen yang terdiri dari: satu \text
 		& RAM 1GB	\\ \cline{2-2} 
 		& Hard disk 20GB \\ \hline
 		\textbf{Perangkat Lunak}      & Ubuntu 16.04 64 bit \\ \cline{2-2} 
-		& Nginx versi 1.10.3. \\ \cline{2-2} 
-		& Gunicorn versi 19.9.1. \\ \cline{2-2} 
-		& Supervisor versi 3.2. \\ \hline
-		\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.173 \\ \cline{2-2} 
+		& Python versi 2.7.12. \\ \cline{2-2} 
+		& Flask versi 1.0.2.\\ \hline
+		\textbf{Konfigurasi Jaringan} & IP address : 10.151.36.171 \\ \cline{2-2} 
 		& Netmask : 255.255.255.0 \\ \cline{2-2} 
 		& Gateway : 10.151.36.1 \\ \cline{2-2} 
 		& Hostname : SERVERLOGIN \\ \hline
@@ -280,6 +279,7 @@ Aplikasi halaman \textit{administrator} digunakan untuk membaca \textit{log traf
 	1 & User List & Menampilkan halaman \textit{user list} pada web. & Halaman \textit{user list} dapat tampil pada web. \\ \cline{3-4}
 	&& Melihat secara \textit{live} atau langsung \textit{log traffic} dari \textit{client}. & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} dapat melihat secara \textit{live} atau langsung \textit{log traffic} dari \textit{client}. \\ \cline{3-4}
 	&& Melihat \textit{log traffic} terakhir dari \textit{client}. & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} dapat melihat \textit{log traffic} terakhir dari \textit{client}. \\ \hline
+	&& Menghentikan akses internet dari \textit{client}. & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} dapat menghentikan akses internet dari sebuah \textit{client}. \\ \hline
 	2 & History & Melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya.  & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} dapat melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya. \\ \hline
 \end{longtable}
 
@@ -290,6 +290,9 @@ Percobaan dilakukan dengan dua skenario, yaitu mengakses website HTTP dan mengak
 
 \subsubsection{Uji Performa Penggunaan \textit{Memory}}
 Pengujian dilakukan dengan menghitung penggunaan \textit{memory} yang terjadi pada \textit{docker host}. Penggunaan \textit{memory} di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan. Perhitungan dilakukan dengan mengambil nilai rata-rata penggunaan \textit{memory} dari masing-masing kontainer selama proses pengujian dilakukan.
+
+\subsubsection{Uji Performa Penggunaan \textit{CPU}}
+Pengujian dilakukan dengan menghitung penggunaan CPU yang terjadi pada \textit{docker host}. Penggunaan CPU di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan. Perhitungan dilakukan dengan mengambil nilai rata-rata penggunaan CPU dari masing-masing kontainer selama proses pengujian dilakukan.
 
 \subsubsection{Uji Performa Kecepatan Menangani \textit{Request}}
 Pengujian dilakukan dengan mengukur jumlah waktu yang diperlukan untuk menyelesaikan \textit{request} yang dilakukan oleh komputer penguji. Waktu yang diukur adalah saat \textit{client} berhasil melakukan \textit{login} ke dalam sistem sampai dengan \textit{client} selesai dibuatkan sebuah kontainer \textit{docker}.
@@ -404,7 +407,8 @@ Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{keli
 	\endlastfoot
 	1 & User List & Menampilkan halaman \textit{user list} pada web. & OK. \\ \cline{3-4}
 	&& Melihat secara \textit{live} atau langsung \textit{log traffic} dari \textit{client}. & OK. \\ \cline{3-4}
-	&& Melihat \textit{log traffic} terakhir dari \textit{client}. & OK. \\ \hline
+	&& Melihat \textit{log traffic} terakhir dari \textit{client}. & OK. \\ \cline{3-4}
+	&& Menghentikan akses internet dari \textit{client}. & OK. \\ \hline
 	2 & History & Melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya.  & OK. \\ \hline
 \end{longtable}
 
@@ -415,6 +419,9 @@ Seperti yang sudah dijelaskan pada subbab \ref{skenarioujicoba} pengujian perfor
 
 \subsubsection{Penggunaan \textit{Memory}}
 Pengujian dilakukan dengan menghitung penggunaan \textit{memory} yang terjadi pada \textit{docker host}. Penggunaan \textit{memory} di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan. Perhitungan dilakukan dengan mengambil nilai rata-rata penggunaan \textit{memory} dari masing-masing kontainer selama proses pengujian dilakukan.
+
+\subsubsection{Penggunaan CPU}
+Pengujian dilakukan dengan menghitung penggunaan CPU yang terjadi pada \textit{docker host}. Penggunaan CPU di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan. Perhitungan dilakukan dengan mengambil nilai rata-rata penggunaan CPU dari masing-masing kontainer selama proses pengujian dilakukan.
 
 \subsubsection{Kecepatan Menangani \textit{Request}}
 Pengujian dilakukan dengan mengukur jumlah waktu yang diperlukan untuk menyelesaikan \textit{request} yang dilakukan oleh komputer penguji. Waktu yang diukur adalah saat \textit{client} berhasil melakukan \textit{login} ke dalam sistem sampai dengan \textit{client} selesai dibuatkan sebuah kontainer \textit{docker}.

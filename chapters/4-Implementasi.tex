@@ -12,12 +12,10 @@ Perangkat keras yang digunakan dalam pengembangan sistem adalah sebagai berikut:
 Perangkat lunak yang digunakan dalam pengembangan sistem adalah sebagai berikut:
 \begin{enumerate}
 	\item Sistem Operasi Linux Mint 18.03 64 Bit sebagai \textit{docker host}.
-	\item Sistem Operasi Ubuntu 14.04 LTS 64 Bit sebagai \textit{client}.
-	\item Sistem Operasi Ubuntu Server 16.04 LTS 64 Bit sebagai \textit{server login}.
-	\item Python versi 3.5.2 untuk pengembangan web service. 
-	\item Flask versi 1.0.2 sebagai kerangka kerja Python.
-	\item Gunicorn versi 19.8.1
-	\item Supervisor versi 3.2.0
+	\item Sistem Operasi Ubuntu 16.04 LTS 64 Bit sebagai \textit{client}.
+	\item Sistem Operasi Debian 8.6.0 64 Bit sebagai \textit{server login}.
+	\item Python versi 2.7.12 untuk pengembangan web service. 
+	\item Flask versi 1.0.2 sebagai kerangka kerja Python.0
 	\item Nginx versi 1.10.3
 	\item Mitmrproxy versi 3.0.4 untuk mencatat semua \textit{traffic} dari \textit{client}.
 	\item MySQL versi 5.7.18 untuk Sistem Manajemen Basis Data.
@@ -26,16 +24,13 @@ Perangkat lunak yang digunakan dalam pengembangan sistem adalah sebagai berikut:
 \end{enumerate}
 
 \section{Implementasi Pembuatan Halaman \textit{Login} dari Sebuah Sistem}
-Halaman \textit{login} dibangun pada sebuah \textit{server} dengan IP \texttt{10.151.36.173} dengan menggunakan sistem operasi Ubuntu Server 16.04 LTS 64 Bit. Pada implementasi pembuatan halaman \textit{login} dari sebuah sistem menggunakan perangkat lunak antara lain:
+Halaman \textit{login} dibangun pada sebuah \textit{server} dengan IP \texttt{10.151.36.171}. Pada implementasi pembuatan halaman \textit{login} dari sebuah sistem menggunakan perangkat lunak antara lain:
 \begin{enumerate}
 	\item Python versi 3.5.2.
 	\item Flask versi 1.0.2.
-	\item Gunicorn versi 19.8.1.
-	\item Supervisor versi 3.2.0.
-	\item Nginx versi 1.10.3.
 \end{enumerate}
 
-Lalu sistem operasi yang digunakan adalah sistem operasi Ubuntu Server 16.04 LTS 64 Bit, yang akan dipasang pada \textit{virtual machine} dengan menggunakan VirtualBox. Python akan berfungsi sebagai komponen dasar pembangunan sistem yang akan dibangun dengan menggunakan kerangka kerja Flask dan dijalankan dengan Gunicorn pada \textit{server} dengan IP \texttt{10.151.36.173} dengan \textit{port} 4000. Lalu Supervisor akan berfungsi sebagai sebuah \textit{service} yang akan selalu menajalankan Gunicorn. Sedangkan Nginx akan berfungsi sebagai \textit{web server} untuk perangkat lunak halaman \textit{login} yang dijalankan oleh Gunicorn pada \textit{server} dengan IP \texttt{10.151.36.173} dengan \textit{port} 4000 supaya bisa diakses oleh \textit{client}. Implementasi pembuatan halaman \textit{login} dari sebuah sistem akan terbagi menjadi implementasi \textit{web service} dan implementasi basis data.
+Lalu sistem operasi yang digunakan adalah sistem operasi Debian 8.6.0 64 Bit, yang akan dipasang pada \textit{virtual machine} dengan menggunakan VirtualBox. Python akan berfungsi sebagai komponen dasar pembangunan sistem yang akan dibangun dengan menggunakan kerangka kerja Flask dengan IP \texttt{10.151.36.171} dan \textit{port} 4000. Implementasi pembuatan halaman \textit{login} dari sebuah sistem akan terbagi menjadi implementasi \textit{web service} dan implementasi basis data.
 
 \subsection{Implementasi \textit{Web Service} pada Halaman \textit{Login}}
 Diperlukan beberapa tahap, antara lain pemasangan perangkat lunak dan tahap konfigurasi. Tahap pemasangan perangkat lunak dan tahap konfigurasi pada \textit{server} untuk halaman \textit{login} dijelaskan pada Lampiran A. 
@@ -47,7 +42,7 @@ Halaman \textit{login} merupakan halaman utama yang menampilkan sebuah \textit{f
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm,height=4.35cm]{images/bab4/halamanlogin}
+	\includegraphics[width=10cm,height=5cm]{images/bab4/halamanlogin}
 	\caption{Halaman \textit{Login}}
 	\label{implementasihalamanlogin}
 \end{figure}
@@ -127,7 +122,7 @@ iptables -t nat -I PREROUTING 1 -p tcp -s 192.168.99.0/24 --dport 80 -j DNAT --t
 
 Pada implementasi pembuatan \textit{middleware} menggunakan perangkat unak antara lain:
 \begin{enumerate}
-	\item Python versi 3.5.2.
+	\item Python versi 2.7.12.
 	\item Flask versi 1.0.2.
 	\item Docker versi 1.13.1.
 \end{enumerate}
@@ -159,6 +154,7 @@ Pada sub-bab implementasi \textit{web service} pada \textit{middleware} akan dib
 	
 	% Isi Tabel
 	POST & /test/endpoint/ & Berfungsi untuk menyimpan data hasil \textit{input} dari \textit{client} dan mengirimkan perintah untuk membuat kontainer \textit{docker} yang berisikan \textit{mitmproxy} secara otomatis pada \textit{docker host}.\\ \hline
+	POST & /logout/endpoint/ & Berfungsi untuk menerima permintaan penghentian akses internet dari \textit{client} sendiri dan juga untuk menjalankan perintah penghapusan kontainer \textit{docker} dan \textit{rules} dari \textit{client} tersebut. Setelah pada basis data \texttt{kontainer} akan dilakukan pembaruan \textit{status} dari kontainer yang telah digunakan oleh \textit{client} tersebut menjadi 0.\\ \hline
 \end{longtable}
 
 \subsubsection{\textit{Pseduocode Web Service} pada \textit{Middleware}}
@@ -276,7 +272,7 @@ iptables -t nat -I POSTROUTING 1 -o wlp3s0 -j MASQUERADE -s [IP_CLIENT]
 Pada \textit{rules} pertama berfungsi untuk mengizinkan atau memperbolehkan \textit{traffic} dari \textit{client} melewati \textit{router}. Lalu \textit{rules} kedua dan ketiga berfungsi untuk mengarahkan \textit{traffic cleint} ke kontainer \textit{docker} yang sudah dibuat dengan satu port khusus untuk \textit{client} tersebut. Lalu \textit{rules} keempat berfungsi untuk mengizinkan atau memperbolehkan \textit{client} untuk mengakses internet.
 
 \section{Implementasi Pembuatan Halaman \textit{Administrator}}
-Halaman \textit{administrator} dibangun pada \textit{Docker Host} dengan IP \texttt{10.151.36.134} dengan port \texttt{5001}. Fungsi dari halaman \textit{administrator} adalah untuk melihat siapa saja \textit{client} yang berhasil \textit{login} ke dalam sistem dan megnakses internet, juga untuk melihat rekap \textit{client} yang telah berhasil \textit{login} dan mengakses internet. Pada sub-bab ini akan dibagi lagi menjadi beberapa bagian, antara lain rute \textit{web service} pada halaman \textit{administrator}, implementasi pembacaan \textit{log file} dari \textit{client} dan implementasi antarmuka.
+Halaman \textit{administrator} dibangun pada \textit{Docker Host} dengan IP \texttt{10.151.36.134} dengan port \texttt{5001}. Fungsi dari halaman \textit{administrator} adalah untuk melihat siapa saja \textit{client} yang berhasil \textit{login} ke dalam sistem dan megnakses internet, juga untuk melihat rekap \textit{client} yang telah berhasil \textit{login} dan mengakses internet. Selain itu juga dapat menghentikan akses penggunaan internet dari \textit{client}. Pada sub-bab ini akan dibagi lagi menjadi beberapa bagian, antara lain rute \textit{web service} pada halaman \textit{administrator}, implementasi pembacaan \textit{log file} dari \textit{client} dan implementasi antarmuka.
 
 \subsection{Rute \textit{Web Service} pada Halaman \textit{Administrator}}
 Pada halaman \textit{administrator} diperlukan adanya rute-rute yang bisa diakses untuk melayani permintaan dari \textit{user} yang sedang membuka hallaman \textit{administrator}, yaitu untuk melihat \textit{log} dari \textit{client}. Daftar rute yang disediakan tertera pada Tabel \ref{rutehalamanadmin}.\\
@@ -301,6 +297,7 @@ Pada halaman \textit{administrator} diperlukan adanya rute-rute yang bisa diakse
 	GET & /stream/ & \texttt{id, ip, user, port} & Berfungsi untuk melihat \textit{log} dari \textit{client} secara langsung atau \textit{live} dengan memasukkan parameter berupa \texttt{id}, \texttt{ip}, \texttt{user}, dan \texttt{port}.\\ \hline
 	GET & /lihat/ & \texttt{id, ip, user, port} & Berfungsi untuk melihat \textit{log} dari \textit{client} sampai dengan terakhjir \textit{client} mengakses internet dengan memasukkan parameter berupa \texttt{id}, \texttt{ip}, \texttt{user}, dan \texttt{port}.\\ \hline
 	GET & /history & - & Berfungsi untuk menampilkan rekap atau daftar \textit{client} yang telah berhasil \textit{login} ke dalam sistem.\\ \hline
+	GET & /stop/ & \texttt{id, ip, user, port} & Berfungsi untuk menghentikan akses penggunaan internet dari sebuah \textit{client} dengan memasukkan parameter berupa \texttt{id}, \texttt{ip}, \texttt{user}, dan \texttt{port}.\\ \hline
 \end{longtable}
 
 \subsection{Implementasi Pembacaan \textit{Log File} dari \textit{Client}}

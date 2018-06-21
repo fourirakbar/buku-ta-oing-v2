@@ -34,6 +34,7 @@ Digram kasus penggunaan pada Gambar \ref{gambarDiagramKasusPenggunaan} dideskrip
 	UC-0004 & Membuat Aturan untuk Mengarahkan \textit{Traffic Client}  &  Proses dimana \textit{docker host} akan membuat aturan untuk mengarahkan \textit{traffic client} ke halaman \textit{login} dari sistem atau untuk membuat aturan untuk mengarahkan \textit{traffic client} ke kontainer \textit{docker} dari tiap-tiap \textit{client}. \\ \hline
 	UC-0005 & Membaca \textit{Log File} dari \textit{Client}  &  Proses dimana \textit{administrator} dari sebuah jaringan dapat membaca \textit{log file} dari \textit{client} sampai pada \textit{client} terakhir mengakses internet.\\ \hline
 	UC-0006 & Melihat Secara \textit{Stream Log File} dari \textit{Client}  &  Proses dimana \textit{administrator} dari sebuah jaringan dapat melihat \textit{log file} dari \textit{client} secara langsung atau \textit{live}.\\ \hline
+	UC-0007 & Menghentikan akses dari \textit{client}.  &  Proses dimana \textit{administrator} dari sebuah jaringan dapat menghapus akses dari \textit{client} untuk mengakses internet, dengan cara menghapus kontainer \textit{docker} dan \textit{rules} sesuai dengan IP dari \textit{client} tersebut.\\ \hline
 \end{longtable}
 
 \section{Arsitektur Sistem}
@@ -47,6 +48,7 @@ Pada sub-bab ini, dibahas mengenai tahap analisis arsitektur, analisis teknologi
 	\item Pembuatan aturan untuk mengarahkan \textit{traffic client} ke kontainer \textit{docker} dari tiap-tiap \textit{client}.
 	\item Pemasangan kontainer pada \textit{docker host}.
 	\item Pembuatan halaman \textit{administrator} untuk membaca \textit{log file} dari \textit{client}.
+	\item Pembuatan \textit{schedule} pada \textit{docker host}.
 \end{enumerate} 
 
 \indent Untuk memenuhi kebutuhan sistem tersebut, penulis membagi sistem menjadi beberapa komponen. Komponen yang akan dibangun antara lain: 
@@ -63,6 +65,8 @@ Pada sub-bab ini, dibahas mengenai tahap analisis arsitektur, analisis teknologi
 	Berfungsi untuk memasangkan kontainer \textit{docker} pada \textit{docker host} secara otomatis. Hal ini dilakukan dengan menjalankan sebuah perintah penyediaan kontainer pada \textit{docker host}.
 	\item Pembuatan halaman \textit{administrator} untuk membaca \textit{log file} dari \textit{client}.\\
 	Berfungsi untuk melihat apa saja yang telak diakses oleh \textit{client}. \textit{Log} yang tersimpan terdapat \textit{log} HTTP maupun \textit{log} HTTPS.  Hal ini dilakukan dengan menjalankan sebuah perintah untuk melihat \textit{log file} dari suatu \textit{client}.
+	\item Pembuatan \textit{schedule} pada \textit{docker host}.\\
+	Berfungsi untuk menghentikan akses internet dari \textit{client} dengan cara menghapus kontainer \textit{docker} dan \textit{rules} Iptables sesuai dengan IP \textit{client} tersebut.
 	
 \end{enumerate}
 
@@ -102,7 +106,9 @@ Komponen basis data berfungsi sebagai tempat penyimpanan data \textit{username} 
 	1 & id & int(11) & Sebagai primary key pada tabel, nilai awal adalah \texttt{AUTO\_INCREMENT}. \\ \hline
 	2 & username & varchar(50) & Menunjukkan NRP dari mahasiswa yang telah terdaftar. \\ \hline
 	3 & password & varchar(50) & Menunjukkan password dari NRP mahasiswa yang telah terdaftar. \\ \hline
-	4 & isLogin & int(11) & Status apakah nrp tersebut sedang digunakan (1), atau sedang tidak digunakan (0). \\ \hline
+	4 & created-at & timestamp & Menunjukkan waktu kapan \textit{username} tersebut didaftarkan. \\ \hline
+	5 & updated-at & timestamp & Menunjukkan waktu kapan \textit{username} tersebut dilakukan pengubahan atau \textit{update}. \\ \hline
+	5 & deleted-at & timestamp & Menunjukkan waktu kapan \textit{username} tersebut dihapus dari basis data. \\ \hline
 \end{longtable}
 \subsubsection{Desain \textit{Web Service}}
 Komponen \textit{web service} berfungsi untuk menyediakan antar muka halaman \textit{login} untuk \textit{client} dan untuk mengirimkan permintaan pembuatan kontainer \textit{docker} secara otomatis pada \textit{docker host} setelah terdapat \textit{client} yang berhasil \textit{login} ke dalam sistem. Halaman \textit{login} akan menggunakan Material UI untuk mendapatkan tampilan yang sederhana dan nyaman untuk digunakan. Desain \textit{web service} untuk halaman \textit{login} dari sistem dapat dilihat pada Gambar \ref{mockuplogin}.
@@ -114,14 +120,7 @@ Komponen \textit{web service} berfungsi untuk menyediakan antar muka halaman \te
 	\label{mockuplogin}
 \end{figure}
 
-Lalu untuk desain \textit{backend} dari \textit{web serive} untuk halaman \textit{login} akan menggunakan bahasa pemrograman Python degan kerangka kerja Flask yang akan dijalankan dengan Gunicorn. Kemudian Gunicorn akan dijalankan dengan Supervisor sebagai \textit{service}. Lalu akan digunakan \textit{nginx} sebagai \textit{web server} dari halaman \textit{login} dari sebuah sistem. Desain \textit{backend} dari \textit{web service} untuk halaman \textit{login} dapat dilihat pada Gambar \ref{desainbackendhalamanlogin}.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{images/bab3/DesainBackend}
-	\caption{Desain \textit{Backend} dari Halaman \textit{Login}}
-	\label{desainbackendhalamanlogin}
-\end{figure}
+Lalu untuk desain \textit{backend} dari \textit{web serive} untuk halaman \textit{login} akan menggunakan bahasa pemrograman Python degan kerangka kerja Flask yang dijalankan pada \textit{port} 4000.
 
 \subsection{Perancangan Pembuatan Aturan untuk Mengarahkan \textit{Traffic Client} ke Halaman \textit{Login} dari Sistem}
 Pembuatan aturan untuk mengarahkan \textit{traffic client} ke halaman \textit{login} dari sistem adalah komponen yang bertugas untuk membelokkan \textit{traffic} dari \textit{client} yang akan menuju ke internet. Awalnya semua \textit{traffic} dari satu \textit{subnet client} tersebut akan diarahkan ke halaman \textit{login} dari sistem dengan membuat sebuah aturan menggunakan Iptables, karena asumsinya adalah belum ada \textit{client} yang berhasil \textit{login} ke dalam sistem. Desain perancangan pembuatan aturan untuk mengarahkan \textit{traffic client} ke halaman \textit{login} dapat dilihat pada Gambar \ref{dessainmengarahkankehalamanlogin} .
@@ -160,7 +159,7 @@ Komponen basis data berfungsi sebagai tempat penyimpanan data kontainer \textit{
 	2 & username & varchar(50) & Menunjukkan NRP dari mahasiswa yang telah berhasil dibuatkan satu kontainer \textit{docker}. \\ \hline
 	3 & ip & varchar(50) & Menunjukkan IP dari \textit{client} yang telah berhasil dibuatkan satu kontainer \textit{docker}. \\ \hline
 	4 & port & varchar(50) & Menunjukkan \textit{port} dari \textit{client} yang telah berhasil dibuatkan satu kontainer \textit{docker}. \\ \hline
-	5 & createdAt & datetime & Menunjukkan waktu pertama kali kontainer \textit{docker} tersebut dibuat. \\ \hline
+	5 & created-at & timestamp & Menunjukkan waktu pertama kali kontainer \textit{docker} tersebut dibuat. \\ \hline
 	
 \end{longtable}
 
@@ -220,4 +219,5 @@ Halaman \textit{administrator} akan menggunakan Boostsrap 4 untuk mendapatkan ta
 	\label{desainstream}
 \end{figure}
 
-
+\subsection{Pembuatan \textit{Schedule} pada \textit{Docker Host}}
+Pembuatan \textit{schedule} pada \textit{docker host} adalah komponen yang bertugas untuk melakukan \textit{reboot} sistem secara keseluruhan pada \textit{docker host}. Dalam hal ini, seluruh kontainer \textit{docker} maupun \textit{rules} yang sudah dibuat akan dihapuskan. \textit{Schedule} ini akan dijalankan setiap hari pada pukul 23.59. Jika terdapat \textit{client} yang telah berhasil \textit{login} ke dalam sistem sebelum pukul 23.59, lalu \textit{client} tersebut menggunakan akses internet lebih dari pukul 23.59 atau telah berganti keesokan harinya, maka akses menggunakan internet dari \textit{client} tersebut akan terputus. Jika \textit{client} tersebut ingin mengakses internet lagi, maka \textit{client} tersebut harus melakukan \textit{login} kembali ke dalam sistem.
