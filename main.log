@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  25 JUN 2018 19:56
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  25 JUN 2018 20:09
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1602,10 +1602,7 @@ File: images/bab4/userrekap.png Graphic file (type QTm)
 
 ]
 BAB V.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [55]
+[55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [56]
