@@ -16,8 +16,8 @@
 \contentsline {lstlisting}{\numberline {4.16}Command untuk mengarahkan \textit {client} ke halaman \textit {login}}{47}{lstlisting.4.16}
 \contentsline {lstlisting}{\numberline {4.17}Perintah untuk Membaca \textit {File Log} dari Mitmrproxy}{50}{lstlisting.4.17}
 \contentsline {lstlisting}{\numberline {4.18}Perintah untuk Membaca \textit {File Log} dari \textit {Client}}{51}{lstlisting.4.18}
-\contentsline {lstlisting}{\numberline {2.1}Isi Berkas app.conf}{87}{lstlisting.B.1}
-\contentsline {lstlisting}{\numberline {2.2}Command untuk Reload Supervisor}{88}{lstlisting.B.2}
-\contentsline {lstlisting}{\numberline {2.3}Command untuk mengaktifkan konfigurasi Nginx}{88}{lstlisting.B.3}
-\contentsline {lstlisting}{\numberline {2.4}Command untuk merestart Nginx}{88}{lstlisting.B.4}
-\contentsline {lstlisting}{\numberline {2.5}Isi Berkas app}{88}{lstlisting.B.5}
+\contentsline {lstlisting}{\numberline {2.1}Isi Berkas app.conf}{89}{lstlisting.B.1}
+\contentsline {lstlisting}{\numberline {2.2}Command untuk Reload Supervisor}{90}{lstlisting.B.2}
+\contentsline {lstlisting}{\numberline {2.3}Command untuk mengaktifkan konfigurasi Nginx}{90}{lstlisting.B.3}
+\contentsline {lstlisting}{\numberline {2.4}Command untuk merestart Nginx}{90}{lstlisting.B.4}
+\contentsline {lstlisting}{\numberline {2.5}Isi Berkas app}{90}{lstlisting.B.5}

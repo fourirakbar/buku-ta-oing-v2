@@ -171,6 +171,7 @@ Uji coba fungsionalitas dilakukan dengan cara menjalankan sistem yang telah dibu
 \begin{enumerate}
 	\item Pengujian \textit{client} dapat mengakses internet.
 	\item Pengujian fungsionalitas menu aplikasi halaman administrator.
+	\item Pengujian schedule pada \textit{docker host}.
 \end{enumerate}
 
 \subsubsection{Uji \textit{client} dapat Mengakses Internet} \label{keempat}
@@ -283,6 +284,24 @@ Aplikasi halaman \textit{administrator} digunakan untuk membaca \textit{log traf
 	2 & History & Melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya.  & \textit{User} yang mempunyai akses membuka halaman \textit{administrator} dapat melihat \textit{log traffic} dari \textit{client} pada hari-hari sebelumnya. \\ \hline
 \end{longtable}
 
+\subsubsection{Uji Fungsionalitas \textit{Schedule} pada \textit{Docker Host}} \label{keenam}
+Pengujian ini dilakukan untuk mengetahui apakah sistem dapat melakukan \textit{reboot} untuk menghapus semua kontainer \textit{docker} dan \textit{rules} yang sedang aktif berjalan setiap hari pada pukul 23.59.
+
+Rancangan pengujian dan hasil yang diharapkan ditunjukkan dengan Tabel \ref{scheduledocker}
+\begin{longtable}{|p{0.05\textwidth}|p{0.38\textwidth}|p{0.39\textwidth}|}					\caption{Skenario Uji \textit{Schedule} pada \textit{Docker Host}} \label{scheduledocker} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endfirsthead
+	\caption[]{Skenario Uji Mengelola Aplikasi Berbasis Docker} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endhead
+	\endfoot
+	\endlastfoot
+	
+	1 & Sistem menjalankan sebuah \textit{script} yang telah disediakan, dilakukan setiap hari pada pukul 23.59 secara otomatis. & Sistem dapat menjalankan \textit{script} yang telah disediakan, dilakukan setiap hari pada pukul 23.59 secara otomatis. \textit{Script} yang telah disediakan berfungsi untuk melakukan penghapus kontainer \textit{docker} dan \textit{rules} yang sedang aktif. \\ \hline
+\end{longtable}
+
 \subsection{Skenario Uji Coba Performa}
 Uji performa dilakukan dengan menggunakan enam buah desktop yang berperan sebagai \textit{client} untuk melakukan akses ke internet secara bersama-sama. \textit{Client} akan mencoba mengakses internet dengan membuka website HTTP maupun HTTPS.
 
@@ -295,9 +314,7 @@ Pengujian dilakukan dengan menghitung penggunaan \textit{memory} yang terjadi pa
 Pengujian dilakukan dengan menghitung penggunaan CPU yang terjadi pada \textit{docker host}. Penggunaan CPU di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan. Perhitungan dilakukan dengan mengambil nilai rata-rata penggunaan CPU dari masing-masing kontainer selama proses pengujian dilakukan.
 
 \subsubsection{Uji Performa Kecepatan Menangani \textit{Request}}
-Pengujian dilakukan dengan mengukur jumlah waktu yang diperlukan untuk menyelesaikan \textit{request} yang dilakukan oleh komputer penguji. Waktu yang diukur adalah saat \textit{client} berhasil melakukan \textit{login} ke dalam sistem sampai dengan \textit{client} selesai dibuatkan sebuah kontainer \textit{docker}.
-
-Pengujian performa kecepatan menangani \textit{request} juga dilakukan dengan membandingkan performa kecepatan dari \textit{client} ketika \textit{client} melakukan \textit{download} maupun \textit{upload} sebuah file dengan menggunakan \textit{server} \textit{internet access management} secara konvensional dengan menggunakan \textit{server} \textit{internet access management} berbasis kontainer.
+Pengujian dilakukan dengan mengukur kecepatan unduh dan juga upload dari \textit{client}. Kecepatan unduh dan upload yang diuukur dengan menggunaakn \textit{tools} \texttt{speedtest} yang tersedia pada masing-masing \textit{client}.
 
 \subsubsection{Uji Performa Keberhasilan \textit{Request}}
 Pengujian dilakukan dengan menghitung jumlah \textit{request} atau jumlah permintaan penyediaan kontainer \textit{docker} yang gagal dilakukan selama skenario dijalankan. Dari semua jumlah \textit{request} yang dikirimkan selama pengujian, akan didapatkan persen \textit{request} yang gagal dilakukan.
@@ -397,7 +414,7 @@ Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{keli
 \begin{longtable}{|p{0.05\textwidth}|p{0.20\textwidth}|p{0.30\textwidth}|p{0.27\textwidth}|}
 	\caption{Hasil Uji Fungsionalitas Aplikasi Halaman \textit{Administrator}} \label{hasilujicoba6} \\
 	\hline
-	\textbf{No} & \textbf{Menu} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\textbf{No} & \textbf{Menu} & \textbf{Uji Coba} & \textbf{Hasil} \\ \hline
 	\endfirsthead
 	\caption[]{Hasil Uji Fungsionalitas Aplikasi Halaman \textit{Administrator}}  \\
 	\hline
@@ -414,6 +431,22 @@ Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{keli
 
 Sesuai dengan skenario uji coba yang diberikan pada Tabel \ref{ujicoba5}, hasil uji coba menunjukkan semua skenario berhasil ditangani.
 
+\subsubsection{Uji Fungsionalitas \textit{Schedule} pada \textit{Docker Host}}
+Pengujian dilakukan sesuai dengan skenario yang dijelaskan pada subbab \ref{keenam} dan pada Tabel \ref{scheduledocker}. Hasil pengujian seperti tertera pada Tabel \ref{hasilujicoba7}
+\begin{longtable}{|p{0.05\textwidth}|p{0.38\textwidth}|p{0.39\textwidth}|}					\caption{Skenario Uji \textit{Schedule} pada \textit{Docker Host}} \label{hasilujicoba7} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endfirsthead
+	\caption[]{Skenario Uji Mengelola Aplikasi Berbasis Docker} \\
+	\hline
+	\textbf{No} & \textbf{Uji Coba} & \textbf{Hasil Harapan} \\ \hline
+	\endhead
+	\endfoot
+	\endlastfoot
+	
+	1 & Sistem menjalankan sebuah \textit{script} yang telah disediakan, dilakukan setiap hari pada pukul 23.59 secara otomatis. & OK. \\ \hline
+\end{longtable}
+
 \subsection{Hasil Uji Performa}
 Seperti yang sudah dijelaskan pada subbab \ref{skenarioujicoba} pengujian performa dilakukan dengan menggunakan enam buah \textit{desktop} yang berperan sebagai \textit{client} untuk melakukan akses ke internet secara bergantian. \textit{Client} akan mencoba mengakses internet dengan membuka \textit{website} HTTP maupun HTTPS.
 
@@ -421,12 +454,10 @@ Seperti yang sudah dijelaskan pada subbab \ref{skenarioujicoba} pengujian perfor
 Pengujian dilakukan dengan menghitung penggunaan \textit{memory} yang terjadi pada \textit{docker host}. Penggunaan \textit{memory} di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan. Perhitungan dilakukan dengan mengambil nilai rata-rata penggunaan \textit{memory} dari masing-masing kontainer selama proses pengujian dilakukan.
 
 \subsubsection{Penggunaan CPU}
-Pengujian dilakukan dengan menghitung penggunaan CPU yang terjadi pada \textit{docker host}. Penggunaan CPU di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan. Perhitungan dilakukan dengan mengambil nilai rata-rata penggunaan CPU dari masing-masing kontainer selama proses pengujian dilakukan.
+Pengujian dilakukan dengan menghitung penggunaan CPU yang terjadi pada \textit{docker host}. Penggunaan CPU di sini adalah penggunaan dari kontainer aplikasi yang sedang berjalan. Perhitungan dilakukan dengan mengambil nilai rata-rata penggunaan CPU dari masing-masing kontainer selama proses pengujian dilakukan.	
 
 \subsubsection{Kecepatan Menangani \textit{Request}}
-Pengujian dilakukan dengan mengukur jumlah waktu yang diperlukan untuk menyelesaikan \textit{request} yang dilakukan oleh komputer penguji. Waktu yang diukur adalah saat \textit{client} berhasil melakukan \textit{login} ke dalam sistem sampai dengan \textit{client} selesai dibuatkan sebuah kontainer \textit{docker}.
-
-Pengujian juga dilakukan dengan mengukur kecepatan unduh dan juga upload dari \textit{client}. Waktu yang diukur adalah saat \textit{client} mencoba mengunduh beberapa \textit{file} dari salah satu \textit{server}.
+Pengujian dilakukan dengan mengukur kecepatan unduh dan juga upload dari \textit{client}. Kecepatan unduh dan upload yang diuukur dengan menggunaakn \textit{tools} \texttt{speedtest} yang tersedia pada masing-masing \textit{client}.
 
 \subsubsection{Keberhasilan \textit{Request}}
 Pengujian dilakukan dengan menghitung jumlah \textit{request} atau jumlah permintaan penyediaan kontainer \textit{docker} yang gagal dilakukan selama skenario dijalankan. Dari semua jumlah \textit{request} yang dikirimkan selama pengujian, akan didapatkan persen \textit{request} yang gagal dilakukan.
@@ -482,12 +513,12 @@ Lalu untuk uji coba dilakukan dengan enam komputer penguji dan dengan menggunaka
 	\endfoot
 	\endlastfoot
 	
-	1 & $\pm$ 91,58 Mbps & $\pm$ 91,27 Mbps \\ \hline
-	2 & $\pm$ 47,97 Mbps & $\pm$ 51,49 Mbps \\ \hline
-	3 & $\pm$ 36,11 Mbps & $\pm$ 35,28 Mbps \\ \hline
-	4 & $\pm$ 23,09 Mbps & $\pm$ 29,88 Mbps \\ \hline
-	5 & $\pm$ 22,50 Mbps & $\pm$ 26,20 Mbps \\ \hline
-	6 & $\pm$ 19,70 Mbps & $\pm$ 21,12 Mbps \\ \hline
+	1 & $\pm$ 12,85 Mbps & $\pm$ 18,43 Mbps \\ \hline
+	2 & $\pm$ 11,34 Mbps & $\pm$ 14,61 Mbps \\ \hline
+	3 & $\pm$ 5,11 Mbps & $\pm$ 9,27 Mbps \\ \hline
+	4 & $\pm$ 4,93 Mbps & $\pm$ 5,61 Mbps \\ \hline
+	5 & $\pm$ 4,01 Mbps & $\pm$ 4,73 Mbps \\ \hline
+	6 & $\pm$ 2,82 Mbps & $\pm$ 3,15 Mbps \\ \hline
 	
 \end{longtable}
 
@@ -500,12 +531,48 @@ Hasil uji coba kecepatan menangani \textit{request} dengan menggunakan \textit{I
 	\label{grafikkecepatan2}
 \end{figure}
 
-Dari Tabel \ref{kecepatanrequest2} dan Tabel \ref{kecepatanrequest3} dapat dilihat bahwa semakin banyak jumlah \textit{client}, maka semakin berkurang kecepatan unduh maupun \textit{upload} dari masing-masing \textit{client}. Hal tersebut dikarenakan \textit{bandwith} dari \textit{server} yang digunakan sebagai \textit{docker host} juga terbatas. Jika semakin besar bandwith yang dapat diterima oleh \textit{server} yang akan digunakan sebagai \textit{docker host}, maka semakin cepat pula kecepatan unduh maupun \textit{upload} dari masing-masing \textit{client}. 
+Dari Tabel \ref{kecepatanrequest2} dan Tabel \ref{kecepatanrequest3} dapat dilihat bahwa semakin banyak jumlah \textit{client}, maka semakin berkurang kecepatan unduh maupun \textit{upload} dari masing-masing \textit{client}. Hal tersebut dikarenakan \textit{bandwith} dari \textit{server} yang digunakan sebagai \textit{docker host} juga terbatas dan menggunakan Kabel UTP Cat 5 100Mb/s. Jika semakin besar bandwith yang dapat diterima oleh \textit{server} yang akan digunakan sebagai \textit{docker host}, maka semakin cepat pula kecepatan unduh maupun \textit{upload} dari masing-masing \textit{client}. Hal tersebut sangat mempengarhui kecepatan saat uji coba berlangsung.
 
-Dari Tabel \ref{kecepatanrequest2}, uji coba menggunakan \textit{server} sebagai \textit{internet access management} berbasis kontainer dengan menggunakan Kabel UTP Cat 5 100Mb/s dan Tabel \ref{kecepatanrequest3}, uji coba menggunakan \textit{server} sebagai \textit{internet access management} konvensional dengan menggunakan Kabel UTP Cat 5 1Gb/s. Hal tersebut sangat mempengaruhi kecepatan saat uji coba berlangsung.
+\subsubsection{Penggunaan CPU}
+Dari hasil uji coba penggunaan CPU dilakukan ketika \textit{client} tidak melakukan aktivitas sama sekali (\textit{idle}), sampai ketika \textit{client} melakukan aktivitas dengan mencoba membuka website HTTP maupun HTTPS. Perhitungan penggunaan CPU adalah jumlah penggunaan CPU dari masing-masing kontainer \textit{docker} dari \textit{client}, dibagi dengan jumlah \textit{cores} yang tersedia pada \textit{docker host}. Uji coba dilakukan dengan menggunakan salah satu komputer penguji untuk mencoba membuka website HTTP maupun HTTPS. Dari hasil uji coba ini, dapat dilihat pada Tabel \ref{penggunaancpu}
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
+\begin{longtable}{|p{0.2\textwidth}|p{0.3\textwidth}|}
+	\caption{\textit{Penggunaan CPU}} \label{penggunaancpu} \\
+	\hline
+	\textbf{Waktu \textit{Detik}} & \textbf{Jumlah CPU yang Digunakan} \\ \hline
+	\endfirsthead
+	
+	\endhead
+	\endfoot
+	\endlastfoot
+	
+	15 & 0.30\% \\ \hline
+	30 & 0.59\% \\ \hline
+	45 & 0.73\% \\ \hline
+	60 & 0.9\% \\ \hline
+	75 & 0.95\% \\ \hline
+	90 & 1.54\% \\ \hline
+	105 & 2.65\% \\ \hline
+	120 & 3.80\% \\ \hline
+	135 & 5\% \\ \hline
+\end{longtable}
+Dari Tabel \ref{penggunaancpu} dapat dilihat bahwa ketika \textit{client} sedang tidak melakukan aktivitas (\textit{iddle}), maka penggunaan CPU akan kecil. Sedangkan ketika \textit{client} melakukan aktivitas dengan mencoba membuka website HTTP maupun HTTPS, maka penggunaan CPU akan mengalami peningkatan. 
+
+Hasil uji coba penggunaan CPU ditunjukkan dalam grafik pada Gambar \ref{ram2}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm,height=4cm]{images/bab5/penggunaancpu}
+	\caption{Grafik Penggunaan \textit{Memory}}
+	\label{ram2}
+\end{figure}
 
 \subsubsection{Penggunaan \textit{Memory}}
-Dari hasil uji coba penggunaan \textit{memory}, semakin banyak \textit{request} yang diterima, semakin banyak \textit{memory} ynag diperlukan. Perhitungan penggunaan \textit{memory} adalah jumlah penggunaan dari masing-masing kontainer \textit{docker} dari \textit{client}. Dari hasil uji coba ini, dapat dilihat pada Tabel \ref{penggunaanmemory1}.
+Dari hasil uji coba penggunaan \textit{memory}, semakin banyak \textit{request} yang diterima, semakin banyak \textit{memory} yang diperlukan. Perhitungan penggunaan \textit{memory} adalah jumlah penggunaan dari masing-masing kontainer \textit{docker} dari \textit{client}. Dari hasil uji coba ini, dapat dilihat pada Tabel \ref{penggunaanmemory1}.
 
 \begin{longtable}{|p{0.2\textwidth}|p{0.3\textwidth}|}
 	\caption{\textit{Penggunaan \textit{Memory}}} \label{penggunaanmemory1} \\
@@ -524,9 +591,11 @@ Dari hasil uji coba penggunaan \textit{memory}, semakin banyak \textit{request} 
 	5 & 571 MB \\ \hline
 	6 & 786 MB \\ \hline
 \end{longtable}
-Dari Tabel \ref{penggunaanmemory1} dapat dilihat bahwa semakin banyak jumlah \textit{client} yang menggunakan \textit{internet access management} berbasis kontainer, maka semakin meningkat pula penggunaan \textit{memory} dari \textit{server} yang digunakan sebagai \textit{docker host}. Rata-rata penggunaan \textit{memory} dari tiap kontainer \textit{docker} adalah sebesar $\pm$ 131 MB. Semakin besar jumlah \textit{memory} yang ada di \textit{docker host}, maka semakin banyak pula jumlah \textit{client} yang dapat ditampung.
+Dari Tabel \ref{penggunaanmemory1} dapat dilihat bahwa semakin banyak jumlah kontainer \textit{docker} yang sendang berjalan, maka semakin meningkat pula penggunaan \textit{memory} dari \textit{docker host}. Rata-rata penggunaan \textit{memory} dari kontainer \textit{docker} yang sudah dibuat sebesar $\pm$ 131 MB. Jika semakin besar \textit{memory} yang tersedia pada \textit{docker host}, maka semakin banyak pula kontainer \textit{docker} yang dapat dibuat.
 
-Penggunaan \textit{memory} dari tiap kontainer juga dapat dibatasi oleh sistem jika \textit{docker host} yang digunakan hanya mempunyai \textit{memory} yang tidak terlalu besar. Hasil uji coba penggunaan \textit{memroy} ditunjukkan dalam grafik pada Gambar \ref{ram1}.
+Selain itu dapat pula melakukan pembatasan sumber daya pada kontainer \textit{docker} yang sudah dibuat jika hanya memiliki \textit{memory} yang terbatas pada \textit{docker host}. Pembatasan sumber daya dapat dilakukan ketika kontainer \textit{docker} akan dibuat dengan menambahkan parameter \texttt{-m} atau \texttt{--memory=}.
+
+Hasil uji coba penggunaan \textit{memroy} ditunjukkan dalam grafik pada Gambar \ref{ram1}.
 
 \begin{figure}[H]
 	\centering

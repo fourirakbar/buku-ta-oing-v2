@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.3.16)  21 JUN 2018 14:58
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.3.16)  23 JUN 2018 13:05
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1339,7 +1339,7 @@ Overfull \hbox (3.65033pt too wide) in paragraph at lines 1--1
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4995) has occurred while \output is active []
 
  [7]
 [8]
@@ -1508,10 +1508,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [29]
 File: images/bab3/desaindashboard.png Graphic file (type QTm)
 
-<use  "images/bab3/desaindashboard.png" >
-Underfull \vbox (badness 1874) has occurred while \output is active []
-
- [30]
+<use  "images/bab3/desaindashboard.png" > [30]
 File: images/bab3/desainstream.png Graphic file (type QTm)
 
 <use  "images/bab3/desainstream.png" >) (./chapters/4-Implementasi.tex
@@ -1623,54 +1620,50 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [58]
-Overfull \vbox (0.68417pt too high) has occurred while \output is active []
+[59] [60]
+Overfull \vbox (2.43608pt too high) has occurred while \output is active []
 
 
-[59]
+[61] [62] [63] [64] [65] [66] [67] [68]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [60]
-[61] [62] [63] [64]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [65]
-Underfull \vbox (badness 2302) has occurred while \output is active []
-
- [66]
-[67] [68] [69]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [70]
-[71] [72]
+ [69]
+[70] [71] [72] [73]
 File: images/bab5/kecepatan1.png Graphic file (type QTm)
- <use  "images/bab5/kecepatan1.png" > [73]
+ <use  "images/bab5/kecepatan1.png" > [74]
 File: images/bab5/kecepatan2.png Graphic file (type QTm)
 
-<use  "images/bab5/kecepatan2.png" > [74] [75]
+<use  "images/bab5/kecepatan2.png" > [75] [76]
+File: images/bab5/penggunaancpu.jpg Graphic file (type QTm)
+
+<use  "images/bab5/penggunaancpu.jpg" > [77]
 File: images/bab5/newmemory.png Graphic file (type QTm)
 
-<use  "images/bab5/newmemory.png" > [76]) (./chapters/6-Penutup.tex [77]
-[78
+<use  "images/bab5/newmemory.png" >
+Underfull \vbox (badness 7186) has occurred while \output is active []
 
-]
+ [78])
+(./chapters/6-Penutup.tex [79] [80]
 BAB VI.
-[79]) (./main.bbl [80] [81
+[81
 
-]) (./chapters/7-Lampiran_A.tex [82]
+]) (./main.bbl [82] [83
+
+]) (./chapters/7-Lampiran_A.tex [84]
 Lampiran A.
-[83
+[85
 
-] [84]) (./chapters/8-Lampiran_B.tex [85] [86
+] [86]) (./chapters/8-Lampiran_B.tex [87] [88
 
 ]
 Lampiran B.
-[87] [88]) [89] [90
+[89] [90]) [91] [92
 
 ]
 File: images/cover/pic.JPG Graphic file (type QTm)
  <use  "images/cover/pic.JPG" >
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
- [91
+ [93
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 57.
@@ -1683,12 +1676,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 27833 strings out of 493638
- 485388 string characters out of 6146796
- 609336 words of memory out of 5000000
- 30863 multiletter control sequences out of 15000+600000
+ 27843 strings out of 493638
+ 485514 string characters out of 6146796
+ 610242 words of memory out of 5000000
+ 30872 multiletter control sequences out of 15000+600000
  7051 words of font info for 63 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,12n,63p,10396b,1709s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (117 pages).
+Output written on main.pdf (119 pages).
