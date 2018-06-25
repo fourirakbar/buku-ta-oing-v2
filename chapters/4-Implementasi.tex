@@ -75,6 +75,15 @@ Pada halaman \textit{login} diperlukan adanya rute-rute yang bisa diakses untuk 
 
 \subsubsection{\textit{Pseduocode Web Service} pada Halaman \textit{Login}}
 Ketika \textit{client} belum \textit{login} ke dalam sistem, maka akan diarahkan ke tampilan grafis antar muka dari halaman \textit{login}. Lalu setelah \textit{client} berhasil \textit{login} ke dalam sistem, maka akan diarahkan ke tampilan grafis antar muka halaman sukses \textit{login}. Pada Kode Sumber \ref{pseudocodehalamanlogin} diperlihatkan bagaimana implementasinya dalam bentuk \textit{pseduocode}.
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
 
 \begin{minipage}{\linewidth}  
 	\begin{lstlisting}[numbers=left, frame=single,tabsize=2,breaklines,caption={Pseudocode Web Service},label=pseudocodehalamanlogin,language=json]
@@ -96,24 +105,23 @@ Ketika \textit{client} belum \textit{login} ke dalam sistem, maka akan diarahkan
 
 
 \subsection{Implementasi Basis Data pada Halaman \textit{Login}}
-Berdasarkan hasil desain dan perancangan basis data pada bab 3 terdapat satu entitas yang diimplementasikan menjadi suatu tabel pada basis data MySQL, yaitu entitas \texttt{nrp-mahasiswa}. Detail implementasi \textit{query} untuk membuat basis data dengan entitas \texttt{nrp-mahasiswa} seperti pada Kode Sumber \ref{entitasnrpmahasiswa}.\\
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,language=python, caption=\textit{Query} untuk membuat tabel testing,label=entitasnrpmahasiswa]
-CREATE TABLE nrp-mahasiswa (
-	id int(11) PRIMARY KEY AUTO_INCREMENT,
-	nrp VARCHAR(50)
-	password VARCHAR(50)
-	isLogin int(11)
-);
-\end{lstlisting}
+Berdasarkan hasil desain dan perancangan basis data pada bab 3 terdapat satu entitas yang diimplementasikan menjadi suatu tabel pada basis data MySQL, yaitu entitas \texttt{nrp-mahasiswa}. Detail implementasi \textit{query} untuk membuat basis data dengan entitas \texttt{nrp-mahasiswa} seperti pada Gambar \ref{querynrpmahasiswa}.\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/bab4/querynrpmahasiswa}
+	\caption{\textit{Query} untuk membuat tabel kontainer}
+	\label{querynrpmahasiswa}
+\end{figure}
 
 
 \section{Implementasi Pembuatan Aturan untuk Mengarahkan \textit{Traffic Client} ke Halaman \textit{Login} dari Sistem}
-Pada implementasi pembuatan aturan untuk mengarahkan \textit{traffic client} ke halaman \textit{login} dari sistem diasumsikan bahwa belum ada \textit{client} yang telah \textit{login} ke dalam sistem. Karena diasumsikan bahwa belum ada \textit{client} yang telah berhasil \textit{login} ke dalam sistem, maka semua \textit{client} tidak diperbolehkan untuk mengakses internet. Kemudian untuk mengarahkan \textit{traffic} dari \textit{client} dibuatkan beberapa \textit{rules} dengan menggunakan iptables pada \textit{Docker Host} dengan IP \texttt{10.151.36.134}. seperti Kode Sumber \ref{iptablesbeforelogin}.
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Command untuk mengarahkan \textit{client} ke halaman \textit{login},language=Python,label=iptablesbeforelogin]
-iptables -I FORWARD 1 -s 192.168.99.0/24 -j REJECT
-iptables -I FORWARD 1 -s 192.168.99.0/24 -p tcp d 10.151.36.173 --dport 4000 -j ACCEPT
-iptables -t nat -I PREROUTING 1 -p tcp -s 192.168.99.0/24 --dport 80 -j DNAT --to 10.151.36.173:4000
-\end{lstlisting}
+Pada implementasi pembuatan aturan untuk mengarahkan \textit{traffic client} ke halaman \textit{login} dari sistem diasumsikan bahwa belum ada \textit{client} yang telah \textit{login} ke dalam sistem. Karena diasumsikan bahwa belum ada \textit{client} yang telah berhasil \textit{login} ke dalam sistem, maka semua \textit{client} tidak diperbolehkan untuk mengakses internet. Kemudian untuk mengarahkan \textit{traffic} dari \textit{client} dibuatkan beberapa \textit{rules} dengan menggunakan iptables pada \textit{Docker Host} dengan IP \texttt{10.151.36.134}. seperti Gambar \ref{iptablesbeforelogin}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/bab4/iptables1}
+	\caption{Command untuk mengarahkan \textit{client} ke halaman \textit{login}}
+	\label{iptablesbeforelogin}
+\end{figure}
 
 \indent \textit{Rules} pertama berfungsi untuk melarang semua \textit{client} untuk melewati \textit{router}. \textit{Rules} kedua berfungsi untuk mengizinkan semua \textit{client} membuka halaman \textit{login}. Sedangkan \textit{rules} ketiga berfungsi untuk mengarahkan semua \textit{traffic client} ke halaman \textit{login}.
 
@@ -183,91 +191,55 @@ Setelah kontainer \textit{docker} yang berisikan \textit{mitmproxy} berhasil dib
 \end{minipage}
 
 \subsection{Implementasi Basis Data pada \textit{Middleware}}
-Berdasarkan hasil perancangan basis data pada bab 3 terdapat 2 entitas yang diimplementasikan menjadi suatu tabel pada basis data MySQL, yaitu entitas \texttt{kontainer}. Detail implementasi entitas \texttt{kontainer} tertera pada Kode Sumber \ref{entitastesting}.
-\newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,language=python, caption=\textit{Query} untuk membuat tabel testing,label=entitastesting]
-CREATE TABLE kontainer (
-	id int(11) PRIMARY KEY AUTO_INCREMENT,
-	username VARCHAR(50)
-	ip VARCHAR(50)
-	port VARCHAR(50)
-	createdAt DATETIME
-);
-\end{lstlisting}
+Berdasarkan hasil perancangan basis data pada bab 3 terdapat 2 entitas yang diimplementasikan menjadi suatu tabel pada basis data MySQL, yaitu entitas \texttt{kontainer}. Detail implementasi entitas \texttt{kontainer} tertera pada Gambar \ref{querykontainer}.
 
 
 \section{Implementasi Pemasangan Kontainer Docker pada \textit{Docker Host}}
-Setelah berhasil melakukan pemasangan \textit{docker} versi 1.13.1 pada \textit{docker host} dengan IP \texttt{10.151.36.134}, sekarang lakukan konfigurasi supaya \textit{docker} tidak hanya dapat digunakan oleh \textit{root user} dari sebuah sistem. Hal ini dapat dilakukan dengan menjalankan perintah pada Kode Sumber \ref{konfigurasildocker1}.
-\newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk installasi Ansible,language=Python,label=konfigurasildocker1]
-sudo groupadd docker
-sudo usermod -aG docker $USER
-\end{lstlisting}
+Setelah berhasil melakukan pemasangan \textit{docker} versi 1.13.1 pada \textit{docker host} dengan IP \texttt{10.151.36.134}, sekarang lakukan konfigurasi supaya \textit{docker} tidak hanya dapat digunakan oleh \textit{root user} dari sebuah sistem. Hal ini dapat dilakukan dengan menjalankan perintah pada Gambar \ref{konfigurasildocker1}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/bab4/konfigurasildocker1}
+	\caption{Perintah memasukkan \textit{user} ke grup \textit{docker}}
+	\label{konfigurasildocker1}
+\end{figure}
+
 
 \subsection{Menambahkan dan Memperbarui Kontainer Docker yang Berisikan Mitmproxy}
-Setelah berhasil melakukan pemasangan \textit{docker} pada \textit{docker host} dan melakukan konfigurasi supaya \textit{docker} tidak hanya dapat digunakan oleh \textit{root user} dari sebuah sistem, selanjutnya dapat mencoba membuat sebuah kontainer \textit{docker} yang berisi aplikasi Mitmproxy. Untuk membuat sebuah kontainer \textit{docker} yang berisi Mitmproxy, penulis melakukannya dengan sistem operasi Ubuntu dalam format \textit{docker} yang disediakan oleh \textit{Docker Hub}. Untuk melakukan unduh, jalankan perintah berikut pada Kode Sumber \ref{pullubuntu}.
-\newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk \textit{Pull} Ubuntu,language=Python,label=pullubuntu]
-docker pull ubuntu
-\end{lstlisting}
+Setelah berhasil melakukan pemasangan \textit{docker} pada \textit{docker host} dan melakukan konfigurasi supaya \textit{docker} tidak hanya dapat digunakan oleh \textit{root user} dari sebuah sistem, selanjutnya dapat mencoba membuat sebuah kontainer \textit{docker} yang berisi aplikasi Mitmproxy. Untuk membuat sebuah kontainer \textit{docker} yang berisi Mitmproxy, penulis melakukannya dengan sistem operasi Ubuntu dalam format \textit{docker} yang disediakan oleh \textit{Docker Hub}. Untuk melakukan unduh, jalankan perintah \texttt{docker pull ubuntu}.
 
-Setelah berhasil diunduh, selanjutnya jalankan sistem operasi Ubuntu dengan menggunakan perintah yang tertera pada Kode Sumber \ref{runubuntu}.
-\newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Menjalankan \textit{Image} Ubuntu,language=Python,label=runubuntu]
-docker run --name testmitmproxy --privileged=True --network=host ubuntu
-\end{lstlisting}
+Setelah berhasil diunduh, selanjutnya jalankan sistem operasi Ubuntu dengan menggunakan perintah \texttt{docker run --name testmitmproxy --privileged=True --network=host ubuntu}.
+
 Parameter \texttt{--name} berguna untuk memberikan nama pada kontainer \textit{docker} agar mudah dikenali dimana lokasi aplikasi saat dijalankan. Pada kasus ini kontainer \textit{docker} diberi nama dengan \texttt{testmitmproxy}. Parameter \texttt{--privileged=True} berguna untuk memberikan kendali hak akses penuh kepada kontainer \textit{docker} tersebut, sama seperti dengan \textit{root user}. Parameter \texttt{--network=host} berguna untuk mendefinisikan jaringan yang akan digunakan oleh kontainer \textit{docker} tersebut. Setelah menjalankannya, kontainer \textit{docker} yang terbentuk dapat digunakan lebih lanjut, misalnya dengan mengubah data yang ada didalamnya, menambahkan fitur baru, atau hanya sekedar mengganti nama dari aplikasi.\\
-\indent Dalam kasus ini penulis menambahkan fitur baru, yaitu menambah Mitmproxy. Untuk menambah atau memasang Mitmproxy pada kontainer \textit{docker} yang baru saja dibuat, jalankan perintah berikut pada Kode Sumber \ref{installmitmproxy}.
-\newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Pemasangan Mitmrproxy,language=Python,label=installmitmproxy]
-sudo apt-get update
-sudo apt-get install python3 python3-dev python3-pip
-sudo pip3 install cryptography
-sudo pip3 install mitmproxy
-\end{lstlisting}
+\indent Dalam kasus ini penulis menambahkan fitur baru, yaitu menambah Mitmproxy. Untuk menambah atau memasang Mitmproxy pada kontainer \textit{docker} yang baru saja dibuat, jalankan perintah berikut pada Gambar \ref{installmitmproxy}.
 
-Mitmrproxy versi 3.0.4 membutuhkan Python minimal versi 3.5, maka dari itu penulis memasang Python versi 3.5.2. Mitmrproxy juga membutuhkan modul \textit{cryptography} yang berguna untuk melakukan enkripsi maupun dekripsi ketika Mitmproxy sedang berjalan. Lalu aktifkan \texttt{ipv4.forwarding} dengan menjalankan perintah pada Kode Sumber \ref{ipv4forwarding}.
-\newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Mengaktifkan \textit{ipv4.forwarding},language=Python,label=ipv4forwarding]
-sudo sysctl -w net.ipv4.ip_forward=1
-\end{lstlisting}
-\indent Setelah berhasil melakukan pemasangan Mitmproxy pada kontainer \textit{docker}, jika ingin membuat \textit{images} baru dari kontainer \textit{docker} tersebut, maka hal pertama yang harus dilakukan adalah menghentikan kontainer \textit{docker} yang sedang berjalan dengan menggunakan perintah seperti pada Kode Sumber \ref{dockerstop}.
-\newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Menghentikan Kontainer Docker,language=Python,label=dockerstop]
-docker stop [nama_container]
-\end{lstlisting}
-Nama \textit{container} ini tergantung dari nama kontainer \textit{docker} yang sudah dibuat. Untuk kasus yang digunakan oleh penulis, penulis menggunakan perintah \texttt{docker stop testmitmproxy}. Setelah itu lakukan \textit{commit} dengan menjalankan perintah seperti pada Kode Sumber \ref{dockercommit}.
-\newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk \textit{Commit} Kontainer Docker,language=Python,label=dockercommit]
-docker commit [nama_container] [nama_repository]
-\end{lstlisting}
-Nama \textit{container} ini tergantung dari nama kontainer \textit{docker} yang sudah dibuat. Sedangkan nama \textit{repository} ini tergantung dari nama \textit{repository} yang telah dibuat di Docker Hub. Untuk kasus yang digunakan oleh penulis, penulis menggunakan perintah \texttt{docker commit testmitmproxy fourirakbar/mitmproxy-oing:version1}. Pada bagian nama \textit{repository} ini memiliki tiga bagian dengan pola seperti \texttt{[URL]/[nama]:[versi]}. Artinya membuat \textit{image} dengan URL \textit{repository} pada Docker Hub dengan nama \texttt{fourirakbar}. Kemudian nama dari \textit{image}-nya sendiri adalah \texttt{mitmproxy-oing} dan versinya adalah \texttt{version1}. Setelah melakukan \textit{commit}, maka \textit{image} baru akan terbentuk. Langkah terakhir adalah melakukan \textit{push image} ke Docker Hub dengan menggunakan perintah seperti Kode Sumber \ref{dockerpush}.
-\newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk \textit{Push Image} ke Docker Hub,language=Python,label=dockerpush]
-docker push [nama_container] [nama_repository]
-\end{lstlisting}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/bab4/installmitmproxy}
+	\caption{Perintah untuk Pemasangan Mitmrproxy}
+	\label{installmitmproxy}
+\end{figure}
+
+Mitmrproxy versi 3.0.4 membutuhkan Python minimal versi 3.5, maka dari itu penulis memasang Python versi 3.5.2. Mitmrproxy juga membutuhkan modul \textit{cryptography} yang berguna untuk melakukan enkripsi maupun dekripsi ketika Mitmproxy sedang berjalan. Lalu aktifkan \texttt{ipv4.forwarding} dengan menjalankan perintah \texttt{sudo sysctl -w net.ipv4.ip-forward=1}.
+
+Setelah berhasil melakukan pemasangan Mitmproxy pada kontainer \textit{docker}, jika ingin membuat \textit{images} baru dari kontainer \textit{docker} tersebut, maka hal pertama yang harus dilakukan adalah menghentikan kontainer \textit{docker} yang sedang berjalan dengan menggunakan perintah \texttt{docker stop [nama container]}.
+
+Nama \textit{container} ini tergantung dari nama kontainer \textit{docker} yang sudah dibuat. Untuk kasus yang digunakan oleh penulis, penulis menggunakan perintah \texttt{docker stop testmitmproxy}. Setelah itu lakukan \textit{commit} dengan menjalankan perintah \texttt{docker commit [nama container] [nama repository]}.
+
+Nama \textit{container} ini tergantung dari nama kontainer \textit{docker} yang sudah dibuat. Sedangkan nama \textit{repository} ini tergantung dari nama \textit{repository} yang telah dibuat di Docker Hub. Untuk kasus yang digunakan oleh penulis, penulis menggunakan perintah \texttt{docker commit testmitmproxy fourirakbar/mitmproxy-oing:version1}. Pada bagian nama \textit{repository} ini memiliki tiga bagian dengan pola seperti \texttt{[URL]/[nama]:[versi]}. Artinya membuat \textit{image} dengan URL \textit{repository} pada Docker Hub dengan nama \texttt{fourirakbar}. Kemudian nama dari \textit{image}-nya sendiri adalah \texttt{mitmproxy-oing} dan versinya adalah \texttt{version1}. Setelah melakukan \textit{commit}, maka \textit{image} baru akan terbentuk. Langkah terakhir adalah melakukan \textit{push image} ke Docker Hub dengan menggunakan perintah \texttt{docker push [nama container] [nama repository]}.
 
 \subsection{Menggunakan \textit{Image} Kontainer Docker yang Sudah Dibuat}
-Setelah berhasil menambahkan dan memperbarui kontainer \textit{docker} yang berisi Mitmproxy, penulis tidak perlu melakukannya lagi. Penulis hanya perlu memanggil kontainer \textit{docker} dengan menjalankan perintah pada Kode Sumber \ref{dockerpullmitm}.
-\newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk \textit{Pull Image mitmproxy},language=Python,label=dockerpullmitm]
-docker pull fourirakbar/mitmproxy-oing:version1
-\end{lstlisting}
+Setelah berhasil menambahkan dan memperbarui kontainer \textit{docker} yang berisi Mitmproxy, penulis tidak perlu melakukannya lagi. Penulis hanya perlu memanggil kontainer \textit{docker} dengan menjalankan perintah \texttt{docker pull fourirakbar/mitmproxy-oing:version1}.
 
-Lalu untuk menjalankan kontainer \textit{docker} yang sudah di \textit{pull}, jalankan perintah pada Kode Sumber \ref{dockerrunmitmoing}.
-\newline
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk \textit{Pull Image mitmproxy},language=Python,label=dockerrunmitmoing]
-docker run --name [IP_CLEINT] --privileged=True --network=host fourirakbar/mitmproxy-oing:version1
-\end{lstlisting}
+Lalu untuk menjalankan kontainer \textit{docker} yang sudah di \textit{pull}, jalankan perintah \texttt{docker run --name [IP CLEINT] --privileged=True --network=host fourirakbar/mitmproxy-oing:version1}.
 
 \section{Implementasi Pembuatan Aturan untuk Mengarahkan \textit{Traffic Client} ke Kontainer Docker dari Tiap-Tiap \textit{Client}}
-Pada implementasi pembuatan aturan untuk mengarahkan \textit{traffic client} ke kontainer \textit{docker} dari tiap-tiap client dibuat ketika terdapat \textit{client} yang telah berhasil \textit{login} ke dalam sistem. Setelah \textit{client} berhasil \textit{login} ke dalam sistem, maka akan dibuatkan beberapa \textit{rules} dengan menggunakan Iptables seperti Kode Sumber \ref{iptablesafterlogin}.
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Command untuk mengarahkan \textit{client} ke halaman \textit{login},language=Python,label=iptablesafterlogin]
-iptables -I FORWARD 1 -s [IP_CLIENT] -j ACCEPT
-iptables -t nat -I PREROUTING 1 -s [IP_CLIENT] -p tcp --dport 80 -j REDIRECT --to-ports [PORTS_CLIENT]
-iptables -t nat -I PREROUTING 1 -s [IP_CLIENT] -p tcp --dport 443 -j REDIRECT --to-ports [PORTS_CLIENT]
-iptables -t nat -I POSTROUTING 1 -o wlp3s0 -j MASQUERADE -s [IP_CLIENT]
-\end{lstlisting}
+Pada implementasi pembuatan aturan untuk mengarahkan \textit{traffic client} ke kontainer \textit{docker} dari tiap-tiap client dibuat ketika terdapat \textit{client} yang telah berhasil \textit{login} ke dalam sistem. Setelah \textit{client} berhasil \textit{login} ke dalam sistem, maka akan dibuatkan beberapa \textit{rules} dengan menggunakan Iptables seperti Gambar \ref{iptablesafterlogin}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/bab4/iptablesafterlogin}
+	\caption{Command untuk mengarahkan \textit{client} ke halaman \textit{login}}
+	\label{iptablesafterlogin}
+\end{figure}
 
 Pada \textit{rules} pertama berfungsi untuk mengizinkan atau memperbolehkan \textit{traffic} dari \textit{client} melewati \textit{router}. Lalu \textit{rules} kedua dan ketiga berfungsi untuk mengarahkan \textit{traffic cleint} ke kontainer \textit{docker} yang sudah dibuat dengan satu port khusus untuk \textit{client} tersebut. Lalu \textit{rules} keempat berfungsi untuk mengizinkan atau memperbolehkan \textit{client} untuk mengakses internet.
 
@@ -301,15 +273,9 @@ Pada halaman \textit{administrator} diperlukan adanya rute-rute yang bisa diakse
 \end{longtable}
 
 \subsection{Implementasi Pembacaan \textit{Log File} dari \textit{Client}}
-Pada implementasi pembacaan \textit{log file} dari \textit{client} dilakukan dengan membaca \textit{file} hasil \textit{output} dari \textit{mitmproxy}. \textit{File} hasil \textit{output} dari \textit{mitmproxy} berbentuk \textit{binary} dimana yang bisa membacanya hanya komputer saja. Maka dari itu perlu dilakukan pembacaan lagi \textit{file} yang berisi \textit{binary} tersebut dengan menjalankan \textit{command} seperti pada Kode Sumber \ref{parsemitmdump}.
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Membaca \textit{File Log} dari Mitmrproxy,language=Python,label=parsemitmdump]
-mitmdump -nr [NAMA-FILE] --set flow_detail=2 --showhost > [NAMA-FILE]
-\end{lstlisting}
+Pada implementasi pembacaan \textit{log file} dari \textit{client} dilakukan dengan membaca \textit{file} hasil \textit{output} dari \textit{mitmproxy}. \textit{File} hasil \textit{output} dari \textit{mitmproxy} berbentuk \textit{binary} dimana yang bisa membacanya hanya komputer saja. Maka dari itu perlu dilakukan pembacaan lagi \textit{file} yang berisi \textit{binary} tersebut dengan menjalankan \textit{command} \texttt{mitmdump -nr [NAMA-FILE] --set flow-detail=2 --showhost > [NAMA-FILE]}.
 
-Sedangkan untuk membaca \textit{log file} dari \textit{client} secara langsung atau \textit{live} dapat dilakukan dengan menjalankan \textit{command} seperti pada Kode Sumber \ref{streammitmdump}.
-\begin{lstlisting}[frame=single,tabsize=2,breaklines,captionpos=b,caption=Perintah untuk Membaca \textit{File Log} dari \textit{Client},language=Python,label=streammitmdump]
-tail -f -c +0 [NAMA_FILE] | mitmdump -n -r - --set flow_detail=1 --showhost
-\end{lstlisting}
+Sedangkan untuk membaca \textit{log file} dari \textit{client} secara langsung atau \textit{live} dapat dilakukan dengan menjalankan \textit{command} \texttt{tail -f -c +0 [NAMA FILE] | mitmdump -n -r - --set flow detail=1 --showhost}.
 
 Parameter \texttt{-nr} berfungsi untuk tidak menjalankan \textit{proxy server} dari \textit{mitmproxy} sendiri, dan juga berfungsi untuk melakukan analisa dari \textit{file output mitmproxy} yang berbentuk \textit{binary}. Sedangkan parameter \texttt{--set flow detail} berfungsi untuk menampilkan detail dari analisa yang dilakukan oleh \textit{mitmproxy}. Terdapat tingkat satu sampai dengan tiga, semakin tinggi tingkat yang diberikan maka semakin jelas detail dari \textit{log} yang dianalisa oleh \textit{mitmproxy}. Lalu parameter \texttt{--showhost} berfungsi untuk menampilkan \textit{header} dari URL yang telah diakses oleh \textit{client}.
 
@@ -324,6 +290,9 @@ Halaman \textit{administrator} diperuntukkan bagi \textit{User} yang mempunyai a
 \end{figure}
 
 Pada bagian \textit{sidebar} terdapat dua menu yaitu \textit{User List} dan \textit{History}. Menu \textit{User List} berguna untuk melihat \textit{client} yang telah berhasil \textit{login} ke dalam sistem. Sedangkan menu \textit{history} berguna untuk melihat rekap \textit{client} yang telah berhasil \textit{login} dan mengakses internet pada hari-hari sebelumnya. Implementasi antarmuka halaman \textit{administrator} pada menu \textit{User List} dapat dilihat pada Gambar \ref{halamandashboardadmin}. Dan implementasi antarmuka halaman \textit{administrator} oada nenu \textit{History} dapat dilihat pada Gambar \ref{userrekap}
+\newline
+\newline
+\newline
 
 \begin{figure}[H]
 	\centering
