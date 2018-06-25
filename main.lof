@@ -3,30 +3,30 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Digram Kasus Penggunaan\relax }}{18}{figure.caption.7}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Arsitektur Komponen Sistem\relax }}{23}{figure.caption.8}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Desain Halaman \textit {Login}\relax }}{26}{figure.caption.9}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Desain Mengarahkan \textit {Traffic Client} ke Halaman \textit {Login}\relax }}{27}{figure.caption.10}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Alur kerja dari \textit {mitmproxy transparent} HTTP\relax }}{30}{figure.caption.11}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Alur kerja dari \textit {mitmproxy transparent} HTTPS\relax }}{31}{figure.caption.12}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Desain pembuatan aturan untuk mengarahkan \textit {traffic client} ke kontainer \textit {docker}\relax }}{32}{figure.caption.13}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Desain halaman dashboard \textit {administrator} \textit {traffic client} ke kontainer \textit {docker}\relax }}{33}{figure.caption.14}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Desain pembuatan aturan untuk mengarahkan \textit {traffic client} ke kontainer \textit {docker}\relax }}{33}{figure.caption.15}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Digram Kasus Penggunaan\relax }}{20}{figure.caption.7}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Arsitektur Komponen Sistem\relax }}{25}{figure.caption.8}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Desain Halaman \textit {Login}\relax }}{28}{figure.caption.9}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Desain Mengarahkan \textit {Traffic Client} ke Halaman \textit {Login}\relax }}{29}{figure.caption.10}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Alur kerja dari \textit {mitmproxy transparent} HTTP\relax }}{32}{figure.caption.11}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Alur kerja dari \textit {mitmproxy transparent} HTTPS\relax }}{33}{figure.caption.12}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Desain pembuatan aturan untuk mengarahkan \textit {traffic client} ke kontainer \textit {docker}\relax }}{34}{figure.caption.13}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Desain halaman dashboard \textit {administrator} \textit {traffic client} ke kontainer \textit {docker}\relax }}{35}{figure.caption.14}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Desain pembuatan aturan untuk mengarahkan \textit {traffic client} ke kontainer \textit {docker}\relax }}{35}{figure.caption.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Halaman \textit {Login}\relax }}{37}{figure.caption.16}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Query} untuk membuat tabel kontainer\relax }}{40}{figure.caption.17}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Command untuk mengarahkan \textit {client} ke halaman \textit {login}\relax }}{41}{figure.caption.18}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Perintah memasukkan \textit {user} ke grup \textit {docker}\relax }}{45}{figure.caption.19}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Perintah untuk Pemasangan Mitmrproxy\relax }}{46}{figure.caption.20}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Command untuk mengarahkan \textit {client} ke halaman \textit {login}\relax }}{48}{figure.caption.21}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Halaman \textit {Administrator} Menu \textit {User List}\relax }}{52}{figure.caption.22}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Halaman \textit {Administrator} Menu \textit {History}\relax }}{53}{figure.caption.23}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Halaman \textit {Login}\relax }}{39}{figure.caption.16}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Query} untuk membuat tabel kontainer\relax }}{42}{figure.caption.17}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Command untuk mengarahkan \textit {client} ke halaman \textit {login}\relax }}{43}{figure.caption.18}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Perintah memasukkan \textit {user} ke grup \textit {docker}\relax }}{47}{figure.caption.19}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Perintah untuk Pemasangan Mitmrproxy\relax }}{48}{figure.caption.20}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Command untuk mengarahkan \textit {client} ke halaman \textit {login}\relax }}{50}{figure.caption.21}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Halaman \textit {Administrator} Menu \textit {User List}\relax }}{54}{figure.caption.22}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Halaman \textit {Administrator} Menu \textit {History}\relax }}{55}{figure.caption.23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Arsitektur dari Setiap Komponen Uji Coba\relax }}{60}{figure.caption.24}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Grafik Kecepatan Menangani \textit {Request}\relax }}{76}{figure.caption.25}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Grafik Kecepatan Menangani \textit {Request}\relax }}{77}{figure.caption.26}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Grafik Penggunaan \textit {Memory}\relax }}{79}{figure.caption.27}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Grafik Penggunaan \textit {Memory}\relax }}{81}{figure.caption.28}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Arsitektur dari Setiap Komponen Uji Coba\relax }}{62}{figure.caption.24}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Grafik Kecepatan Menangani \textit {Request}\relax }}{78}{figure.caption.25}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Grafik Kecepatan Menangani \textit {Request}\relax }}{79}{figure.caption.26}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Grafik Penggunaan \textit {Memory}\relax }}{81}{figure.caption.27}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Grafik Penggunaan \textit {Memory}\relax }}{83}{figure.caption.28}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
