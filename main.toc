@@ -110,7 +110,7 @@
 \contentsline {chapter}{\numberline {VI}PENUTUP}{85}{chapter.6}
 \contentsline {section}{\numberline {6.1}Kesimpulan}{85}{section.6.1}
 \contentsline {section}{\numberline {6.2}Saran}{85}{section.6.2}
-\contentsline {chapter}{DAFTAR PUSTAKA}{87}{chapter*.29}
+\contentsline {chapter}{DAFTAR PUSTAKA}{87}{chapter*.30}
 \contentsline {chapter}{\numberline {A}INSTALASI PERANGKAT LUNAK}{89}{appendix.A}
 \contentsline {chapter}{\numberline {B}Konfigurasi}{93}{appendix.B}
-\contentsline {chapter}{BIODATA PENULIS}{97}{appendix*.30}
+\contentsline {chapter}{BIODATA PENULIS}{97}{appendix*.31}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  25 JUN 2018 22:02
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.5.30)  25 JUN 2018 22:23
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1028,6 +1028,9 @@ LaTeX Warning: Label `tabelKodeKasusPenggunaan' multiply defined.
 
 LaTeX Warning: Label `tabelkontainer' multiply defined.
 
+
+LaTeX Warning: Label `ram2' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1496,19 +1499,13 @@ Underfull \vbox (badness 5203) has occurred while \output is active []
  [32]
 File: images/bab3/DIAGRAM3.png Graphic file (type QTm)
 
-<use  "images/bab3/DIAGRAM3.png" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33]
+<use  "images/bab3/DIAGRAM3.png" > [33]
 File: images/bab3/desaindashboard.png Graphic file (type QTm)
 
 <use  "images/bab3/desaindashboard.png" > [34]
 File: images/bab3/desainstream.png Graphic file (type QTm)
 
-<use  "images/bab3/desainstream.png" >) (./chapters/4-Implementasi.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [35]
+<use  "images/bab3/desainstream.png" >) (./chapters/4-Implementasi.tex [35]
 [36]
 BAB IV.
 [37
@@ -1531,49 +1528,58 @@ Overfull \hbox (4.0504pt too wide) in paragraph at lines 165--165
  []
 
 [44] [45]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 178--192
+Overfull \hbox (17.0pt too wide) in paragraph at lines 177--191
 []$[]$ 
  []
 
 
 LaTeX Warning: Reference `querykontainer' on page 46 undefined on input line 19
-4.
+3.
 
-[46]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
 File: images/bab4/konfigurasildocker1.png Graphic file (type QTm)
- <use  "images/bab4/konfigurasildocker1.png" > [47]
+
+<use  "images/bab4/konfigurasildocker1.png" > [47]
 File: images/bab4/installmitmproxy.png Graphic file (type QTm)
 
 <use  "images/bab4/installmitmproxy.png" > [48] [49]
 File: images/bab4/iptablesafterlogin.png Graphic file (type QTm)
 
 <use  "images/bab4/iptablesafterlogin.png" > [50]
-Overfull \hbox (1.25009pt too wide) in paragraph at lines 256--256
+Overfull \hbox (1.25009pt too wide) in paragraph at lines 255--255
 []|\EU1/TimesNewRoman(0)/bx/n/10.95 HTTP
  []
 
 
-Overfull \hbox (8.1005pt too wide) in paragraph at lines 256--256
+Overfull \hbox (8.1005pt too wide) in paragraph at lines 255--255
 \EU1/TimesNewRoman(0)/bx/n/10.95 Method| 
  []
 
 
-Overfull \hbox (6.0422pt too wide) in alignment at lines 251--258
+Overfull \hbox (6.0422pt too wide) in alignment at lines 250--257
  [] [] [] [] 
  []
 
 
-Overfull \hbox (1.25009pt too wide) in paragraph at lines 261--261
+Overfull \hbox (1.25009pt too wide) in paragraph at lines 260--260
 []|\EU1/TimesNewRoman(0)/bx/n/10.95 HTTP
  []
 
 
-Overfull \hbox (8.1005pt too wide) in paragraph at lines 261--261
+Overfull \hbox (8.1005pt too wide) in paragraph at lines 260--260
 \EU1/TimesNewRoman(0)/bx/n/10.95 Method| 
  []
 
 
-Overfull \hbox (6.0422pt too wide) in alignment at lines 258--263
+Overfull \hbox (6.0422pt too wide) in alignment at lines 257--262
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (6.0422pt too wide) in alignment at lines 262--263
  [] [] [] [] 
  []
 
@@ -1583,12 +1589,7 @@ Overfull \hbox (6.0422pt too wide) in alignment at lines 263--264
  []
 
 
-Overfull \hbox (6.0422pt too wide) in alignment at lines 264--265
- [] [] [] [] 
- []
-
-
-Overfull \hbox (6.0422pt too wide) in alignment at lines 265--273
+Overfull \hbox (6.0422pt too wide) in alignment at lines 264--272
  [] [] [] [] 
  []
 
@@ -1614,30 +1615,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [60]
 File: images/bab5/arsitekturbab5.png Graphic file (type QTm)
 
-<use  "images/bab5/arsitekturbab5.png" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [61]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [62]
-[63] [64]
+<use  "images/bab5/arsitekturbab5.png" > [61]
+File: images/bab5/putih.png Graphic file (type QTm)
+ <use  "images/bab5/putih.png" >
+[62] [63] [64]
 Overfull \vbox (2.43608pt too high) has occurred while \output is active []
 
 
-[65] [66] [67] [68] [69] [70] [71] [72]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [73]
-[74] [75] [76] [77]
+[65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]
 File: images/bab5/kecepatan1.png Graphic file (type QTm)
- <use  "images/bab5/kecepatan1.png" > [78]
+
+<use  "images/bab5/kecepatan1.png" > [78]
 File: images/bab5/kecepatan2.png Graphic file (type QTm)
-
-<use  "images/bab5/kecepatan2.png" > [79] [80]
+ <use  "images/bab5/kecepatan2.png" >
+[79] [80]
 File: images/bab5/penggunaancpu.jpg Graphic file (type QTm)
-
-<use  "images/bab5/penggunaancpu.jpg" > [81]
+ <use  "images/bab5/penggunaancpu.jpg" > [81]
 File: images/bab5/newmemory.png Graphic file (type QTm)
 
 <use  "images/bab5/newmemory.png" >
@@ -1683,10 +1676,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 27843 strings out of 493638
- 485624 string characters out of 6146796
+ 27845 strings out of 493638
+ 485654 string characters out of 6146796
  600694 words of memory out of 5000000
- 30867 multiletter control sequences out of 15000+600000
+ 30868 multiletter control sequences out of 15000+600000
  7051 words of font info for 63 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,12n,63p,10396b,1709s stack positions out of 5000i,500n,10000p,200000b,80000s
